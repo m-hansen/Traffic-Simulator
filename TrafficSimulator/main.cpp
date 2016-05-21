@@ -1,11 +1,14 @@
 #include "pch.h"
 
-const std::uint32_t ScreenWidth = 640;
-const std::uint32_t ScreenHeight = 480;
+#define ERR_STREAM stderr
+
+const std::uint32_t ScreenWidth = 1280;
+const std::uint32_t ScreenHeight = 720;
+const std::string ContentPath = "../Content/";
 
 SDL_Window* gWindow = nullptr;
-SDL_Surface* gScreenSurface = nullptr;
-SDL_Surface* gHelloWorld = nullptr;
+SDL_Renderer* gRenderer = nullptr;
+SDL_Texture* gCarTexture = nullptr;
 
 bool InitializeSDL()
 {
@@ -14,34 +17,81 @@ bool InitializeSDL()
 	// Initialize SDL and create a window
 	if (SDL_Init(SDL_INIT_VIDEO) < 0)
 	{
-		fprintf(stderr, "SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
+		fprintf(ERR_STREAM, "SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
 		success = false;
 	}
 	else
 	{
+		// Create a window
 		gWindow = SDL_CreateWindow("Traffic Simulator", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, ScreenWidth, ScreenHeight, SDL_WINDOW_SHOWN);
 		if (gWindow == nullptr)
 		{
-			fprintf(stderr, "Window could not be created! SDL_Error: %s\n", SDL_GetError());
+			fprintf(ERR_STREAM, "Window could not be created! SDL_Error: %s\n", SDL_GetError());
 			success = false;
 		}
 		else
 		{
-			gScreenSurface = SDL_GetWindowSurface(gWindow);
+			// Create renderer for window
+			gRenderer = SDL_CreateRenderer(gWindow, -1, SDL_RENDERER_ACCELERATED);
+			if (gRenderer == nullptr)
+			{
+				fprintf(ERR_STREAM, "Renderer could not be created! SDL Error: %s\n", SDL_GetError());
+				success = false;
+			}
+			else
+			{
+				// Initialize renderer color
+				SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
+
+				// Initialize PNG loading
+				int imgFlags = IMG_INIT_PNG;
+				if (!(IMG_Init(imgFlags) & imgFlags))
+				{
+					fprintf(ERR_STREAM, "SDL_image could not initialize! SDL_image Error: %s\n", IMG_GetError());
+					success = false;
+				}
+			}
 		}
 	}
 
 	return success;
 }
 
+SDL_Texture* LoadTexture(const std::string& path)
+{
+	SDL_Texture* newTexture = nullptr;
+
+	// Load image at specified path
+	SDL_Surface* loadedSurface = IMG_Load(path.c_str());
+	if (loadedSurface == NULL)
+	{
+		fprintf(ERR_STREAM, "Unable to load image %s! SDL_image Error: %s\n", path.c_str(), IMG_GetError());
+	}
+	else
+	{
+		// Create texture from surface pixels
+		newTexture = SDL_CreateTextureFromSurface(gRenderer, loadedSurface);
+		if (newTexture == NULL)
+		{
+			fprintf(ERR_STREAM, "Unable to create texture from %s! SDL Error: %s\n", path.c_str(), SDL_GetError());
+		}
+
+		// Get rid of old loaded surface
+		SDL_FreeSurface(loadedSurface);
+	}
+
+	return newTexture;
+}
+
 bool LoadResources()
 {
 	bool success = true;
 
-	gHelloWorld = SDL_LoadBMP("../Content/Images/traffic_simulator.bmp");
-	if (gHelloWorld == nullptr)
+	// Load the car PNG
+	gCarTexture = LoadTexture(ContentPath + "Images/car.png");
+	if (gCarTexture == nullptr)
 	{
-		fprintf(stderr, "Unable to load image %s! SDL Error: %s\n", "traffic_simulator.bmp", SDL_GetError());
+		fprintf(ERR_STREAM, "Failed to load texture image!\n");
 		success = false;
 	}
 
@@ -50,13 +100,18 @@ bool LoadResources()
 
 void Shutdown()
 {
-	SDL_FreeSurface(gHelloWorld);
-	gHelloWorld = nullptr;
+	// Free loaded images
+	SDL_DestroyTexture(gCarTexture);
+	gCarTexture = nullptr;
 
-	// Destroy window will handle the destruction of the screen surface
+	// Destroy window    
+	SDL_DestroyRenderer(gRenderer);
 	SDL_DestroyWindow(gWindow);
 	gWindow = nullptr;
+	gRenderer = nullptr;
 
+	// Quit SDL subsystems
+	IMG_Quit();
 	SDL_Quit();
 }
 
@@ -80,13 +135,13 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 	if (!InitializeSDL())
 	{
-		fprintf(stderr, "Failed to initialize SDL!\n");
+		fprintf(ERR_STREAM, "Failed to initialize SDL!\n");
 	}
 	else
 	{
 		if (!LoadResources())
 		{
-			fprintf(stderr, "Failed to load resources!\n");
+			fprintf(ERR_STREAM, "Failed to load resources!\n");
 		}
 	}
 	
@@ -96,8 +151,14 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		{
 			HandleInput(e, isRunning);
 
-			SDL_BlitSurface(gHelloWorld, nullptr, gScreenSurface, nullptr);
-			SDL_UpdateWindowSurface(gWindow);
+			// Clear screen
+			SDL_RenderClear(gRenderer);
+
+			// Render texture to screen
+			SDL_RenderCopy(gRenderer, gCarTexture, nullptr, nullptr);
+
+			// Update screen
+			SDL_RenderPresent(gRenderer);
 		}
 	}
 
