@@ -3,8 +3,31 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Vehicle.cpp" />
+    <ClCompile Include="GameInstance.cpp" />
+    <ClCompile Include="Sensor.cpp">
+      <Filter>Sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="RangeFinder.cpp">
+      <Filter>Sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="IDrawable.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Vehicle.h" />
+    <ClInclude Include="GameInstance.h" />
+    <ClInclude Include="Sensor.h">
+      <Filter>Sensors</Filter>
+    </ClInclude>
+    <ClInclude Include="RangeFinder.h">
+      <Filter>Sensors</Filter>
+    </ClInclude>
+    <ClInclude Include="IDrawable.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Sensors">
+      <UniqueIdentifier>{3450d641-2ee1-4b53-a2a7-1c36e5066870}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

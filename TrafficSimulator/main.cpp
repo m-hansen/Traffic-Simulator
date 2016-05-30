@@ -104,7 +104,7 @@ void Shutdown()
 	SDL_DestroyTexture(gCarTexture);
 	gCarTexture = nullptr;
 
-	// Destroy window    
+	// Destroy window
 	SDL_DestroyRenderer(gRenderer);
 	SDL_DestroyWindow(gWindow);
 	gWindow = nullptr;
@@ -121,6 +121,25 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 	{
 		isRunning = false;
 	}
+}
+
+void Update(std::uint32_t delta, TrafficSimulator::Vehicle& car)
+{
+	car.Update(delta);
+}
+
+void Render(TrafficSimulator::Vehicle& car)
+{
+	// Clear screen
+	SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
+	SDL_RenderClear(gRenderer);
+
+	// Render texture to screen
+	//SDL_RenderCopy(gRenderer, gCarTexture, nullptr, nullptr);
+	car.Draw(gRenderer);
+
+	// Update screen
+	SDL_RenderPresent(gRenderer);
 }
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
@@ -144,21 +163,35 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			fprintf(ERR_STREAM, "Failed to load resources!\n");
 		}
 	}
-	
-	while (isRunning) 
+
+	const std::int32_t CarWidth = 26;
+	const std::int32_t CarHeight = 40;
+	TrafficSimulator::Vehicle car(
+		gCarTexture,
+		Vector2f(ScreenWidth / 2, ScreenHeight / 2), 
+		CarWidth, 
+		CarHeight
+	);
+
+	std::uint32_t previousTick = 0;
+	std::uint32_t delta = 0;
+
+	while (isRunning)
 	{
+		std::uint32_t currentTick = SDL_GetTicks();
+		if (currentTick > previousTick)
+		{
+			delta = currentTick - previousTick;
+			previousTick = currentTick;
+		}
+
 		while (SDL_PollEvent(&e) != 0)
 		{
 			HandleInput(e, isRunning);
 
-			// Clear screen
-			SDL_RenderClear(gRenderer);
+			Update(delta, car);
 
-			// Render texture to screen
-			SDL_RenderCopy(gRenderer, gCarTexture, nullptr, nullptr);
-
-			// Update screen
-			SDL_RenderPresent(gRenderer);
+			Render(car);
 		}
 	}
 
