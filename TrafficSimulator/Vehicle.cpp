@@ -29,8 +29,8 @@ namespace TrafficSimulator
 		const Uint8* currentKeyStates = SDL_GetKeyboardState(NULL);
 		if (currentKeyStates[SDL_SCANCODE_UP])
 		{
-			mPosition.x += mSpeed * static_cast<float>(cos((mRotation - 90) * 3.1415965 / 180));
-			mPosition.y += mSpeed * static_cast<float>(sin((mRotation - 90) * 3.1415965 / 180));
+			mPosition.x += mSpeed * static_cast<float>(cos((mRotation - 90) * PI / 180));
+			mPosition.y += mSpeed * static_cast<float>(sin((mRotation - 90) * PI / 180));
 		}
 		else if (currentKeyStates[SDL_SCANCODE_LEFT])
 		{

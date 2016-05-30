@@ -2,6 +2,8 @@
 
 #include <cstdint>
 
+#define PI 3.14159265
+
 namespace Engine
 {
 	struct Vector2

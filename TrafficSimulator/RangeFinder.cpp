@@ -19,8 +19,8 @@ namespace TrafficSimulator
 		//mEndPosition.y = mStartPosition.y - mLength;
 
 		// Calculate the begin and and of each line segment based on its rotation
-		mEndPosition.x = mStartPosition.x - mLength * static_cast<float>(cos((mAngleInDegrees + rotation) * 3.14159265 / 180));
-		mEndPosition.y = mStartPosition.y - mLength * static_cast<float>(sin((mAngleInDegrees + rotation) * 3.14159265 / 180));
+		mEndPosition.x = mStartPosition.x - mLength * static_cast<float>(cos((mAngleInDegrees + rotation) * PI / 180));
+		mEndPosition.y = mStartPosition.y - mLength * static_cast<float>(sin((mAngleInDegrees + rotation) * PI / 180));
 		//mEndPosition.y = mLength * sin(mAngleInDegrees);
 	}
 
