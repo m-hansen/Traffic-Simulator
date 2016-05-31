@@ -12,6 +12,7 @@
       <Filter>Sensors</Filter>
     </ClCompile>
     <ClCompile Include="IDrawable.cpp" />
+    <ClCompile Include="Wall.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -24,10 +25,15 @@
       <Filter>Sensors</Filter>
     </ClInclude>
     <ClInclude Include="IDrawable.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Wall.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Sensors">
       <UniqueIdentifier>{3450d641-2ee1-4b53-a2a7-1c36e5066870}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TrafficSimulator.rc" />
   </ItemGroup>
 </Project>

@@ -9,6 +9,10 @@ const std::string ContentPath = "../Content/";
 SDL_Window* gWindow = nullptr;
 SDL_Renderer* gRenderer = nullptr;
 SDL_Texture* gCarTexture = nullptr;
+SDL_Texture* gWallTexture = nullptr;
+
+std::vector<TrafficSimulator::Vehicle> gVehicleList;
+std::vector<TrafficSimulator::Wall> gWallList;
 
 bool InitializeSDL()
 {
@@ -95,6 +99,14 @@ bool LoadResources()
 		success = false;
 	}
 
+	// Load the wall PNG
+	gWallTexture = LoadTexture(ContentPath + "Images/wall.png");
+	if (gWallTexture == nullptr)
+	{
+		fprintf(ERR_STREAM, "Failed to load texture image!\n");
+		success = false;
+	}
+
 	return success;
 }
 
@@ -121,22 +133,64 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 	{
 		isRunning = false;
 	}
+
+	if (e.type == SDL_MOUSEBUTTONDOWN)
+	{
+		if (e.button.button == SDL_BUTTON_LEFT)
+		{
+			// Place a wall at the mouse position
+			TrafficSimulator::Wall wall(gWallTexture, Vector2f(static_cast<float>(e.button.x), static_cast<float>(e.button.y)));
+			gWallList.emplace_back(wall);
+		}
+		if (e.button.button == SDL_BUTTON_RIGHT)
+		{
+			// Place a vehicle at the mouse position
+			const std::int32_t CarWidth = 26;
+			const std::int32_t CarHeight = 40;
+			TrafficSimulator::Vehicle car(
+				gCarTexture,
+				Vector2f(static_cast<float>(e.button.x), static_cast<float>(e.button.y)),
+				CarWidth,
+				CarHeight
+			);
+			gVehicleList.emplace_back(car);
+		}
+	}
+	else if (e.type == SDL_MOUSEBUTTONUP)
+	{
+		switch (e.button.button)
+		{
+		case SDL_BUTTON_LEFT:
+			break;
+		}
+	}
 }
 
-void Update(std::uint32_t delta, TrafficSimulator::Vehicle& car)
+void Update(std::uint32_t delta)
 {
-	car.Update(delta);
+	for (auto& vehicle : gVehicleList)
+	{
+		vehicle.Update(delta, gVehicleList, gWallList);
+	}
 }
 
-void Render(TrafficSimulator::Vehicle& car)
+void Render()
 {
 	// Clear screen
 	SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
 	SDL_RenderClear(gRenderer);
 
-	// Render texture to screen
-	//SDL_RenderCopy(gRenderer, gCarTexture, nullptr, nullptr);
-	car.Draw(gRenderer);
+	// Render all vehicles to screen
+	for (auto& vehicle : gVehicleList)
+	{
+		vehicle.Draw(gRenderer);
+	}
+
+	// Render all walls
+	for (auto& wall : gWallList)
+	{
+		wall.Draw(gRenderer);
+	}
 
 	// Update screen
 	SDL_RenderPresent(gRenderer);
@@ -172,6 +226,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		CarWidth, 
 		CarHeight
 	);
+	gVehicleList.emplace_back(car);
 
 	std::uint32_t previousTick = 0;
 	std::uint32_t delta = 0;
@@ -189,9 +244,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		{
 			HandleInput(e, isRunning);
 
-			Update(delta, car);
+			Update(delta);
 
-			Render(car);
+			Render();
 		}
 	}
 

@@ -23,8 +23,10 @@ namespace TrafficSimulator
 	{
 	}
 
-	void Vehicle::Update(std::uint32_t delta)
+	void Vehicle::Update(std::uint32_t delta, const std::vector<Vehicle>& vehicles, const std::vector<Wall>& walls)
 	{
+		UNREFERENCED_PARAMETER(vehicles);
+
 		// For debugging purposes
 		const Uint8* currentKeyStates = SDL_GetKeyboardState(NULL);
 		if (currentKeyStates[SDL_SCANCODE_UP])
@@ -47,9 +49,9 @@ namespace TrafficSimulator
 		mBoundingRect.y = static_cast<std::int32_t>(mPosition.y);
 
 		// Update all sensors - do this after the vehicle update logic
-		mRangeFinderLeft.Update(mBoundingRect, mRotation);
-		mRangeFinderCenter.Update(mBoundingRect, mRotation);
-		mRangeFinderRight.Update(mBoundingRect, mRotation);
+		mRangeFinderLeft.Update(mBoundingRect, mRotation, walls);
+		mRangeFinderCenter.Update(mBoundingRect, mRotation, walls);
+		mRangeFinderRight.Update(mBoundingRect, mRotation, walls);
 	}
 
 	void Vehicle::Draw(SDL_Renderer* renderer)
