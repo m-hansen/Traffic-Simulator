@@ -13,7 +13,7 @@ namespace TrafficSimulator
 	public:
 		RangeFinder(float length, float angle);
 		~RangeFinder();
-		void Update(const SDL_Rect& position, float rotation, const std::vector<Wall>& walls);
+		void Update(std::uint32_t delta, SDL_Rect& position, float rotation, const std::vector<Wall>& walls);
 		void Draw(SDL_Renderer* renderer);
 
 	private:

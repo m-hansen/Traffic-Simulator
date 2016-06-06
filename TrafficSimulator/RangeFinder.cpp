@@ -11,13 +11,13 @@ namespace TrafficSimulator
 	{
 	}
 
-	void RangeFinder::Update(const SDL_Rect& position, float rotation, const std::vector<Wall>& walls)
+	void RangeFinder::Update(std::uint32_t delta, SDL_Rect& position, float rotation, const std::vector<Wall>& walls)
 	{
 		mStartPosition = { static_cast<float>(position.x + position.w / 2), static_cast<float>(position.y + position.h / 2) };
 
 		// Calculate the begin and and of each line segment based on its rotation
-		mEndPosition.x = mStartPosition.x - mLength * static_cast<float>(cos((mAngleInDegrees + rotation) * PI / 180));
-		mEndPosition.y = mStartPosition.y - mLength * static_cast<float>(sin((mAngleInDegrees + rotation) * PI / 180));
+		mEndPosition.x = (mStartPosition.x - mLength * static_cast<float>(cos((mAngleInDegrees + rotation) * PI / 180))) * delta;
+		mEndPosition.y = (mStartPosition.y - mLength * static_cast<float>(sin((mAngleInDegrees + rotation) * PI / 180))) * delta;
 
 		// Check for collisions
 		mIsIntersecting = false;

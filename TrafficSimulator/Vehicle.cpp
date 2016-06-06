@@ -49,9 +49,9 @@ namespace TrafficSimulator
 		mBoundingRect.y = static_cast<std::int32_t>(mPosition.y);
 
 		// Update all sensors - do this after the vehicle update logic
-		mRangeFinderLeft.Update(mBoundingRect, mRotation, walls);
-		mRangeFinderCenter.Update(mBoundingRect, mRotation, walls);
-		mRangeFinderRight.Update(mBoundingRect, mRotation, walls);
+		mRangeFinderLeft.Update(delta, mBoundingRect, mRotation, walls);
+		mRangeFinderCenter.Update(delta, mBoundingRect, mRotation, walls);
+		mRangeFinderRight.Update(delta, mBoundingRect, mRotation, walls);
 	}
 
 	void Vehicle::Draw(SDL_Renderer* renderer)
