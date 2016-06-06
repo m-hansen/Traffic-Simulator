@@ -13,6 +13,12 @@
     </ClCompile>
     <ClCompile Include="IDrawable.cpp" />
     <ClCompile Include="Wall.cpp" />
+    <ClCompile Include="Graph.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Node.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -27,10 +33,19 @@
     <ClInclude Include="IDrawable.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Wall.h" />
+    <ClInclude Include="Graph.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Sensors">
       <UniqueIdentifier>{3450d641-2ee1-4b53-a2a7-1c36e5066870}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graph">
+      <UniqueIdentifier>{2b6af9fc-45ec-4d19-91c9-102d4a37c868}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

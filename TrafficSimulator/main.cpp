@@ -10,9 +10,11 @@ SDL_Window* gWindow = nullptr;
 SDL_Renderer* gRenderer = nullptr;
 SDL_Texture* gCarTexture = nullptr;
 SDL_Texture* gWallTexture = nullptr;
+SDL_Texture* gNodetexture = nullptr;
 
 std::vector<TrafficSimulator::Vehicle> gVehicleList;
 std::vector<TrafficSimulator::Wall> gWallList;
+std::vector<Node> gNodeList;
 
 bool InitializeSDL()
 {
@@ -107,6 +109,14 @@ bool LoadResources()
 		success = false;
 	}
 
+	// Load the node PNG
+	gNodetexture = LoadTexture(ContentPath + "Images/node.png");
+	if (gNodetexture == nullptr)
+	{
+		fprintf(ERR_STREAM, "Failed to load texture image!\n");
+		success = false;
+	}
+
 	return success;
 }
 
@@ -143,6 +153,12 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 			gWallList.emplace_back(wall);
 		}
 		if (e.button.button == SDL_BUTTON_RIGHT)
+		{
+			// Place a node at the mouse position
+			Node node(gNodetexture,	Vector2f(static_cast<float>(e.button.x), static_cast<float>(e.button.y)));
+			gNodeList.emplace_back(node);
+		}
+		if (e.button.button == SDL_BUTTON_MIDDLE)
 		{
 			// Place a vehicle at the mouse position
 			const std::int32_t CarWidth = 26;
@@ -190,6 +206,12 @@ void Render()
 	for (auto& wall : gWallList)
 	{
 		wall.Draw(gRenderer);
+	}
+
+	// Render all nodes
+	for (auto& node : gNodeList)
+	{
+		node.Draw(gRenderer);
 	}
 
 	// Update screen

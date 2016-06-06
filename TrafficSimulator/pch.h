@@ -14,3 +14,6 @@
 #include "Vehicle.h"
 #include "Wall.h"
 #include "RangeFinder.h"
+
+#include "Node.h"
+#include "Graph.h"
