@@ -9,7 +9,7 @@
 class Node : public TrafficSimulator::IDrawable
 {
 public:
-	Node(SDL_Texture* texture, const Vector2f& position);
+	Node(SDL_Renderer* renderer, SDL_Texture* texture, TTF_Font* font, const Vector2f& position);
 	~Node();
 	void Draw(SDL_Renderer* renderer);
 
@@ -18,6 +18,8 @@ private:
 	static std::int32_t sWidth;
 	static std::int32_t sHeight;
 	SDL_Texture* mTexture;
+	SDL_Texture* mIdTexture;
+	TTF_Font* mFont;
 	SDL_Rect mBoundingRect;
 	std::uint32_t mNodeId;
 	Vector2f mPosition;

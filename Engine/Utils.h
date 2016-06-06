@@ -1,6 +1,8 @@
 #pragma once
 
 #include <cstdint>
+#include <ostream>
+#include <string>
 #include <SDL.h>
 
 #define PI 3.14159265

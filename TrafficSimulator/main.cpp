@@ -10,7 +10,8 @@ SDL_Window* gWindow = nullptr;
 SDL_Renderer* gRenderer = nullptr;
 SDL_Texture* gCarTexture = nullptr;
 SDL_Texture* gWallTexture = nullptr;
-SDL_Texture* gNodetexture = nullptr;
+SDL_Texture* gNodeTexture = nullptr;
+TTF_Font* gCalibriFont = nullptr;
 
 std::vector<TrafficSimulator::Vehicle> gVehicleList;
 std::vector<TrafficSimulator::Wall> gWallList;
@@ -54,6 +55,13 @@ bool InitializeSDL()
 				if (!(IMG_Init(imgFlags) & imgFlags))
 				{
 					fprintf(ERR_STREAM, "SDL_image could not initialize! SDL_image Error: %s\n", IMG_GetError());
+					success = false;
+				}
+
+				// Initialize SDL_ttf
+				if (TTF_Init() == -1)
+				{
+					printf("SDL_ttf could not initialize! SDL_ttf Error: %s\n", TTF_GetError());
 					success = false;
 				}
 			}
@@ -110,10 +118,19 @@ bool LoadResources()
 	}
 
 	// Load the node PNG
-	gNodetexture = LoadTexture(ContentPath + "Images/node.png");
-	if (gNodetexture == nullptr)
+	gNodeTexture = LoadTexture(ContentPath + "Images/node.png");
+	if (gNodeTexture == nullptr)
 	{
 		fprintf(ERR_STREAM, "Failed to load texture image!\n");
+		success = false;
+	}
+
+	// Load the calibri font
+	const std::uint8_t CalibriFontSize = 24;
+	gCalibriFont = TTF_OpenFont((ContentPath + "Fonts/calibri.ttf").c_str(), CalibriFontSize);
+	if (gCalibriFont == nullptr)
+	{
+		printf("Failed to load lazy font! SDL_ttf Error: %s\n", TTF_GetError());
 		success = false;
 	}
 
@@ -125,6 +142,14 @@ void Shutdown()
 	// Free loaded images
 	SDL_DestroyTexture(gCarTexture);
 	gCarTexture = nullptr;
+	SDL_DestroyTexture(gWallTexture);
+	gWallTexture = nullptr;
+	SDL_DestroyTexture(gNodeTexture);
+	gNodeTexture = nullptr;
+
+	// Free loaded fonts
+	TTF_CloseFont(gCalibriFont);
+	gCalibriFont = nullptr;
 
 	// Destroy window
 	SDL_DestroyRenderer(gRenderer);
@@ -133,6 +158,7 @@ void Shutdown()
 	gRenderer = nullptr;
 
 	// Quit SDL subsystems
+	TTF_Quit();
 	IMG_Quit();
 	SDL_Quit();
 }
@@ -155,7 +181,7 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 		if (e.button.button == SDL_BUTTON_RIGHT)
 		{
 			// Place a node at the mouse position
-			Node node(gNodetexture,	Vector2f(static_cast<float>(e.button.x), static_cast<float>(e.button.y)));
+			Node node(gRenderer, gNodeTexture, gCalibriFont, Vector2f(static_cast<float>(e.button.x), static_cast<float>(e.button.y)));
 			gNodeList.emplace_back(node);
 		}
 		if (e.button.button == SDL_BUTTON_MIDDLE)
