@@ -12,6 +12,8 @@ public:
 	Node(SDL_Renderer* renderer, SDL_Texture* texture, TTF_Font* font, const Vector2f& position);
 	~Node();
 	void Draw(SDL_Renderer* renderer);
+	const Vector2f& GetPosition();
+	std::uint32_t GetId();
 
 private:
 	static std::uint32_t sTotalNodes;
@@ -23,5 +25,5 @@ private:
 	SDL_Rect mBoundingRect;
 	std::uint32_t mNodeId;
 	Vector2f mPosition;
-	std::vector<Node*> mNeighborNodes;
+	std::vector<Node*> mAdjacentNodes;
 };

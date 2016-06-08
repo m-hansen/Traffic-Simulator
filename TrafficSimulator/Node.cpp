@@ -5,12 +5,12 @@ std::int32_t Node::sWidth = 25;
 std::int32_t Node::sHeight = 25;
 
 Node::Node(SDL_Renderer* renderer, SDL_Texture* texture, TTF_Font* font, const Vector2f& position)
-	: mTexture(texture), mFont(font), mNodeId(sTotalNodes++), mPosition(position.x - sWidth / 2, position.y - sWidth / 2), mNeighborNodes()
+	: mTexture(texture), mFont(font), mNodeId(sTotalNodes++), mPosition(position), mAdjacentNodes()
 {
 	mBoundingRect = 
 	{
-		static_cast<std::int32_t>(mPosition.x),
-		static_cast<std::int32_t>(mPosition.y),
+		static_cast<std::int32_t>(mPosition.x - sWidth / 2),
+		static_cast<std::int32_t>(mPosition.y - sHeight / 2),
 		sWidth,
 		sHeight
 	};
@@ -46,4 +46,14 @@ void Node::Draw(SDL_Renderer* renderer)
 
 	// Display the node's id
 	SDL_RenderCopy(renderer, mIdTexture, nullptr, &mBoundingRect);
+}
+
+const Vector2f& Node::GetPosition()
+{
+	return mPosition;
+}
+
+std::uint32_t Node::GetId()
+{
+	return mNodeId;
 }

@@ -11,10 +11,14 @@
 #include <SDL_image.h>
 #include <SDL_ttf.h>
 
+#include "../Engine/Utils.h"
+#include "../Engine/TextureManager.h"
+
 #include "GameInstance.h"
 #include "Vehicle.h"
 #include "Wall.h"
 #include "RangeFinder.h"
 
 #include "Node.h"
+#include "Edge.h"
 #include "Graph.h"

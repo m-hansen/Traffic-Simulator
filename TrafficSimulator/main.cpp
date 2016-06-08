@@ -12,6 +12,7 @@ SDL_Texture* gCarTexture = nullptr;
 SDL_Texture* gWallTexture = nullptr;
 SDL_Texture* gNodeTexture = nullptr;
 TTF_Font* gCalibriFont = nullptr;
+Graph gGraph;
 
 std::vector<TrafficSimulator::Vehicle> gVehicleList;
 std::vector<TrafficSimulator::Wall> gWallList;
@@ -183,6 +184,10 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 			// Place a node at the mouse position
 			Node node(gRenderer, gNodeTexture, gCalibriFont, Vector2f(static_cast<float>(e.button.x), static_cast<float>(e.button.y)));
 			gNodeList.emplace_back(node);
+			if (gNodeList.size() > 1)
+			{
+				gGraph.CreateEdge(&gNodeList.at(gNodeList.size() - 2), &gNodeList.at(gNodeList.size() - 1));
+			}
 		}
 		if (e.button.button == SDL_BUTTON_MIDDLE)
 		{
@@ -239,6 +244,8 @@ void Render()
 	{
 		node.Draw(gRenderer);
 	}
+
+	gGraph.Draw(gRenderer);
 
 	// Update screen
 	SDL_RenderPresent(gRenderer);

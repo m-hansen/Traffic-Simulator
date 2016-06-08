@@ -4,7 +4,6 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="Vehicle.cpp" />
-    <ClCompile Include="GameInstance.cpp" />
     <ClCompile Include="Sensor.cpp">
       <Filter>Sensors</Filter>
     </ClCompile>
@@ -19,11 +18,14 @@
     <ClCompile Include="Node.cpp">
       <Filter>Graph</Filter>
     </ClCompile>
+    <ClCompile Include="Edge.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="GameInstance.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClInclude Include="Vehicle.h" />
-    <ClInclude Include="GameInstance.h" />
     <ClInclude Include="Sensor.h">
       <Filter>Sensors</Filter>
     </ClInclude>
@@ -39,6 +41,10 @@
     <ClInclude Include="Node.h">
       <Filter>Graph</Filter>
     </ClInclude>
+    <ClInclude Include="Edge.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="GameInstance.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Sensors">

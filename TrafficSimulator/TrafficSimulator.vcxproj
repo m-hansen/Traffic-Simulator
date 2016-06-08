@@ -149,6 +149,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Edge.cpp" />
     <ClCompile Include="GameInstance.cpp" />
     <ClCompile Include="Graph.cpp" />
     <ClCompile Include="IDrawable.cpp" />
@@ -166,6 +167,7 @@
     <ClCompile Include="Wall.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Edge.h" />
     <ClInclude Include="GameInstance.h" />
     <ClInclude Include="Graph.h" />
     <ClInclude Include="IDrawable.h" />
