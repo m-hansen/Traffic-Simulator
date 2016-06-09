@@ -1,8 +1,25 @@
 #include "pch.h"
 
-Edge::Edge(Node* from, Node* to)
-	: mNodeFrom(from), mNodeTo(to)
+Edge::Edge(const Node& from, const Node& to)
+	: mNodeFrom(&from), mNodeTo(&to), mCost(0.0)
 {
+}
+
+Edge::Edge(const Edge& rhs)
+	: mNodeFrom(rhs.mNodeFrom), mNodeTo(rhs.mNodeTo), mCost(rhs.mCost)
+{
+}
+
+Edge& Edge::operator=(const Edge& rhs)
+{
+	if (this != &rhs)
+	{
+		mNodeFrom = rhs.mNodeFrom;
+		mNodeTo = rhs.mNodeTo;
+		mCost = rhs.mCost;
+	}
+
+	return *this;
 }
 
 Edge::~Edge()
@@ -11,8 +28,12 @@ Edge::~Edge()
 
 void Edge::Draw(SDL_Renderer* renderer)
 {
-	SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0x00, 0xFF);
-
+	// TODO remove ---- debug
+	if (mNodeFrom->GetId() > 999)
+	{
+		int i = 0; 
+		++i;
+	}
 	Vector2f fromPosition = mNodeFrom->GetPosition();
 	Vector2f toPosition = mNodeTo->GetPosition();
 	SDL_RenderDrawLine

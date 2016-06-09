@@ -1,8 +1,10 @@
+// Traffic Simulator
 #pragma once
 
 #include <Windows.h>
 #include <cstdint>
 #include <cmath>
+#include <memory>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string>
@@ -12,7 +14,7 @@
 #include <SDL_ttf.h>
 
 #include "../Engine/Utils.h"
-#include "../Engine/TextureManager.h"
+#include "TextureManager.h"
 
 #include "GameInstance.h"
 #include "Vehicle.h"

@@ -163,6 +163,7 @@
     </ClCompile>
     <ClCompile Include="RangeFinder.cpp" />
     <ClCompile Include="Sensor.cpp" />
+    <ClCompile Include="TextureManager.cpp" />
     <ClCompile Include="Vehicle.cpp" />
     <ClCompile Include="Wall.cpp" />
   </ItemGroup>
@@ -176,6 +177,7 @@
     <ClInclude Include="RangeFinder.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Sensor.h" />
+    <ClInclude Include="TextureManager.h" />
     <ClInclude Include="Vehicle.h" />
     <ClInclude Include="Wall.h" />
   </ItemGroup>

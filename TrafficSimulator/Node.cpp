@@ -48,12 +48,12 @@ void Node::Draw(SDL_Renderer* renderer)
 	SDL_RenderCopy(renderer, mIdTexture, nullptr, &mBoundingRect);
 }
 
-const Vector2f& Node::GetPosition()
+const Vector2f& Node::GetPosition() const
 {
 	return mPosition;
 }
 
-std::uint32_t Node::GetId()
+std::uint32_t Node::GetId() const
 {
 	return mNodeId;
 }

@@ -24,13 +24,15 @@ private:
 	};
 
 public:
-	Edge(Node* from, Node* to);
+	Edge(const Node& from, const Node& to);
+	Edge(const Edge& rhs);
+	Edge& operator=(const Edge& rhs);
 	~Edge();
 	void Draw(SDL_Renderer* renderer);
 
 private:
-	Node* mNodeFrom;
-	Node* mNodeTo;
+	const Node* mNodeFrom;
+	const Node* mNodeTo;
 	double mCost;
 };
 

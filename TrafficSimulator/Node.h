@@ -1,6 +1,7 @@
 #pragma once
 
 #include <cstdint>
+#include <memory>
 #include <vector>
 #include <SDL.h>
 #include "IDrawable.h"
@@ -12,8 +13,8 @@ public:
 	Node(SDL_Renderer* renderer, SDL_Texture* texture, TTF_Font* font, const Vector2f& position);
 	~Node();
 	void Draw(SDL_Renderer* renderer);
-	const Vector2f& GetPosition();
-	std::uint32_t GetId();
+	const Vector2f& GetPosition() const;
+	std::uint32_t GetId() const;
 
 private:
 	static std::uint32_t sTotalNodes;

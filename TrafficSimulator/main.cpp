@@ -8,15 +8,11 @@ const std::string ContentPath = "../Content/";
 
 SDL_Window* gWindow = nullptr;
 SDL_Renderer* gRenderer = nullptr;
-SDL_Texture* gCarTexture = nullptr;
-SDL_Texture* gWallTexture = nullptr;
-SDL_Texture* gNodeTexture = nullptr;
 TTF_Font* gCalibriFont = nullptr;
-Graph gGraph;
+Graph* gGraph = nullptr;
 
 std::vector<TrafficSimulator::Vehicle> gVehicleList;
 std::vector<TrafficSimulator::Wall> gWallList;
-std::vector<Node> gNodeList;
 
 bool InitializeSDL()
 {
@@ -72,6 +68,7 @@ bool InitializeSDL()
 	return success;
 }
 
+// TODO: can remove this once TextureManager is implemented
 SDL_Texture* LoadTexture(const std::string& path)
 {
 	SDL_Texture* newTexture = nullptr;
@@ -102,29 +99,11 @@ bool LoadResources()
 {
 	bool success = true;
 
-	// Load the car PNG
-	gCarTexture = LoadTexture(ContentPath + "Images/car.png");
-	if (gCarTexture == nullptr)
-	{
-		fprintf(ERR_STREAM, "Failed to load texture image!\n");
-		success = false;
-	}
-
-	// Load the wall PNG
-	gWallTexture = LoadTexture(ContentPath + "Images/wall.png");
-	if (gWallTexture == nullptr)
-	{
-		fprintf(ERR_STREAM, "Failed to load texture image!\n");
-		success = false;
-	}
-
-	// Load the node PNG
-	gNodeTexture = LoadTexture(ContentPath + "Images/node.png");
-	if (gNodeTexture == nullptr)
-	{
-		fprintf(ERR_STREAM, "Failed to load texture image!\n");
-		success = false;
-	}
+	// Load textures
+	success = 
+		TextureManager::LoadTexture(gRenderer, "car", ContentPath + "Images/car.png") && 
+		TextureManager::LoadTexture(gRenderer, "wall", ContentPath + "Images/wall.png") &&
+		TextureManager::LoadTexture(gRenderer, "node", ContentPath + "Images/node.png");
 
 	// Load the calibri font
 	const std::uint8_t CalibriFontSize = 24;
@@ -141,12 +120,7 @@ bool LoadResources()
 void Shutdown()
 {
 	// Free loaded images
-	SDL_DestroyTexture(gCarTexture);
-	gCarTexture = nullptr;
-	SDL_DestroyTexture(gWallTexture);
-	gWallTexture = nullptr;
-	SDL_DestroyTexture(gNodeTexture);
-	gNodeTexture = nullptr;
+	TextureManager::ClearAll();
 
 	// Free loaded fonts
 	TTF_CloseFont(gCalibriFont);
@@ -176,17 +150,18 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 		if (e.button.button == SDL_BUTTON_LEFT)
 		{
 			// Place a wall at the mouse position
-			TrafficSimulator::Wall wall(gWallTexture, Vector2f(static_cast<float>(e.button.x), static_cast<float>(e.button.y)));
+			TrafficSimulator::Wall wall(TextureManager::GetTexture("wall"), Vector2f(static_cast<float>(e.button.x), static_cast<float>(e.button.y)));
 			gWallList.emplace_back(wall);
 		}
 		if (e.button.button == SDL_BUTTON_RIGHT)
 		{
-			// Place a node at the mouse position
-			Node node(gRenderer, gNodeTexture, gCalibriFont, Vector2f(static_cast<float>(e.button.x), static_cast<float>(e.button.y)));
-			gNodeList.emplace_back(node);
-			if (gNodeList.size() > 1)
+			gGraph->CreateNode(Vector2f(static_cast<float>(e.button.x), static_cast<float>(e.button.y)));
+
+			// Temporary code for testing - creates edges between current and last nodes placed
+			std::uint32_t graphNodeCount = gGraph->GetNodeCount();
+			if (graphNodeCount > 1)
 			{
-				gGraph.CreateEdge(&gNodeList.at(gNodeList.size() - 2), &gNodeList.at(gNodeList.size() - 1));
+				gGraph->CreateEdge(*gGraph->GetNodeAtIndex(graphNodeCount - 2), *gGraph->GetNodeAtIndex(graphNodeCount - 1));
 			}
 		}
 		if (e.button.button == SDL_BUTTON_MIDDLE)
@@ -195,7 +170,7 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 			const std::int32_t CarWidth = 26;
 			const std::int32_t CarHeight = 40;
 			TrafficSimulator::Vehicle car(
-				gCarTexture,
+				TextureManager::GetTexture("car"),
 				Vector2f(static_cast<float>(e.button.x), static_cast<float>(e.button.y)),
 				CarWidth,
 				CarHeight
@@ -239,13 +214,7 @@ void Render()
 		wall.Draw(gRenderer);
 	}
 
-	// Render all nodes
-	for (auto& node : gNodeList)
-	{
-		node.Draw(gRenderer);
-	}
-
-	gGraph.Draw(gRenderer);
+	gGraph->Draw(gRenderer);
 
 	// Update screen
 	SDL_RenderPresent(gRenderer);
@@ -276,7 +245,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	const std::int32_t CarWidth = 26;
 	const std::int32_t CarHeight = 40;
 	TrafficSimulator::Vehicle car(
-		gCarTexture,
+		TextureManager::GetTexture("car"),
 		Vector2f(ScreenWidth / 2, ScreenHeight / 2), 
 		CarWidth, 
 		CarHeight
@@ -285,6 +254,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 	std::uint32_t previousTick = 0;
 	std::uint32_t delta = 0;
+
+	// Create the graph
+	gGraph = new Graph(gRenderer, gCalibriFont);
 
 	while (isRunning)
 	{
@@ -304,6 +276,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			Render();
 		}
 	}
+
+	delete gGraph;
 
 	Shutdown();
 

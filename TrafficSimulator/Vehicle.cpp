@@ -3,14 +3,14 @@
 namespace TrafficSimulator
 {
 	Vehicle::Vehicle(SDL_Texture* texture, const Vector2f& position, std::int32_t width, std::int32_t height)
-		: mSpeed(10), mRotationSpeed(5), mTexture(texture), mPosition(position.x - width / 2, position.y - height / 2), 
+		: mSpeed(10), mRotationSpeed(5), mTexture(texture), mPosition(position), 
 		mWidth(width), mHeight(height),	mSensors(), mRotation(0), mRangeFinderLeft(100, 125), mRangeFinderCenter(100, 90), 
 		mRangeFinderRight(100, 55)
 	{
 		mBoundingRect = 
 		{ 
-			static_cast<std::int32_t>(mPosition.x),
-			static_cast<std::int32_t>(mPosition.y),
+			static_cast<std::int32_t>(mPosition.x - width / 2),
+			static_cast<std::int32_t>(mPosition.y - height / 2),
 			mWidth,
 			mHeight
 		};
