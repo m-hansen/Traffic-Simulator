@@ -25,6 +25,29 @@ Node::Node(SDL_Renderer* renderer, SDL_Texture* texture, TTF_Font* font, const V
 	}
 }
 
+Node::Node(const Node& rhs)
+	: mTexture(rhs.mTexture), mIdTexture(rhs.mIdTexture), mFont(rhs.mFont),
+	mBoundingRect(rhs.mBoundingRect), mNodeId(rhs.mNodeId), mPosition(rhs.mPosition),
+	mAdjacentNodes(rhs.mAdjacentNodes)
+{
+}
+
+Node& Node::operator=(const Node& rhs)
+{
+	if (this != &rhs)
+	{
+		mTexture = rhs.mTexture;
+		mIdTexture = rhs.mIdTexture;
+		mFont = rhs.mFont;
+		mBoundingRect = rhs.mBoundingRect;
+		mNodeId = rhs.mNodeId;
+		mPosition = rhs.mPosition;
+		mAdjacentNodes = rhs.mAdjacentNodes;
+	}
+
+	return *this;
+}
+
 Node::~Node()
 {
 	// TODO: Either create a move constructor, allocate on the heap and store a vector of pointers, or use unique_ptr.

@@ -28,12 +28,6 @@ Edge::~Edge()
 
 void Edge::Draw(SDL_Renderer* renderer)
 {
-	// TODO remove ---- debug
-	if (mNodeFrom->GetId() > 999)
-	{
-		int i = 0; 
-		++i;
-	}
 	Vector2f fromPosition = mNodeFrom->GetPosition();
 	Vector2f toPosition = mNodeTo->GetPosition();
 	SDL_RenderDrawLine
