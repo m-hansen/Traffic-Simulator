@@ -68,33 +68,6 @@ bool InitializeSDL()
 	return success;
 }
 
-// TODO: can remove this once TextureManager is implemented
-SDL_Texture* LoadTexture(const std::string& path)
-{
-	SDL_Texture* newTexture = nullptr;
-
-	// Load image at specified path
-	SDL_Surface* loadedSurface = IMG_Load(path.c_str());
-	if (loadedSurface == NULL)
-	{
-		fprintf(ERR_STREAM, "Unable to load image %s! SDL_image Error: %s\n", path.c_str(), IMG_GetError());
-	}
-	else
-	{
-		// Create texture from surface pixels
-		newTexture = SDL_CreateTextureFromSurface(gRenderer, loadedSurface);
-		if (newTexture == NULL)
-		{
-			fprintf(ERR_STREAM, "Unable to create texture from %s! SDL Error: %s\n", path.c_str(), SDL_GetError());
-		}
-
-		// Get rid of old loaded surface
-		SDL_FreeSurface(loadedSurface);
-	}
-
-	return newTexture;
-}
-
 bool LoadResources()
 {
 	bool success = true;
