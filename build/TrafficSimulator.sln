@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TrafficSimulator", "TrafficSimulator\TrafficSimulator.vcxproj", "{B9A5BCA9-584D-4833-A655-57E3254C1A66}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TrafficSimulator", "..\source\TrafficSimulator\TrafficSimulator.vcxproj", "{B9A5BCA9-584D-4833-A655-57E3254C1A66}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Engine", "Engine\Engine.vcxproj", "{9A017616-950C-4315-90FA-B287DE0747AF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Engine", "..\source\Engine\Engine.vcxproj", "{9A017616-950C-4315-90FA-B287DE0747AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
