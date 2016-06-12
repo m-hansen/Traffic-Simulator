@@ -70,15 +70,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Dev\libraries\SDL2-2.0.4\include;C:\Dev\libraries\SDL2_image-2.0.1\include;C:\Dev\libraries\SDL2_ttf-2.0.14\include</IncludePath>
+    <OutDir>$(ProjectDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)obj\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Dev\libraries\SDL2-2.0.4\include;C:\Dev\libraries\SDL2_image-2.0.1\include;C:\Dev\libraries\SDL2_ttf-2.0.14\include</IncludePath>
+    <OutDir>$(ProjectDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)obj\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Dev\libraries\SDL2-2.0.4\include;C:\Dev\libraries\SDL2_image-2.0.1\include;C:\Dev\libraries\SDL2_ttf-2.0.14\include</IncludePath>
+    <OutDir>$(ProjectDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)obj\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Dev\libraries\SDL2-2.0.4\include;C:\Dev\libraries\SDL2_image-2.0.1\include;C:\Dev\libraries\SDL2_ttf-2.0.14\include</IncludePath>
+    <OutDir>$(ProjectDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)obj\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -88,11 +96,12 @@
       <TreatWarningAsError>true</TreatWarningAsError>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>..\..\external\tinyxml2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>C:\Dev\libraries\SDL2-2.0.4\lib\x86;C:\Dev\libraries\SDL2_image-2.0.1\lib\x86;C:\Dev\libraries\SDL2_ttf-2.0.14\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Dev\libraries\SDL2-2.0.4\lib\x86;C:\Dev\libraries\SDL2_image-2.0.1\lib\x86;C:\Dev\libraries\SDL2_ttf-2.0.14\lib\x86;..\..\external\tinyxml2\lib\$(Platform)-$(Configuration)</AdditionalLibraryDirectories>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;tinyxml2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -103,11 +112,12 @@
       <TreatWarningAsError>true</TreatWarningAsError>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>..\..\external\tinyxml2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>C:\Dev\libraries\SDL2-2.0.4\lib\x64;C:\Dev\libraries\SDL2_image-2.0.1\lib\x64;C:\Dev\libraries\SDL2_ttf-2.0.14\lib\x64</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Dev\libraries\SDL2-2.0.4\lib\x64;C:\Dev\libraries\SDL2_image-2.0.1\lib\x64;C:\Dev\libraries\SDL2_ttf-2.0.14\lib\x64;..\..\external\tinyxml2\lib\$(Platform)-$(Configuration)</AdditionalLibraryDirectories>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;tinyxml2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -120,13 +130,14 @@
       <TreatWarningAsError>true</TreatWarningAsError>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>..\..\external\tinyxml2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>C:\Dev\libraries\SDL2-2.0.4\lib\x86;C:\Dev\libraries\SDL2_image-2.0.1\lib\x86;C:\Dev\libraries\SDL2_ttf-2.0.14\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Dev\libraries\SDL2-2.0.4\lib\x86;C:\Dev\libraries\SDL2_image-2.0.1\lib\x86;C:\Dev\libraries\SDL2_ttf-2.0.14\lib\x86;..\..\external\tinyxml2\lib\$(Platform)-$(Configuration)</AdditionalLibraryDirectories>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;tinyxml2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -139,19 +150,21 @@
       <TreatWarningAsError>true</TreatWarningAsError>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>..\..\external\tinyxml2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>C:\Dev\libraries\SDL2-2.0.4\lib\x64;C:\Dev\libraries\SDL2_image-2.0.1\lib\x64;C:\Dev\libraries\SDL2_ttf-2.0.14\lib\x64</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Dev\libraries\SDL2-2.0.4\lib\x64;C:\Dev\libraries\SDL2_image-2.0.1\lib\x64;C:\Dev\libraries\SDL2_ttf-2.0.14\lib\x64;..\..\external\tinyxml2\lib\$(Platform)-$(Configuration)</AdditionalLibraryDirectories>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;tinyxml2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Edge.cpp" />
     <ClCompile Include="GameInstance.cpp" />
     <ClCompile Include="Graph.cpp" />
+    <ClCompile Include="GraphParser.cpp" />
     <ClCompile Include="IDrawable.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Node.cpp" />
@@ -171,6 +184,7 @@
     <ClInclude Include="Edge.h" />
     <ClInclude Include="GameInstance.h" />
     <ClInclude Include="Graph.h" />
+    <ClInclude Include="GraphParser.h" />
     <ClInclude Include="IDrawable.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="pch.h" />

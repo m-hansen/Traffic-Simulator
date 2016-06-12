@@ -4,7 +4,7 @@
 
 const std::uint32_t ScreenWidth = 1280;
 const std::uint32_t ScreenHeight = 720;
-const std::string ContentPath = "../Content/";
+const std::string ContentPath = "../../Content/";
 
 SDL_Window* gWindow = nullptr;
 SDL_Renderer* gRenderer = nullptr;

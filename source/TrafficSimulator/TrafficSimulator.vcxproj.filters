@@ -23,6 +23,9 @@
     </ClCompile>
     <ClCompile Include="GameInstance.cpp" />
     <ClCompile Include="TextureManager.cpp" />
+    <ClCompile Include="GraphParser.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -47,6 +50,9 @@
     </ClInclude>
     <ClInclude Include="GameInstance.h" />
     <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="GraphParser.h">
+      <Filter>Graph</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Sensors">

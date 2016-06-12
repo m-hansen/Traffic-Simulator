@@ -82,15 +82,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>C:\Dev\libraries\SDL2-2.0.4\include;C:\Dev\libraries\SDL2_image-2.0.1\include;C:\Dev\libraries\SDL2_ttf-2.0.14\include;$(IncludePath)</IncludePath>
+    <OutDir>$(ProjectDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)obj\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>C:\Dev\libraries\SDL2-2.0.4\include;C:\Dev\libraries\SDL2_image-2.0.1\include;C:\Dev\libraries\SDL2_ttf-2.0.14\include;$(IncludePath)</IncludePath>
+    <OutDir>$(ProjectDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)obj\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>C:\Dev\libraries\SDL2-2.0.4\include;C:\Dev\libraries\SDL2_image-2.0.1\include;C:\Dev\libraries\SDL2_ttf-2.0.14\include;$(IncludePath)</IncludePath>
+    <OutDir>$(ProjectDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)obj\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>C:\Dev\libraries\SDL2-2.0.4\include;C:\Dev\libraries\SDL2_image-2.0.1\include;C:\Dev\libraries\SDL2_ttf-2.0.14\include;$(IncludePath)</IncludePath>
+    <OutDir>$(ProjectDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)obj\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

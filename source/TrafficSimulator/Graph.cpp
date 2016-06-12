@@ -39,7 +39,8 @@ void Graph::CreateNode(const Vector2f& position)
 
 std::uint32_t Graph::GetNodeCount() const
 {
-	return mNodeList.size();
+	// Note: The number of nodes in a graph must never exceed the maximum value of a 32-bit unsigned integer
+	return static_cast<std::uint32_t>(mNodeList.size());
 }
 
 const Node* Graph::GetNodeById(std::uint32_t id)
