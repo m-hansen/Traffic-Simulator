@@ -4,8 +4,8 @@ namespace TrafficSimulator
 {
 	Vehicle::Vehicle(SDL_Texture* texture, const Vector2f& position, std::int32_t width, std::int32_t height)
 		: mSpeed(10), mRotationSpeed(5), mTexture(texture), mPosition(position), 
-		mWidth(width), mHeight(height),	mSensors(), mRotation(0), mRangeFinderLeft(100, 125), mRangeFinderCenter(100, 90), 
-		mRangeFinderRight(100, 55)
+		mWidth(width), mHeight(height),	mSensors(), mRotation(0), mRangeFinderLeft(150, 125), mRangeFinderCenter(150, 90),
+		mRangeFinderRight(150, 55)
 	{
 		mBoundingRect = 
 		{ 
@@ -17,6 +17,9 @@ namespace TrafficSimulator
 		mSensors.emplace_back(&mRangeFinderLeft);
 		mSensors.emplace_back(&mRangeFinderCenter);
 		mSensors.emplace_back(&mRangeFinderRight);
+		
+		// Set the color
+		SDL_SetTextureColorMod(mTexture, 0x33, 0x99, 0xCC);
 	}
 
 	Vehicle::~Vehicle()
@@ -66,6 +69,7 @@ namespace TrafficSimulator
 		// Draw the vehicle
 		
 		//SDL_RenderFillRect(renderer, &mRect);
+		
 
 		//SDL_SetRenderDrawColor(renderer, 0xFF, 0x00, 0x00, 0xFF);
 		SDL_RenderCopyEx(renderer, mTexture, nullptr, &mBoundingRect, mRotation, nullptr, SDL_FLIP_NONE);

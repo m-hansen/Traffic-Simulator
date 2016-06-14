@@ -74,7 +74,7 @@ bool LoadResources()
 
 	// Load textures
 	success = 
-		TextureManager::LoadTexture(gRenderer, "car", ContentPath + "Images/car.png") && 
+		TextureManager::LoadTexture(gRenderer, "car", ContentPath + "Images/car-sprite.png") && 
 		TextureManager::LoadTexture(gRenderer, "wall", ContentPath + "Images/wall.png") &&
 		TextureManager::LoadTexture(gRenderer, "node", ContentPath + "Images/node.png");
 
@@ -142,6 +142,8 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 
 				gGraph->CreateEdge(*sourceNode, *targetNode);
 			}
+
+			// Memory debug
 			printf("======\nGraph\n======\n");
 			for (const auto& node : gGraph->Nodes())
 			{
@@ -153,13 +155,12 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 					edge.SourceNode().Id(), &edge.SourceNode(), edge.TargetNode().Id(), &edge.TargetNode());
 			}
 			printf("\n");
-			
 		}
 		if (e.button.button == SDL_BUTTON_MIDDLE)
 		{
 			// Place a vehicle at the mouse position
-			const std::int32_t CarWidth = 26;
-			const std::int32_t CarHeight = 40;
+			const std::int32_t CarWidth = 48;
+			const std::int32_t CarHeight = 96;
 			TrafficSimulator::Vehicle car(
 				TextureManager::GetTexture("car"),
 				Vector2f(static_cast<float>(e.button.x), static_cast<float>(e.button.y)),
@@ -245,8 +246,8 @@ int main(int argc, char* argv[])
 		}
 	}
 
-	const std::int32_t CarWidth = 26;
-	const std::int32_t CarHeight = 40;
+	const std::int32_t CarWidth = 48;
+	const std::int32_t CarHeight = 96;
 	TrafficSimulator::Vehicle car(
 		TextureManager::GetTexture("car"),
 		Vector2f(ScreenWidth / 2, ScreenHeight / 2), 
