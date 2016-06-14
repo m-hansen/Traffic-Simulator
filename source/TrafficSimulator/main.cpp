@@ -128,7 +128,7 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 		}
 		if (e.button.button == SDL_BUTTON_RIGHT)
 		{
-			gGraph->CreateNode(Vector2{e.button.x, e.button.y});
+			gGraph->CreateNode(Node::Count(), Vector2{e.button.x, e.button.y});
 
 			// Temporary code for testing - creates edges between current and last nodes placed
 			std::uint32_t graphNodeCount = gGraph->GetNodeCount();
@@ -142,6 +142,18 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 
 				gGraph->CreateEdge(*sourceNode, *targetNode);
 			}
+			printf("======\nGraph\n======\n");
+			for (const auto& node : gGraph->Nodes())
+			{
+				printf("Node ID: %d(0x%p)\n", node.Id(), &node);
+			}
+			for (const auto& edge : gGraph->Edges())
+			{
+				printf("Source ID: %d(0x%p)\tTarget ID: %d(0x%p)\n", 
+					edge.SourceNode().Id(), &edge.SourceNode(), edge.TargetNode().Id(), &edge.TargetNode());
+			}
+			printf("\n");
+			
 		}
 		if (e.button.button == SDL_BUTTON_MIDDLE)
 		{

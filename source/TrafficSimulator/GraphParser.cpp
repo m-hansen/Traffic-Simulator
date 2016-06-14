@@ -32,13 +32,15 @@ bool GraphParser::LoadGraph(Graph* graph, const std::string& filename)
 	XMLElement* nodeElement = element->FirstChildElement("node");
 	while (nodeElement != nullptr)
 	{
+		std::int32_t id = -1;
 		std::int32_t xPosition = -1;
 		std::int32_t yPosition = -1;
 
+		nodeElement->QueryIntAttribute("id", &id);
 		nodeElement->QueryIntAttribute("x", &xPosition);
 		nodeElement->QueryIntAttribute("y", &yPosition);
 
-		graph->CreateNode(Vector2{ xPosition, yPosition });
+		graph->CreateNode(id, Vector2{ xPosition, yPosition });
 
 		nodeElement = nodeElement->NextSiblingElement("node");
 	}

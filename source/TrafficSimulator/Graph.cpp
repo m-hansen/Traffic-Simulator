@@ -13,6 +13,7 @@ void Graph::Clear()
 {
 	mEdgeList.clear();
 	mNodeList.clear();
+	Node::ResetCount();
 }
 
 // TODO: Look into batch rendering to speed this process up
@@ -37,16 +38,16 @@ void Graph::CreateEdge(const Node& source, const Node& target)
 	mEdgeList.emplace_back(edge);
 }
 
-void Graph::CreateNode(const Vector2& position)
+void Graph::CreateNode(std::uint32_t id, const Vector2& position)
 {
-	Node node(mRenderer, TextureManager::GetTexture("node"), mFont, position);
+	Node node(mRenderer, TextureManager::GetTexture("node"), mFont, id, position);
 	mNodeList.emplace_back(node);
 }
 
 std::uint32_t Graph::GetNodeCount() const
 {
 	// Note: The number of nodes in a graph must never exceed the maximum value of a 32-bit unsigned integer
-	return static_cast<std::uint32_t>(mNodeList.size());
+	return Node::Count();
 }
 
 const Node* Graph::GetNodeById(std::uint32_t id)
@@ -62,22 +63,12 @@ const Node* Graph::GetNodeById(std::uint32_t id)
 	return nullptr;
 }
 
-const Node* Graph::GetNodeAtIndex(std::uint32_t index) const
-{
-	if (index < GetNodeCount())
-	{
-		return &mNodeList.at(index);
-	}
-
-	return nullptr;
-}
-
-const std::vector<Node>& Graph::Nodes() const
+const std::list<Node>& Graph::Nodes() const
 {
 	return mNodeList;
 }
 
-const std::vector<Edge>& Graph::Edges() const
+const std::list<Edge>& Graph::Edges() const
 {
 	return mEdgeList;
 }

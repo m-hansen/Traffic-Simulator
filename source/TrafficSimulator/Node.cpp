@@ -4,9 +4,11 @@ std::uint32_t Node::sTotalNodes = 0;
 std::int32_t Node::sWidth = 25;
 std::int32_t Node::sHeight = 25;
 
-Node::Node(SDL_Renderer* renderer, SDL_Texture* texture, TTF_Font* font, const Vector2& position)
-	: mTexture(texture), mFont(font), mNodeId(sTotalNodes++), mPosition(position), mAdjacentNodes()
+Node::Node(SDL_Renderer* renderer, SDL_Texture* texture, TTF_Font* font, std::uint32_t id, const Vector2& position)
+	: mTexture(texture), mFont(font), mNodeId(id), mPosition(position), mAdjacentNodes()
 {
+	++sTotalNodes;
+
 	mBoundingRect = 
 	{
 		mPosition.x - static_cast<std::int32_t>(sWidth / 2),
@@ -79,4 +81,14 @@ const Vector2& Node::Position() const
 std::uint32_t Node::Id() const
 {
 	return mNodeId;
+}
+
+std::uint32_t Node::Count()
+{
+	return sTotalNodes;
+}
+
+void Node::ResetCount()
+{
+	sTotalNodes = 0;
 }

@@ -10,13 +10,15 @@
 class Node : public TrafficSimulator::IDrawable
 {
 public:
-	Node(SDL_Renderer* renderer, SDL_Texture* texture, TTF_Font* font, const Vector2& position);
+	Node(SDL_Renderer* renderer, SDL_Texture* texture, TTF_Font* font, std::uint32_t id, const Vector2& position);
 	Node(const Node& rhs);
 	Node& operator=(const Node& rhs);	
 	~Node();
 	void Draw(SDL_Renderer* renderer);
 	const Vector2& Position() const;
 	std::uint32_t Id() const;
+	static std::uint32_t Count();
+	static void ResetCount();
 
 private:
 	static std::uint32_t sTotalNodes;
