@@ -1,12 +1,12 @@
 #include "pch.h"
 
-Edge::Edge(const Node& from, const Node& to)
-	: mNodeFrom(&from), mNodeTo(&to), mCost(0.0)
+Edge::Edge(const Node& source, const Node& target)
+	: mSourceNode(&source), mTargetNode(&target), mWeight(0.0)
 {
 }
 
 Edge::Edge(const Edge& rhs)
-	: mNodeFrom(rhs.mNodeFrom), mNodeTo(rhs.mNodeTo), mCost(rhs.mCost)
+	: mSourceNode(rhs.mSourceNode), mTargetNode(rhs.mTargetNode), mWeight(rhs.mWeight)
 {
 }
 
@@ -14,9 +14,9 @@ Edge& Edge::operator=(const Edge& rhs)
 {
 	if (this != &rhs)
 	{
-		mNodeFrom = rhs.mNodeFrom;
-		mNodeTo = rhs.mNodeTo;
-		mCost = rhs.mCost;
+		mSourceNode = rhs.mSourceNode;
+		mTargetNode = rhs.mTargetNode;
+		mWeight = rhs.mWeight;
 	}
 
 	return *this;
@@ -28,14 +28,17 @@ Edge::~Edge()
 
 void Edge::Draw(SDL_Renderer* renderer)
 {
-	Vector2f fromPosition = mNodeFrom->GetPosition();
-	Vector2f toPosition = mNodeTo->GetPosition();
-	SDL_RenderDrawLine
-	(
-		renderer,
-		static_cast<std::int32_t>(fromPosition.x),
-		static_cast<std::int32_t>(fromPosition.y),
-		static_cast<std::int32_t>(toPosition.x),
-		static_cast<std::int32_t>(toPosition.y)
-	);
+	Vector2 sourcePosition = mSourceNode->Position();
+	Vector2 targetPosition = mTargetNode->Position();
+	SDL_RenderDrawLine(renderer, sourcePosition.x, sourcePosition.y, targetPosition.x, targetPosition.y);
+}
+
+const Node& Edge::SourceNode() const
+{
+	return *mSourceNode;
+}
+
+const Node& Edge::TargetNode() const
+{
+	return *mTargetNode;
 }

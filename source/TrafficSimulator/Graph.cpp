@@ -1,12 +1,18 @@
 #include "pch.h"
 
 Graph::Graph(SDL_Renderer* renderer, TTF_Font* font)
-	: mRenderer(renderer), mFont(font)
+	: mRenderer(renderer), mFont(font), mNodeList(), mEdgeList()
 {
 }
 
 Graph::~Graph()
 {
+}
+
+void Graph::Clear()
+{
+	mEdgeList.clear();
+	mNodeList.clear();
 }
 
 // TODO: Look into batch rendering to speed this process up
@@ -25,13 +31,13 @@ void Graph::Draw(SDL_Renderer* renderer)
 	}
 }
 
-void Graph::CreateEdge(const Node& from, const Node& to)
+void Graph::CreateEdge(const Node& source, const Node& target)
 {
-	Edge edge(from, to);
+	Edge edge(source, target);
 	mEdgeList.emplace_back(edge);
 }
 
-void Graph::CreateNode(const Vector2f& position)
+void Graph::CreateNode(const Vector2& position)
 {
 	Node node(mRenderer, TextureManager::GetTexture("node"), mFont, position);
 	mNodeList.emplace_back(node);
@@ -47,7 +53,7 @@ const Node* Graph::GetNodeById(std::uint32_t id)
 {
 	for (const auto& node : mNodeList)
 	{
-		if (node.GetId() == id)
+		if (node.Id() == id)
 		{
 			return &node;
 		}
@@ -64,4 +70,14 @@ const Node* Graph::GetNodeAtIndex(std::uint32_t index) const
 	}
 
 	return nullptr;
+}
+
+const std::vector<Node>& Graph::Nodes() const
+{
+	return mNodeList;
+}
+
+const std::vector<Edge>& Graph::Edges() const
+{
+	return mEdgeList;
 }

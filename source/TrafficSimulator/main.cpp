@@ -128,13 +128,19 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 		}
 		if (e.button.button == SDL_BUTTON_RIGHT)
 		{
-			gGraph->CreateNode(Vector2f(static_cast<float>(e.button.x), static_cast<float>(e.button.y)));
+			gGraph->CreateNode(Vector2{e.button.x, e.button.y});
 
 			// Temporary code for testing - creates edges between current and last nodes placed
 			std::uint32_t graphNodeCount = gGraph->GetNodeCount();
 			if (graphNodeCount > 1)
 			{
-				gGraph->CreateEdge(*gGraph->GetNodeAtIndex(graphNodeCount - 2), *gGraph->GetNodeAtIndex(graphNodeCount - 1));
+				std::uint32_t sourceNodeId = graphNodeCount - 2;
+				std::uint32_t targetNodeId = graphNodeCount - 1;
+
+				const Node* sourceNode = gGraph->GetNodeById(sourceNodeId);
+				const Node* targetNode = gGraph->GetNodeById(targetNodeId);
+
+				gGraph->CreateEdge(*sourceNode, *targetNode);
 			}
 		}
 		if (e.button.button == SDL_BUTTON_MIDDLE)
@@ -159,6 +165,19 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 			break;
 		}
 	}
+
+	if (e.type == SDL_KEYDOWN)
+	{
+		switch (e.key.keysym.sym)
+		{
+		case SDLK_p:
+			GraphParser::SaveGraph(*gGraph, (ContentPath + "Test/test001.xml").c_str());
+			break;
+		case SDLK_l:
+			GraphParser::LoadGraph(gGraph, (ContentPath + "Test/test001.xml").c_str());
+			break;
+		}
+	}
 }
 
 void Update(std::uint32_t delta)
@@ -175,6 +194,9 @@ void Render()
 	SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
 	SDL_RenderClear(gRenderer);
 
+	// Render the graph
+	gGraph->Draw(gRenderer);
+
 	// Render all vehicles to screen
 	for (auto& vehicle : gVehicleList)
 	{
@@ -187,18 +209,14 @@ void Render()
 		wall.Draw(gRenderer);
 	}
 
-	gGraph->Draw(gRenderer);
-
 	// Update screen
 	SDL_RenderPresent(gRenderer);
 }
 
-int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
+int main(int argc, char* argv[])
 {
-	UNREFERENCED_PARAMETER(hInstance);
-	UNREFERENCED_PARAMETER(hPrevInstance);
-	UNREFERENCED_PARAMETER(lpCmdLine);
-	UNREFERENCED_PARAMETER(nCmdShow);
+	UNREFERENCED_PARAMETER(argc);
+	UNREFERENCED_PARAMETER(argv);
 
 	bool isRunning = true;
 	SDL_Event e;

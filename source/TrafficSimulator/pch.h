@@ -24,3 +24,4 @@
 #include "Node.h"
 #include "Edge.h"
 #include "Graph.h"
+#include "GraphParser.h"
