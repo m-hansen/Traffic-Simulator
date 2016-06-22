@@ -190,6 +190,14 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 		case SDLK_l:
 			GraphParser::LoadGraph(gGraph, (ContentPath + "Test/test001.xml").c_str());
 			break;
+		case SDLK_SPACE:
+			// For debugging only
+			// Recalculate path
+			srand(static_cast<uint32_t>(std::time(NULL)));
+			std::int32_t randomIndex = rand() % gGraph->GetNodeCount();
+			gGraph->RemoveHighlight(gVehicleList[0].Itinerary());
+			gVehicleList[0].NavigateTo(*gGraph->GetNodeById(randomIndex));
+			gGraph->HighlightPath(gVehicleList[0].Itinerary());
 		}
 	}
 }

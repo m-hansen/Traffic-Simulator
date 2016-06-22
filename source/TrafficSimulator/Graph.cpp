@@ -1,5 +1,7 @@
 #include "pch.h"
 
+const SDL_Color Graph::sDefaultEdgeColor = SDL_Color{ 0x00, 0x00, 0x00, 0xFF };
+
 Graph::Graph(SDL_Renderer* renderer, TTF_Font* font)
 	: mRenderer(renderer), mFont(font), mNodeList(), mEdgeList()
 {
@@ -30,7 +32,7 @@ void Graph::Draw(SDL_Renderer* renderer)
 	}
 }
 
-void Graph::HighlightPath(const std::list<const Node*>& nodes)
+void Graph::HighlightPath(const std::list<const Node*>& nodes, const SDL_Color color)
 {
 	const Node* previousNode = nullptr;
 
@@ -40,37 +42,21 @@ void Graph::HighlightPath(const std::list<const Node*>& nodes)
 		{
 			// Color edges
 			// Note: Both directions, if it exists, are being highlighted for debugging purposes
-			const_cast<Edge*>(FindEdge(*previousNode, *node))->SetColor(SDL_Color{ 0xFF, 0x00, 0x00, 0xFF });
+			const_cast<Edge*>(FindEdge(*previousNode, *node))->SetColor(SDL_Color{ color.r, color.g, color.b, color.a });
 			const Edge* temp = FindEdge(*node, *previousNode);
 			if (temp)
 			{
-				const_cast<Edge*>(temp)->SetColor(SDL_Color{ 0xFF, 0x00, 0x00, 0xFF });
+				const_cast<Edge*>(temp)->SetColor(SDL_Color{ color.r, color.g, color.b, color.a });
 			}
 		}
 
 		previousNode = node;
 	}
+}
 
-	//for (std::uint32_t i = 0; i < nodes.size(); ++i)
-	//{
-	//	Node* currentNode = nodes.front;
-	//	assert(currentNode);
-
-	//	//currentNode->Draw(renderer);
-
-	//	if (i == 0)
-	//	{
-	//		// Color start node
-	//	}
-	//	else
-	//	{
-	//		// Color edges
-	//		const_cast<Edge*>(FindEdge(*GetNodeById(i - 1), *currentNode))->SetColor(SDL_Color{ 0xFF, 0x00, 0x00, 0xFF });
-	//	}
-
-	//	currentNode = currentNode->
-	//}
-
+void Graph::RemoveHighlight(const std::list<const Node*>& nodes)
+{
+	HighlightPath(nodes, sDefaultEdgeColor);
 }
 
 void Graph::CreateEdge(const Node& source, const Node& target)
