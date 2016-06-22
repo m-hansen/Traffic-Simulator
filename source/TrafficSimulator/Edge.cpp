@@ -1,8 +1,27 @@
 #include "pch.h"
 
 Edge::Edge(const Node& source, const Node& target)
-	: mSourceNode(source), mTargetNode(target), mWeight(0.0)
+	: mSourceNode(source), mTargetNode(target), mWeight(0.0), mColor(SDL_Color{0x00, 0x00, 0x00, 0xFF})
 {
+	// Distance is squared
+	double distanceSq = std::pow((source.Position().x - target.Position().x), 2) +
+		std::pow((source.Position().y - target.Position().y), 2);
+
+	mWeight = distanceSq; // For now, the total weight can just equal the distance squared
+
+#if (_DEBUG)
+	printf("Edge %d->%d weight : %.2lf\n", source.Id(), target.Id(), mWeight);
+#endif
+}
+
+bool Edge::operator==(const Edge& rhs) const
+{
+	return ((mSourceNode == rhs.SourceNode()) && (mTargetNode == rhs.TargetNode()));
+}
+
+bool Edge::operator!=(const Edge& rhs) const
+{
+	return !(*this == rhs);
 }
 
 Edge::~Edge()
@@ -11,6 +30,7 @@ Edge::~Edge()
 
 void Edge::Draw(SDL_Renderer* renderer)
 {
+	SDL_SetRenderDrawColor(renderer, mColor.r, mColor.g, mColor.b, mColor.a);
 	Vector2 sourcePosition = mSourceNode.Position();
 	Vector2 targetPosition = mTargetNode.Position();
 	SDL_RenderDrawLine(renderer, sourcePosition.x, sourcePosition.y, targetPosition.x, targetPosition.y);
@@ -24,4 +44,9 @@ const Node& Edge::SourceNode() const
 const Node& Edge::TargetNode() const
 {
 	return mTargetNode;
+}
+
+double Edge::Weight() const
+{ 
+	return mWeight;
 }

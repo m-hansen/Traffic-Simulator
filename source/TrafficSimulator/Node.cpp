@@ -50,6 +50,16 @@ Node& Node::operator=(const Node& rhs)
 	return *this;
 }
 
+bool Node::operator==(const Node& rhs) const
+{
+	return ((mNodeId == rhs.Id()) && (mPosition == rhs.Position()));
+}
+
+bool Node::operator!=(const Node& rhs) const
+{
+	return !(*this == rhs);
+}
+
 Node::~Node()
 {
 	// TODO: Either create a move constructor, allocate on the heap and store a vector of pointers, or use unique_ptr.
@@ -60,6 +70,14 @@ Node::~Node()
 		SDL_DestroyTexture(mIdTexture);
 		mIdTexture = nullptr;
 	}*/
+}
+
+void Node::InitializeForPathfinding()
+{
+	mMovementCost = DBL_MAX;
+	mHeuristic = 0.0;
+	mTotalCost = 0.0;
+	mParent = nullptr;
 }
 
 void Node::Draw(SDL_Renderer* renderer)

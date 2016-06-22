@@ -26,6 +26,7 @@
     <ClCompile Include="GraphParser.cpp">
       <Filter>Graph</Filter>
     </ClCompile>
+    <ClCompile Include="Pathfinder.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -53,6 +54,7 @@
     <ClInclude Include="GraphParser.h">
       <Filter>Graph</Filter>
     </ClInclude>
+    <ClInclude Include="Pathfinder.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Sensors">

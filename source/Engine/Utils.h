@@ -13,13 +13,16 @@ namespace Engine
 	{
 		std::int32_t x;
 		std::int32_t y;
+		inline bool operator==(const Vector2& rhs) const { return ((x == rhs.x) && (y == rhs.y)); }
+		inline bool operator!=(const Vector2& rhs) const { return !(*this == rhs); }
 	};
 
 	struct Vector2f
 	{
-		Vector2f(float x1, float y1) : x(x1), y(y1) { }
 		float x;
 		float y;
+		inline bool operator==(const Vector2f& rhs) const { return ((x == rhs.x) && (y == rhs.y)); }
+		inline bool operator!=(const Vector2f& rhs) const { return !(*this == rhs); }
 	};
 
 	struct Vector3

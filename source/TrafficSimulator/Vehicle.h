@@ -7,15 +7,20 @@
 
 using namespace Engine;
 
+class Node;
+class Graph;
+
 namespace TrafficSimulator
 {
 	class Vehicle : public IDrawable
 	{
 	public:
-		Vehicle(SDL_Texture* texture, const Vector2f& position, std::int32_t width, std::int32_t height);
+		Vehicle(SDL_Texture* texture, const Vector2f& position, std::int32_t width, std::int32_t height, const Graph& map);
 		~Vehicle();
 		void Update(std::uint32_t delta, const std::vector<Vehicle>& vehicles, const std::vector<Wall>& walls);
 		void Draw(SDL_Renderer* renderer);
+		void NavigateTo(const Node& targetNode);
+		const std::list<const Node*>& Itinerary() const;
 
 	private:
 		SDL_Texture* mTexture;
@@ -31,5 +36,9 @@ namespace TrafficSimulator
 		RangeFinder mRangeFinderCenter;
 		RangeFinder mRangeFinderRight;
 		std::vector<Sensor*> mSensors;
+		Node* mLastVisitedNode;
+		std::list<const Node*> mItinerary;
+		const Graph& mMap;
+		bool mIsSelected;
 	};
 }

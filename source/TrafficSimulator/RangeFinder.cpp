@@ -3,7 +3,7 @@
 namespace TrafficSimulator
 {
 	RangeFinder::RangeFinder(float length, float angle)
-		: mColor{ 0x00, 0xFF, 0x00, 0xFF }, mIsIntersecting(false), mLength(length), mAngleInDegrees(angle), mStartPosition(Vector2f(0, 0)), mEndPosition(Vector2f(0, 0))
+		: mColor{ 0x00, 0xFF, 0x00, 0xFF }, mIsIntersecting(false), mLength(length), mAngleInDegrees(angle), mStartPosition(Vector2f{ 0, 0 }), mEndPosition(Vector2f{ 0, 0 })
 	{
 	}
 

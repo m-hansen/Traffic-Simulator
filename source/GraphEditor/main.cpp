@@ -11,9 +11,6 @@ SDL_Renderer* gRenderer = nullptr;
 TTF_Font* gCalibriFont = nullptr;
 Graph* gGraph = nullptr;
 
-std::vector<TrafficSimulator::Vehicle> gVehicleList;
-std::vector<TrafficSimulator::Wall> gWallList;
-
 bool InitializeSDL()
 {
 	bool success = true;
@@ -73,10 +70,7 @@ bool LoadResources()
 	bool success = true;
 
 	// Load textures
-	success = 
-		TextureManager::LoadTexture(gRenderer, "car", ContentPath + "Images/car-sprite.png") && 
-		TextureManager::LoadTexture(gRenderer, "wall", ContentPath + "Images/wall.png") &&
-		TextureManager::LoadTexture(gRenderer, "node", ContentPath + "Images/node.png");
+	success = TextureManager::LoadTexture(gRenderer, "node", ContentPath + "Images/node.png");
 
 	// Load the calibri font
 	const std::uint8_t CalibriFontSize = 24;
@@ -122,13 +116,11 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 	{
 		if (e.button.button == SDL_BUTTON_LEFT)
 		{
-			// Place a wall at the mouse position
-			TrafficSimulator::Wall wall(TextureManager::GetTexture("wall"), Vector2f{ static_cast<float>(e.button.x), static_cast<float>(e.button.y) });
-			gWallList.emplace_back(wall);
+			// TODO: Select a node
 		}
 		if (e.button.button == SDL_BUTTON_RIGHT)
 		{
-			gGraph->CreateNode(Node::Count(), Vector2{e.button.x, e.button.y});
+			gGraph->CreateNode(Node::Count(), Vector2{ e.button.x, e.button.y });
 
 			// Temporary code for testing - creates edges between current and last nodes placed
 			std::uint32_t graphNodeCount = gGraph->GetNodeCount();
@@ -151,24 +143,14 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 			}
 			for (const auto& edge : gGraph->Edges())
 			{
-				printf("Source ID: %d(0x%p)\tTarget ID: %d(0x%p)\n", 
+				printf("Source ID: %d(0x%p)\tTarget ID: %d(0x%p)\n",
 					edge.SourceNode().Id(), &edge.SourceNode(), edge.TargetNode().Id(), &edge.TargetNode());
 			}
 			printf("\n");
 		}
 		if (e.button.button == SDL_BUTTON_MIDDLE)
 		{
-			// Place a vehicle at the mouse position
-			const std::int32_t CarWidth = 48;
-			const std::int32_t CarHeight = 96;
-			TrafficSimulator::Vehicle car(
-				TextureManager::GetTexture("car"),
-				Vector2f{ static_cast<float>(e.button.x), static_cast<float>(e.button.y) },
-				CarWidth,
-				CarHeight,
-				*gGraph
-			);
-			gVehicleList.emplace_back(car);
+			// TODO: Remove a node
 		}
 	}
 	else if (e.type == SDL_MOUSEBUTTONUP)
@@ -196,10 +178,6 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 
 void Update(std::uint32_t delta)
 {
-	for (auto& vehicle : gVehicleList)
-	{
-		vehicle.Update(delta, gVehicleList, gWallList);
-	}
 }
 
 void Render()
@@ -210,18 +188,6 @@ void Render()
 
 	// Render the graph
 	gGraph->Draw(gRenderer);
-
-	// Render all vehicles to screen
-	for (auto& vehicle : gVehicleList)
-	{
-		vehicle.Draw(gRenderer);
-	}
-
-	// Render all walls
-	for (auto& wall : gWallList)
-	{
-		wall.Draw(gRenderer);
-	}
 
 	// Update screen
 	SDL_RenderPresent(gRenderer);
@@ -252,23 +218,6 @@ int main(int argc, char* argv[])
 
 	// Create the graph
 	gGraph = new Graph(gRenderer, gCalibriFont);
-
-	// Load a graph
-	GraphParser::LoadGraph(gGraph, (ContentPath + "Test/test001.xml").c_str());
-	
-	const std::int32_t CarWidth = 48;
-	const std::int32_t CarHeight = 96;
-	TrafficSimulator::Vehicle car(
-		TextureManager::GetTexture("car"),
-		Vector2f{ ScreenWidth / 2, ScreenHeight / 2 },
-		CarWidth, 
-		CarHeight,
-		*gGraph
-	);
-	gVehicleList.emplace_back(car);
-
-	// Color path for selected vehicle, if any
-	gGraph->HighlightPath(gVehicleList[0].Itinerary()); // TODO: update for selected and not index 0
 
 	while (isRunning)
 	{

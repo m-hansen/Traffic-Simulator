@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{B9A5BCA9-584D-4833-A655-57E3254C1A66}</ProjectGuid>
-    <RootNamespace>TrafficSimulator</RootNamespace>
+    <ProjectGuid>{DFC0DBA5-43DC-495F-A114-8416B471ACB9}</ProjectGuid>
+    <RootNamespace>GraphEditor</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -96,10 +96,8 @@
       <TreatWarningAsError>true</TreatWarningAsError>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>..\..\external\tinyxml2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>C:\Dev\libraries\SDL2-2.0.4\lib\x86;C:\Dev\libraries\SDL2_image-2.0.1\lib\x86;C:\Dev\libraries\SDL2_ttf-2.0.14\lib\x86;..\..\external\tinyxml2\lib\$(Platform)-$(Configuration)</AdditionalLibraryDirectories>
       <SubSystem>Console</SubSystem>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;tinyxml2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
@@ -112,10 +110,8 @@
       <TreatWarningAsError>true</TreatWarningAsError>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>..\..\external\tinyxml2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>C:\Dev\libraries\SDL2-2.0.4\lib\x64;C:\Dev\libraries\SDL2_image-2.0.1\lib\x64;C:\Dev\libraries\SDL2_ttf-2.0.14\lib\x64;..\..\external\tinyxml2\lib\$(Platform)-$(Configuration)</AdditionalLibraryDirectories>
       <SubSystem>Console</SubSystem>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;tinyxml2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
@@ -130,12 +126,10 @@
       <TreatWarningAsError>true</TreatWarningAsError>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>..\..\external\tinyxml2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>C:\Dev\libraries\SDL2-2.0.4\lib\x86;C:\Dev\libraries\SDL2_image-2.0.1\lib\x86;C:\Dev\libraries\SDL2_ttf-2.0.14\lib\x86;..\..\external\tinyxml2\lib\$(Platform)-$(Configuration)</AdditionalLibraryDirectories>
       <SubSystem>Console</SubSystem>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;tinyxml2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
@@ -150,55 +144,37 @@
       <TreatWarningAsError>true</TreatWarningAsError>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>..\..\external\tinyxml2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>C:\Dev\libraries\SDL2-2.0.4\lib\x64;C:\Dev\libraries\SDL2_image-2.0.1\lib\x64;C:\Dev\libraries\SDL2_ttf-2.0.14\lib\x64;..\..\external\tinyxml2\lib\$(Platform)-$(Configuration)</AdditionalLibraryDirectories>
       <SubSystem>Console</SubSystem>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;tinyxml2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Edge.cpp" />
-    <ClCompile Include="GameInstance.cpp" />
-    <ClCompile Include="Graph.cpp" />
-    <ClCompile Include="GraphParser.cpp" />
-    <ClCompile Include="IDrawable.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Node.cpp" />
-    <ClCompile Include="Pathfinder.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pch.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pch.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pch.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="RangeFinder.cpp" />
-    <ClCompile Include="Sensor.cpp" />
-    <ClCompile Include="TextureManager.cpp" />
-    <ClCompile Include="Vehicle.cpp" />
-    <ClCompile Include="Wall.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Edge.h" />
-    <ClInclude Include="GameInstance.h" />
-    <ClInclude Include="Graph.h" />
-    <ClInclude Include="GraphParser.h" />
-    <ClInclude Include="IDrawable.h" />
-    <ClInclude Include="Node.h" />
-    <ClInclude Include="Pathfinder.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="RangeFinder.h" />
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="Sensor.h" />
-    <ClInclude Include="TextureManager.h" />
-    <ClInclude Include="Vehicle.h" />
-    <ClInclude Include="Wall.h" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="TrafficSimulator.rc" />
+    <ProjectReference Include="..\Engine\Engine.vcxproj">
+      <Project>{9a017616-950c-4315-90fa-b287de0747af}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\TrafficSimulator\TrafficSimulator.vcxproj">
+      <Project>{b9a5bca9-584d-4833-a655-57e3254c1a66}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

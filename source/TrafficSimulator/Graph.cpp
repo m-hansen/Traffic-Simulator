@@ -19,17 +19,58 @@ void Graph::Clear()
 // TODO: Look into batch rendering to speed this process up
 void Graph::Draw(SDL_Renderer* renderer)
 {
-	SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);
-	for (auto& node : mNodeList)
-	{
-		node.Draw(renderer);
-	}
-
-	SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0x00, 0xFF);
 	for (auto& edge : mEdgeList)
 	{
 		edge.Draw(renderer);
 	}
+
+	for (auto& node : mNodeList)
+	{
+		node.Draw(renderer);
+	}
+}
+
+void Graph::HighlightPath(const std::list<const Node*>& nodes)
+{
+	const Node* previousNode = nullptr;
+
+	for (const Node* node : nodes)
+	{
+		if (previousNode != nullptr)
+		{
+			// Color edges
+			// Note: Both directions, if it exists, are being highlighted for debugging purposes
+			const_cast<Edge*>(FindEdge(*previousNode, *node))->SetColor(SDL_Color{ 0xFF, 0x00, 0x00, 0xFF });
+			const Edge* temp = FindEdge(*node, *previousNode);
+			if (temp)
+			{
+				const_cast<Edge*>(temp)->SetColor(SDL_Color{ 0xFF, 0x00, 0x00, 0xFF });
+			}
+		}
+
+		previousNode = node;
+	}
+
+	//for (std::uint32_t i = 0; i < nodes.size(); ++i)
+	//{
+	//	Node* currentNode = nodes.front;
+	//	assert(currentNode);
+
+	//	//currentNode->Draw(renderer);
+
+	//	if (i == 0)
+	//	{
+	//		// Color start node
+	//	}
+	//	else
+	//	{
+	//		// Color edges
+	//		const_cast<Edge*>(FindEdge(*GetNodeById(i - 1), *currentNode))->SetColor(SDL_Color{ 0xFF, 0x00, 0x00, 0xFF });
+	//	}
+
+	//	currentNode = currentNode->
+	//}
+
 }
 
 void Graph::CreateEdge(const Node& source, const Node& target)
@@ -50,7 +91,7 @@ std::uint32_t Graph::GetNodeCount() const
 	return Node::Count();
 }
 
-const Node* Graph::GetNodeById(std::uint32_t id)
+const Node* Graph::GetNodeById(std::uint32_t id) const
 {
 	for (const auto& node : mNodeList)
 	{
@@ -71,4 +112,28 @@ const std::list<Node>& Graph::Nodes() const
 const std::list<Edge>& Graph::Edges() const
 {
 	return mEdgeList;
+}
+
+const Edge* Graph::FindEdge(const Node& source, const Node& target) const
+{
+	const Edge* foundEdge = nullptr;
+
+	for (std::list<Edge>::const_iterator edge = mEdgeList.begin(); edge != mEdgeList.end(); ++edge)
+	{
+		if (edge->SourceNode() == source && edge->TargetNode() == target)
+		{
+			foundEdge = &(*edge);
+			break;
+		}
+	}
+
+	return foundEdge;
+}
+
+void Graph::InitializeForPathfinding()
+{
+	for (Node& node : mNodeList)
+	{
+		node.InitializeForPathfinding();
+	}
 }

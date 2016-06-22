@@ -60,6 +60,9 @@ bool GraphParser::LoadGraph(Graph* graph, const std::string& filename)
 
 		graph->CreateEdge(*sourceNode, *targetNode);
 
+		// Add connected nodes to the source adjacency list
+		const_cast<Node*>(sourceNode)->AddAdjacentNode(*targetNode);
+
 		edgeElement = edgeElement->NextSiblingElement("edge");
 	}
 
