@@ -87,6 +87,8 @@ bool LoadResources()
 		success = false;
 	}
 
+	success &= TextureManager::LoadFont("calibri", ContentPath + "Fonts/calibri.ttf", 24);
+
 	return success;
 }
 
@@ -159,8 +161,8 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 		if (e.button.button == SDL_BUTTON_MIDDLE)
 		{
 			// Place a vehicle at the mouse position
-			const std::int32_t CarWidth = 48;
-			const std::int32_t CarHeight = 96;
+			const std::int32_t CarWidth = 26;
+			const std::int32_t CarHeight = 50;
 			TrafficSimulator::Vehicle car(
 				TextureManager::GetTexture("car"),
 				Vector2f{ static_cast<float>(e.button.x), static_cast<float>(e.button.y) },
@@ -264,8 +266,8 @@ int main(int argc, char* argv[])
 	// Load a graph
 	GraphParser::LoadGraph(gGraph, (ContentPath + "Test/test001.xml").c_str());
 	
-	const std::int32_t CarWidth = 48;
-	const std::int32_t CarHeight = 96;
+	const std::int32_t CarWidth = 26;
+	const std::int32_t CarHeight = 50;
 	TrafficSimulator::Vehicle car(
 		TextureManager::GetTexture("car"),
 		Vector2f{ ScreenWidth / 2, ScreenHeight / 2 },
@@ -273,6 +275,7 @@ int main(int argc, char* argv[])
 		CarHeight,
 		*gGraph
 	);
+	car.Select();
 	gVehicleList.emplace_back(car);
 
 	// Color path for selected vehicle, if any
@@ -290,11 +293,11 @@ int main(int argc, char* argv[])
 		while (SDL_PollEvent(&e) != 0)
 		{
 			HandleInput(e, isRunning);
-
-			Update(delta);
-
-			Render();
 		}
+
+		Update(delta);
+
+		Render();
 	}
 
 	delete gGraph;
