@@ -23,6 +23,57 @@ namespace Engine
 		float y;
 		inline bool operator==(const Vector2f& rhs) const { return ((x == rhs.x) && (y == rhs.y)); }
 		inline bool operator!=(const Vector2f& rhs) const { return !(*this == rhs); }
+		inline Vector2f& operator+=(const Vector2f& rhs) { 
+			x += rhs.x;
+			y += rhs.y;
+			return *this; 
+		}
+		inline const Vector2f operator+(const Vector2f& other) const {
+			Vector2f copy = *this;
+			copy += other;
+			return copy;
+		}
+		inline Vector2f& operator-=(const Vector2f& rhs) {
+			x -= rhs.x;
+			y -= rhs.y;
+			return *this;
+		}
+		inline const Vector2f operator-(const Vector2f& other) const {
+			Vector2f copy = *this;
+			copy -= other;
+			return copy;
+		}	
+		inline Vector2f& operator*=(const Vector2f& rhs) {
+			x *= rhs.x;
+			y *= rhs.y;
+			return *this;
+		}
+		inline const Vector2f operator*(const Vector2f& other) const {
+			Vector2f copy = *this;
+			copy *= other;
+			return copy;
+		}
+		inline Vector2f& operator*=(float rhs) {
+			x *= rhs;
+			y *= rhs;
+			return *this;
+		}
+		inline const Vector2f operator*(float other) const {
+			Vector2f copy = *this;
+			copy *= other;
+			return copy;
+		}
+		inline float Length() const { return (x * x + y * y); }
+		inline Vector2f Normalize() const {
+			Vector2f vector(Vector2f{ 0, 0 });
+			float length = Length();
+			if (length != 0)
+			{
+				vector.x = x / length;
+				vector.y = y / length;
+			}
+			return vector;
+		}
 	};
 
 	struct Vector3
