@@ -1,6 +1,7 @@
 #include "pch.h"
 
-std::map<std::string, SDL_Texture*> TextureManager::textureMap;
+std::map<std::string, SDL_Texture*> TextureManager::mTextureMap;
+std::map<std::string, TTF_Font*> TextureManager::mFontMap;
 
 bool TextureManager::LoadTexture(SDL_Renderer* renderer, std::string referenceName, std::string location)
 {
@@ -38,7 +39,7 @@ bool TextureManager::LoadTexture(SDL_Renderer* renderer, std::string referenceNa
 	SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
 
 	// Create and add to map if successful
-	textureMap.insert(std::map<std::string, SDL_Texture*>::value_type(referenceName.c_str(), texture));
+	mTextureMap.insert(std::map<std::string, SDL_Texture*>::value_type(referenceName.c_str(), texture));
 	SDL_FreeSurface(surface);
 
 	return true;
@@ -47,14 +48,14 @@ bool TextureManager::LoadTexture(SDL_Renderer* renderer, std::string referenceNa
 void TextureManager::UnloadTexture(std::string referenceName)
 {
 	// Free the memory for an individual resource
-	std::map<std::string, SDL_Texture*>::iterator iter = textureMap.find(referenceName);
+	std::map<std::string, SDL_Texture*>::iterator iter = mTextureMap.find(referenceName);
 	SDL_DestroyTexture(iter->second);
-	textureMap.erase(iter);
+	mTextureMap.erase(iter);
 }
 
 void TextureManager::ClearAll()
 {
-	for (auto texture : textureMap)
+	for (auto texture : mTextureMap)
 	{
 		if (texture.second != nullptr)
 		{
@@ -63,15 +64,15 @@ void TextureManager::ClearAll()
 			texture.second = nullptr;
 		}
 	}
-	textureMap.clear();
+	mTextureMap.clear();
 }
 
 SDL_Texture* TextureManager::GetTexture(std::string key)
 {
-	auto iter = textureMap.find(key);
+	auto iter = mTextureMap.find(key);
 
 	// Validate the key
-	if (iter == textureMap.end())
+	if (iter == mTextureMap.end())
 	{
 		fprintf(stdout, "Could not find the texture with the key \"%s\" - returning NULL\n", key.c_str());
 		return nullptr;
@@ -79,3 +80,49 @@ SDL_Texture* TextureManager::GetTexture(std::string key)
 
 	return iter->second;
 }
+
+bool TextureManager::LoadFont(const std::string& referenceName, const std::string& location, std::uint8_t fontSize)
+{
+	bool success = true;
+
+	// Load the font
+	//const std::uint8_t CalibriFontSize = 24; // TODO: default this param in header
+	TTF_Font* font = TTF_OpenFont(location.c_str(), fontSize);
+	if (font == nullptr)
+	{
+		printf("Failed to load lazy font! SDL_ttf Error: %s\n", TTF_GetError());
+		success = false;
+	}
+	else
+	{
+		mFontMap.insert(std::map<std::string, TTF_Font*>::value_type(referenceName.c_str(), font));
+	}
+
+	return success;
+}
+
+void TextureManager::RenderText(SDL_Renderer* renderer, const std::string& fontName, const std::string& text, const SDL_Rect& rect)
+{
+	SDL_Color black = { 0, 0, 0 };
+	SDL_Surface* surface = TTF_RenderText_Solid(mFontMap[fontName], text.c_str(), black);
+	if (surface != nullptr)
+	{
+		SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
+
+		SDL_FreeSurface(surface);
+		surface = nullptr;
+
+		if (texture == nullptr)
+		{
+			printf("Failed to create texture from surface in RenderText()\n");
+		}
+		else
+		{
+			SDL_RenderCopy(renderer, texture, nullptr, &rect);
+			SDL_DestroyTexture(texture);
+		}
+	}
+}
+
+// TODO unload fonts
+// TODO remove fonts on clear
