@@ -74,10 +74,11 @@ bool LoadResources()
 	bool success = true;
 
 	// Load textures
-	success = 
-		TextureManager::LoadTexture(gRenderer, "car", ContentPath + "Images/car-sprite.png") && 
+	success =
+		TextureManager::LoadTexture(gRenderer, "car", ContentPath + "Images/car-sprite.png") &&
 		TextureManager::LoadTexture(gRenderer, "wall", ContentPath + "Images/wall.png") &&
-		TextureManager::LoadTexture(gRenderer, "node", ContentPath + "Images/node.png");
+		TextureManager::LoadTexture(gRenderer, "node", ContentPath + "Images/node.png") &&
+		TextureManager::LoadTexture(gRenderer, "adjacentAgent", ContentPath + "Images/adjacent-agent-sensor.png");
 
 	// Load the calibri font
 	const std::uint8_t CalibriFontSize = 24;

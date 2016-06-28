@@ -63,7 +63,7 @@ namespace Engine
 			copy *= other;
 			return copy;
 		}
-		inline float Length() const { return (x * x + y * y); }
+		inline float Length() const { return sqrt(x * x + y * y); }
 		inline Vector2f Normalize() const {
 			Vector2f vector(Vector2f{ 0, 0 });
 			float length = Length();

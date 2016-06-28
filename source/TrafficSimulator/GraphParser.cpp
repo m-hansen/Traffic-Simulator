@@ -79,7 +79,7 @@ bool GraphParser::SaveGraph(const Graph& graph, const std::string& filename)
 	// Note: The memory for an XMLElement is managed by the XMLDocument
 	XMLElement* element = mXmlDocument.NewElement("graph");
 	element->SetAttribute("id", "WorldGraph");
-	element->SetAttribute("edgedefault", "undirected");
+	element->SetAttribute("edgedefault", "directed");
 	root->InsertEndChild(element);
 
 	for (const auto& node : graph.Nodes())

@@ -189,6 +189,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AdjacentAgent.cpp" />
     <ClCompile Include="Edge.cpp" />
     <ClCompile Include="GameInstance.cpp" />
     <ClCompile Include="Graph.cpp" />
@@ -210,6 +211,7 @@
     <ClCompile Include="Wall.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AdjacentAgent.h" />
     <ClInclude Include="Edge.h" />
     <ClInclude Include="GameInstance.h" />
     <ClInclude Include="Graph.h" />

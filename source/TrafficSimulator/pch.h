@@ -24,7 +24,9 @@
 #include "GameInstance.h"
 #include "Vehicle.h"
 #include "Wall.h"
+
 #include "RangeFinder.h"
+#include "AdjacentAgent.h"
 
 #include "Node.h"
 #include "Edge.h"

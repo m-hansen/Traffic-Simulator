@@ -5,21 +5,23 @@ namespace TrafficSimulator
 	std::uint32_t Vehicle::sTotalVehicles = 0;
 
 	Vehicle::Vehicle(SDL_Texture* texture, const Vector2f& position, std::int32_t width, std::int32_t height, const Graph& map)
-		: mSpeed(10), mRotationSpeed(5), mTexture(texture), mPosition(position), mMap(map), mLastVisitedNode(nullptr), mItinerary(),
+		: mSpeed(100), mRotationSpeed(5), mTexture(texture), mPosition(position), mMap(map), mLastVisitedNode(nullptr), mItinerary(),
 		mWidth(width), mHeight(height), mSensors(), mRotation(0), mRangeFinderLeft(100, 125), mRangeFinderCenter(100, 90),
-		mRangeFinderRight(100, 55), mItineraryIndex(0), mTarget(nullptr), mVelocity(Vector2f{ 0, -1 }), mIsSelected(false), 
-		mVehicleId(sTotalVehicles++)
+		mRangeFinderRight(100, 55), mItineraryIndex(0), mTarget(nullptr), mVelocity(Vector2f{ 0, -1 }), mIsSelected(false),
+		mVehicleId(sTotalVehicles++), mAdjacentAgentSensor(mPosition, mWidth, mHeight, 100), mPathNodeIdString()
 	{
-		mBoundingRect =
+		mBoundingRect = 
 		{
-			static_cast<std::int32_t>(mPosition.x - width / 2),
-			static_cast<std::int32_t>(mPosition.y - height / 2),
+			static_cast<std::int32_t>(mPosition.x - mWidth / 2),
+			static_cast<std::int32_t>(mPosition.y - mHeight / 2),
 			mWidth,
 			mHeight
 		};
+
 		mSensors.emplace_back(&mRangeFinderLeft);
 		mSensors.emplace_back(&mRangeFinderCenter);
 		mSensors.emplace_back(&mRangeFinderRight);
+		mSensors.emplace_back(&mAdjacentAgentSensor);
 
 		// Set the color
 		SDL_SetTextureColorMod(mTexture, 0x33, 0x99, 0xCC);
@@ -58,6 +60,13 @@ namespace TrafficSimulator
 	{
 		assert(mLastVisitedNode);
 		mItinerary = Pathfinder::Dijkstras(mMap, *mMap.GetNodeById(mLastVisitedNode->Id()), *mMap.GetNodeById(targetNode.Id()));
+		mPathNodeIdString.clear();
+		std::string delim = ", ";
+		for (auto& node : mItinerary)
+		{
+			mPathNodeIdString += (std::to_string(node->Id()) + delim);
+		}
+		mPathNodeIdString = mPathNodeIdString.substr(0, mPathNodeIdString.length() - delim.length());
 	}
 
 	void Vehicle::Update(std::uint32_t delta, const std::list<Vehicle>& vehicles, const std::vector<Wall>& walls)
@@ -88,7 +97,7 @@ namespace TrafficSimulator
 		if (mTarget != nullptr)
 		{
 			Seek(mTarget->Position());
-			mPosition += ((mVelocity + mSteering) * mSpeed) * static_cast<float>(delta);
+			mPosition += ((mVelocity + mSteering) * mSpeed) * (static_cast<float>(delta) / 1000);
 
 			// Check if we reached target, set a new one if so
 			if (abs(mPosition.x - mTarget->Position().x) < 50 &&
@@ -122,6 +131,7 @@ namespace TrafficSimulator
 		mRangeFinderLeft.Update(mBoundingRect, mRotation, walls);
 		mRangeFinderCenter.Update(mBoundingRect, mRotation, walls);
 		mRangeFinderRight.Update(mBoundingRect, mRotation, walls);
+		mAdjacentAgentSensor.Update(mPosition);
 	}
 
 	void Vehicle::Draw(SDL_Renderer* renderer)
@@ -137,11 +147,10 @@ namespace TrafficSimulator
 			mRangeFinderLeft.Draw(renderer);
 			mRangeFinderCenter.Draw(renderer);
 			mRangeFinderRight.Draw(renderer);
+			mAdjacentAgentSensor.Draw(renderer);
 		}
 
 		SDL_RenderCopyEx(renderer, mTexture, nullptr, &mBoundingRect, mRotation, nullptr, SDL_FLIP_NONE);
-	
-		TextureManager::RenderText(renderer, "calibri", "TEST", mBoundingRect);
 
 		// TODO: rendering should be done on UI layer in future
 		if (mIsSelected)
@@ -160,9 +169,11 @@ namespace TrafficSimulator
 			SDL_Rect testRect{ r.x, r.y + padding, r.w / 4, padding };
 			SDL_Rect selectedAgentRect{ r.x, r.y + padding * 2, r.w / 2, padding };
 			SDL_Rect agentPosRect{ r.x, r.y + padding * 3, r.w, padding };
+			SDL_Rect pathRect{ r.x, r.y + padding * 4, r.w, padding };
 			TextureManager::RenderText(renderer, "calibri", "TEST", testRect);
 			TextureManager::RenderText(renderer, "calibri", "Selected Agent ID: " + std::to_string(mVehicleId), selectedAgentRect);
 			TextureManager::RenderText(renderer, "calibri", "Agent Position: " + std::to_string(static_cast<std::int32_t>(mPosition.x)) + ", " + std::to_string(static_cast<std::int32_t>(mPosition.y)), agentPosRect);
+			TextureManager::RenderText(renderer, "calibri", "Path: " + mPathNodeIdString, pathRect);
 		}
 	}
 

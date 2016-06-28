@@ -3,6 +3,7 @@
 #include <vector>
 #include "IDrawable.h"
 #include "RangeFinder.h"
+#include "AdjacentAgent.h"
 #include "../Engine/Utils.h"
 
 using namespace Engine;
@@ -26,6 +27,7 @@ namespace TrafficSimulator
 		void Seek(const Vector2& target);
 		void Seek(const Vector2f& target);
 		const SDL_Rect& GetBoundingRectangle() const { return mBoundingRect; }
+		const Vector2f& Position() const { return mPosition; }
 		inline std::uint32_t ID() const { return mVehicleId; }
 
 	private:
@@ -46,9 +48,11 @@ namespace TrafficSimulator
 		RangeFinder mRangeFinderLeft;
 		RangeFinder mRangeFinderCenter;
 		RangeFinder mRangeFinderRight;
+		AdjacentAgent mAdjacentAgentSensor;
 		std::vector<Sensor*> mSensors;
 		Node* mLastVisitedNode;
 		std::list<const Node*> mItinerary;
+		std::string mPathNodeIdString;
 		std::uint32_t mItineraryIndex;
 		const Graph& mMap;
 		bool mIsSelected;

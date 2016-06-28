@@ -27,6 +27,9 @@
       <Filter>Graph</Filter>
     </ClCompile>
     <ClCompile Include="Pathfinder.cpp" />
+    <ClCompile Include="AdjacentAgent.cpp">
+      <Filter>Sensors</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -55,6 +58,9 @@
       <Filter>Graph</Filter>
     </ClInclude>
     <ClInclude Include="Pathfinder.h" />
+    <ClInclude Include="AdjacentAgent.h">
+      <Filter>Sensors</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Sensors">
