@@ -97,19 +97,19 @@ namespace Engine
 	public:
 		Utils();
 		~Utils();
-		static bool Utils::CollisionChecker(SDL_Rect* a, SDL_Rect* b)
+		static bool Utils::CollisionChecker(const SDL_Rect& a, const SDL_Rect& b)
 		{
 			// Set the bounds for collider A
-			int leftA = a->x;
-			int rightA = a->x + a->w;
-			int topA = a->y;
-			int bottomA = a->y + a->h;
+			int leftA = a.x;
+			int rightA = a.x + a.w;
+			int topA = a.y;
+			int bottomA = a.y + a.h;
 
 			// Set the bounds for collider B
-			int leftB = b->x;
-			int rightB = b->x + b->w;
-			int topB = b->y;
-			int bottomB = b->y + b->h;
+			int leftB = b.x;
+			int rightB = b.x + b.w;
+			int topB = b.y;
+			int bottomB = b.y + b.h;
 
 			// Check for collision
 			// if any of these statements are true we know that there is a gap between 

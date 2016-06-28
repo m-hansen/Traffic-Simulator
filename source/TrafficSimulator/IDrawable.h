@@ -8,7 +8,8 @@ namespace TrafficSimulator
 		IDrawable() : mIsVisible(true) { }
 		virtual ~IDrawable() = default;
 		virtual void Draw(SDL_Renderer* renderer) = 0;
-		bool IsVisible() { return mIsVisible; }
+		inline bool IsVisible() { return mIsVisible; }
+		inline void SetVisible(bool isVisible) { mIsVisible = isVisible; }
 	
 	private :
 		bool mIsVisible;

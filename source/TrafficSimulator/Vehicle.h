@@ -25,6 +25,7 @@ namespace TrafficSimulator
 		const std::list<const Node*>& Itinerary() const;
 		void Seek(const Vector2& target);
 		void Seek(const Vector2f& target);
+		const SDL_Rect& GetBoundingRectangle() const { return mBoundingRect; }
 		inline std::uint32_t ID() const { return mVehicleId; }
 
 	private:

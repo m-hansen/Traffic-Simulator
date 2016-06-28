@@ -12,7 +12,7 @@ class Graph : TrafficSimulator::IDrawable
 {
 public:
 	Graph(SDL_Renderer* renderer, TTF_Font* font);
-	~Graph();
+	~Graph() = default;
 	void Clear();
 	void Draw(SDL_Renderer* renderer);
 	void HighlightPath(const std::list<const Node*>& nodes, SDL_Color color = SDL_Color{ 0x00,0x33,0xFF,0xFF });

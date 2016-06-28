@@ -34,6 +34,12 @@ void Edge::Draw(SDL_Renderer* renderer)
 	Vector2 sourcePosition = mSourceNode.Position();
 	Vector2 targetPosition = mTargetNode.Position();
 	SDL_RenderDrawLine(renderer, sourcePosition.x, sourcePosition.y, targetPosition.x, targetPosition.y);
+
+	// TODO: remove this - for presentation only after complaints of being unable to see debugging info
+	SDL_RenderDrawLine(renderer, sourcePosition.x - 1, sourcePosition.y - 1, targetPosition.x - 1, targetPosition.y - 1);
+	SDL_RenderDrawLine(renderer, sourcePosition.x + 1, sourcePosition.y + 1, targetPosition.x + 1, targetPosition.y + 1);
+	SDL_RenderDrawLine(renderer, sourcePosition.x - 2, sourcePosition.y - 2, targetPosition.x - 2, targetPosition.y - 2);
+	SDL_RenderDrawLine(renderer, sourcePosition.x + 2, sourcePosition.y + 2, targetPosition.x + 2, targetPosition.y + 2);
 }
 
 const Node& Edge::SourceNode() const

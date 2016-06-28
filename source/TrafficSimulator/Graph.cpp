@@ -7,10 +7,6 @@ Graph::Graph(SDL_Renderer* renderer, TTF_Font* font)
 {
 }
 
-Graph::~Graph()
-{
-}
-
 void Graph::Clear()
 {
 	mEdgeList.clear();

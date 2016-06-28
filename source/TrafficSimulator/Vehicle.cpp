@@ -36,12 +36,22 @@ namespace TrafficSimulator
 
 	void Vehicle::Select()
 	{
-		mIsSelected = true;
+		if (!mIsSelected)
+		{
+			mIsSelected = true;
+			if (!mItinerary.empty())
+				const_cast<Graph&>(mMap).HighlightPath(mItinerary);
+		}
 	}
 
 	void Vehicle::Deselect()
 	{
-		mIsSelected = false;
+		if (mIsSelected)
+		{
+			mIsSelected = false;
+			if (!mItinerary.empty())
+				const_cast<Graph&>(mMap).RemoveHighlight(mItinerary);
+		}
 	}
 
 	void Vehicle::NavigateTo(const Node& targetNode)
@@ -72,13 +82,13 @@ namespace TrafficSimulator
 		////////////////////////////////////////
 
 		// TODO: rotate to face towards target
-		mRotation = atan(mVelocity.x / mVelocity.y);
+		mRotation += atan(mVelocity.x / mVelocity.y) * mRotationSpeed * delta;
 
 		// Seek to target
 		if (mTarget != nullptr)
 		{
 			Seek(mTarget->Position());
-			mPosition += ((mVelocity + mSteering) * mSpeed);
+			mPosition += ((mVelocity + mSteering) * mSpeed) * static_cast<float>(delta);
 
 			// Check if we reached target, set a new one if so
 			if (abs(mPosition.x - mTarget->Position().x) < 50 &&
@@ -87,13 +97,19 @@ namespace TrafficSimulator
 				++mItineraryIndex;
 				// TODO: expensive, change the data structure after moving to smart pointers
 				std::uint32_t tempIndex = 0;
+				bool newTargetAcquired = false;
 				for (auto& iter : mItinerary)
 				{
 					if (tempIndex == mItineraryIndex)
 					{
 						mTarget = iter;
+						newTargetAcquired = true;
 					}
 					++tempIndex;
+				}
+				if (!newTargetAcquired)
+				{
+					mTarget = nullptr;
 				}
 			}
 		}
@@ -110,6 +126,9 @@ namespace TrafficSimulator
 
 	void Vehicle::Draw(SDL_Renderer* renderer)
 	{
+		if (!IsVisible()) 
+			return;
+
 		SDL_SetRenderDrawColor(renderer, 0xFF, 0x00, 0x00, 0xFF);
 
 		if (mIsSelected)
@@ -120,23 +139,9 @@ namespace TrafficSimulator
 			mRangeFinderRight.Draw(renderer);
 		}
 
-		// Draw the vehicle
-		
-		//SDL_RenderFillRect(renderer, &mRect);
-		
-		
-
-		//SDL_SetRenderDrawColor(renderer, 0xFF, 0x00, 0x00, 0xFF);
 		SDL_RenderCopyEx(renderer, mTexture, nullptr, &mBoundingRect, mRotation, nullptr, SDL_FLIP_NONE);
-		
-		// Display the sensors
-		/*for (auto& sensor : mSensors)
-		{
-			sensor.Draw(renderer);
-		}*/
-
+	
 		TextureManager::RenderText(renderer, "calibri", "TEST", mBoundingRect);
-
 
 		// TODO: rendering should be done on UI layer in future
 		if (mIsSelected)

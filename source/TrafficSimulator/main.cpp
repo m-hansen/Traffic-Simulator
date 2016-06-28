@@ -13,6 +13,7 @@ Graph* gGraph = nullptr;
 
 std::vector<TrafficSimulator::Vehicle> gVehicleList;
 std::vector<TrafficSimulator::Wall> gWallList;
+TrafficSimulator::Vehicle* gSelectedVehicle = nullptr;
 
 bool InitializeSDL()
 {
@@ -124,9 +125,21 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 	{
 		if (e.button.button == SDL_BUTTON_LEFT)
 		{
-			// Place a wall at the mouse position
-			TrafficSimulator::Wall wall(TextureManager::GetTexture("wall"), Vector2f{ static_cast<float>(e.button.x), static_cast<float>(e.button.y) });
-			gWallList.emplace_back(wall);
+			if (gSelectedVehicle)
+				gSelectedVehicle->Deselect();
+
+			for (auto& vehicle : gVehicleList)
+			{
+				// Check for vehicle selection
+				SDL_Rect mouseRect{ e.button.x, e.button.y, 1, 1 };
+				if (Utils::CollisionChecker(mouseRect, vehicle.GetBoundingRectangle()))
+				{
+					gSelectedVehicle = &vehicle;
+					assert(gSelectedVehicle);
+					gSelectedVehicle->Select();
+					break;
+				}
+			}
 		}
 		if (e.button.button == SDL_BUTTON_RIGHT)
 		{
@@ -190,9 +203,45 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 			GraphParser::SaveGraph(*gGraph, (ContentPath + "Test/test001.xml").c_str());
 			break;
 		case SDLK_l:
-			GraphParser::LoadGraph(gGraph, (ContentPath + "Test/test001.xml").c_str());
+		{
+			const SDL_MessageBoxButtonData buttons[] = 
+			{
+				{ SDL_MESSAGEBOX_BUTTON_RETURNKEY_DEFAULT,	0,	"Default" },
+				{ 0,										1,	"Web" },
+				{ 0,										2,	"Test" },
+				{ SDL_MESSAGEBOX_BUTTON_ESCAPEKEY_DEFAULT,	3,	"Cancel" },
+			};
+			const SDL_MessageBoxData messageBoxData =
+			{
+				SDL_MESSAGEBOX_INFORMATION,
+				nullptr,
+				"Load Level",
+				"Choose a level to load.",
+				SDL_arraysize(buttons),
+				buttons,
+				nullptr
+			};
+			std::int32_t buttonId = 0;
+			if (SDL_ShowMessageBox(&messageBoxData, &buttonId) >= 0)
+			{
+				switch (buttonId)
+				{
+				case 0:
+					GraphParser::LoadGraph(gGraph, (ContentPath + "Maps/default.xml").c_str());
+					break;
+				case 1:
+					GraphParser::LoadGraph(gGraph, (ContentPath + "Maps/web.xml").c_str());
+					break;
+				case 2:
+					GraphParser::LoadGraph(gGraph, (ContentPath + "Test/test001.xml").c_str());
+					break;
+				}
+			}
+			
 			break;
+		}
 		case SDLK_SPACE:
+		{
 			// For debugging only
 			// Recalculate path
 			srand(static_cast<uint32_t>(std::time(NULL)));
@@ -200,6 +249,17 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 			gGraph->RemoveHighlight(gVehicleList[0].Itinerary());
 			gVehicleList[0].NavigateTo(*gGraph->GetNodeById(randomIndex));
 			gGraph->HighlightPath(gVehicleList[0].Itinerary());
+			break;
+		}
+		case SDLK_w:
+		{
+			// Place a wall at the mouse position
+			std::int32_t x, y;
+			SDL_GetMouseState(&x, &y);
+			TrafficSimulator::Wall wall(TextureManager::GetTexture("wall"), Vector2f{ static_cast<float>(x), static_cast<float>(y) });
+			gWallList.emplace_back(wall);
+			break;
+		}
 		}
 	}
 }
@@ -263,8 +323,8 @@ int main(int argc, char* argv[])
 	// Create the graph
 	gGraph = new Graph(gRenderer, gCalibriFont);
 
-	// Load a graph
-	GraphParser::LoadGraph(gGraph, (ContentPath + "Test/test001.xml").c_str());
+	// Load the default graph
+	GraphParser::LoadGraph(gGraph, (ContentPath + "Maps/default.xml").c_str());
 	
 	const std::int32_t CarWidth = 26;
 	const std::int32_t CarHeight = 50;
@@ -275,11 +335,7 @@ int main(int argc, char* argv[])
 		CarHeight,
 		*gGraph
 	);
-	car.Select();
 	gVehicleList.emplace_back(car);
-
-	// Color path for selected vehicle, if any
-	gGraph->HighlightPath(gVehicleList[0].Itinerary()); // TODO: update for selected and not index 0
 
 	while (isRunning)
 	{
