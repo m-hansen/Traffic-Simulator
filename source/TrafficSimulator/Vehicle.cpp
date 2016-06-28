@@ -150,7 +150,6 @@ namespace TrafficSimulator
 
 			SDL_SetRenderDrawColor(renderer, 0xAA, 0xAA, 0xAA, 0xFF);
 			SDL_RenderFillRect(renderer, &r);
-			SDL_RenderPresent(renderer);
 
 			std::int32_t padding = 20;
 			SDL_Rect testRect{ r.x, r.y + padding, r.w / 4, padding };
