@@ -12,7 +12,7 @@ namespace TrafficSimulator
 	class AdjacentAgent final : public Sensor, public IDrawable
 	{
 	public:
-		AdjacentAgent(const Vector2f& position, std::int32_t parentWidth, std::int32_t parentHeight, float radius);
+		AdjacentAgent(const Vector2f& position, float radius);
 		~AdjacentAgent() = default;
 		void Update(const Vector2f& position);
 		void Draw(SDL_Renderer* renderer);
@@ -24,7 +24,5 @@ namespace TrafficSimulator
 		SDL_Texture* mTexture;
 		std::int32_t mWidth;
 		std::int32_t mHeight;
-		std::int32_t mParentWidth;
-		std::int32_t mParentHeight;
 	};
 }

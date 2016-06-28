@@ -4,6 +4,9 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include <SDL_ttf.h>
+#include "../Engine/Utils.h"
+
+using namespace Engine;
 
 class TextureManager
 {
@@ -13,7 +16,7 @@ public:
 	static void UnloadTexture(std::string referenceName);
 	static void ClearAll();
 	static bool LoadFont(const std::string& referenceName, const std::string& location, std::uint8_t fontSize);
-	static void RenderText(SDL_Renderer* renderer, const std::string& fontName, const std::string& text, const SDL_Rect& rect);
+	static void RenderText(SDL_Renderer* renderer, const std::string& fontName, const std::string& text, const Vector2& position);
 
 private:
 	static std::map<std::string, SDL_Texture*> mTextureMap;

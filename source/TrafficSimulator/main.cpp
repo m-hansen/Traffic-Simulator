@@ -89,7 +89,7 @@ bool LoadResources()
 		success = false;
 	}
 
-	success &= TextureManager::LoadFont("calibri", ContentPath + "Fonts/calibri.ttf", 24);
+	success &= TextureManager::LoadFont("calibri", ContentPath + "Fonts/calibri.ttf", 18);
 
 	return success;
 }
@@ -332,9 +332,9 @@ int main(int argc, char* argv[])
 	gGraph = new Graph(gRenderer, gCalibriFont);
 
 	// Load the default graph
-	GraphParser::LoadGraph(gGraph, (ContentPath + "Maps/default.xml").c_str());
+	GraphParser::LoadGraph(gGraph, (ContentPath + "Maps/default-some-1-way.xml").c_str());
 	
-	const std::int32_t CarWidth = 26;
+	/*const std::int32_t CarWidth = 26;
 	const std::int32_t CarHeight = 50;
 	TrafficSimulator::Vehicle car(
 		TextureManager::GetTexture("car"),
@@ -343,7 +343,7 @@ int main(int argc, char* argv[])
 		CarHeight,
 		*gGraph
 	);
-	gVehicleList.emplace_back(car);
+	gVehicleList.emplace_back(car);*/
 
 	while (isRunning)
 	{

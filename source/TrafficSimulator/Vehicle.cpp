@@ -5,10 +5,10 @@ namespace TrafficSimulator
 	std::uint32_t Vehicle::sTotalVehicles = 0;
 
 	Vehicle::Vehicle(SDL_Texture* texture, const Vector2f& position, std::int32_t width, std::int32_t height, const Graph& map)
-		: mSpeed(100), mRotationSpeed(5), mTexture(texture), mPosition(position), mMap(map), mLastVisitedNode(nullptr), mItinerary(),
+		: mSpeed(30), mRotationSpeed(5), mTexture(texture), mPosition(position), mMap(map), mLastVisitedNode(nullptr), mItinerary(),
 		mWidth(width), mHeight(height), mSensors(), mRotation(0), mRangeFinderLeft(100, 125), mRangeFinderCenter(100, 90),
 		mRangeFinderRight(100, 55), mItineraryIndex(0), mTarget(nullptr), mVelocity(Vector2f{ 0, -1 }), mIsSelected(false),
-		mVehicleId(sTotalVehicles++), mAdjacentAgentSensor(mPosition, mWidth, mHeight, 100), mPathNodeIdString()
+		mVehicleId(sTotalVehicles++), mAdjacentAgentSensor(mPosition, 100), mPathNodeIdString()
 	{
 		mBoundingRect = 
 		{
@@ -124,8 +124,8 @@ namespace TrafficSimulator
 		}
 
 		// Update the bounding rectangle to reflect the vehicles current position
-		mBoundingRect.x = static_cast<std::int32_t>(mPosition.x);
-		mBoundingRect.y = static_cast<std::int32_t>(mPosition.y);
+		mBoundingRect.x = static_cast<std::int32_t>(mPosition.x) - mBoundingRect.w / 2;
+		mBoundingRect.y = static_cast<std::int32_t>(mPosition.y) - mBoundingRect.h / 2;
 
 		// Update all sensors - do this after the vehicle update logic
 		mRangeFinderLeft.Update(mBoundingRect, mRotation, walls);
@@ -166,14 +166,15 @@ namespace TrafficSimulator
 			SDL_RenderFillRect(renderer, &r);
 
 			std::int32_t padding = 20;
-			SDL_Rect testRect{ r.x, r.y + padding, r.w / 4, padding };
-			SDL_Rect selectedAgentRect{ r.x, r.y + padding * 2, r.w / 2, padding };
-			SDL_Rect agentPosRect{ r.x, r.y + padding * 3, r.w, padding };
-			SDL_Rect pathRect{ r.x, r.y + padding * 4, r.w, padding };
-			TextureManager::RenderText(renderer, "calibri", "TEST", testRect);
-			TextureManager::RenderText(renderer, "calibri", "Selected Agent ID: " + std::to_string(mVehicleId), selectedAgentRect);
-			TextureManager::RenderText(renderer, "calibri", "Agent Position: " + std::to_string(static_cast<std::int32_t>(mPosition.x)) + ", " + std::to_string(static_cast<std::int32_t>(mPosition.y)), agentPosRect);
-			TextureManager::RenderText(renderer, "calibri", "Path: " + mPathNodeIdString, pathRect);
+			
+			Vector2 titlePosition = { r.x, r.y };
+			Vector2 selectedAgentsPosition = { r.x, r.y + padding };
+			Vector2 agentPositionPosition = { r.x, r.y + padding * 2 };
+			Vector2 pathPosition = { r.x, r.y + padding * 3 };
+			TextureManager::RenderText(renderer, "calibri", "INFO", titlePosition);
+			TextureManager::RenderText(renderer, "calibri", "Agent ID: " + std::to_string(mVehicleId), selectedAgentsPosition);
+			TextureManager::RenderText(renderer, "calibri", "Position: " + std::to_string(static_cast<std::int32_t>(mPosition.x)) + ", " + std::to_string(static_cast<std::int32_t>(mPosition.y)), agentPositionPosition);
+			TextureManager::RenderText(renderer, "calibri", "Path: " + mPathNodeIdString, pathPosition);
 		}
 	}
 

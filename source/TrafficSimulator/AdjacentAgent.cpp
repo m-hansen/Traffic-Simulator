@@ -2,14 +2,13 @@
 
 namespace TrafficSimulator
 {
-	AdjacentAgent::AdjacentAgent(const Vector2f& position, std::int32_t parentWidth, std::int32_t parentHeight, float radius)
-		: mRadius(radius), mWidth(150), mHeight(150), mParentWidth(parentWidth),
-		mParentHeight(parentHeight), mTexture(TextureManager::GetTexture("adjacentAgent"))
+	AdjacentAgent::AdjacentAgent(const Vector2f& position, float radius)
+		: mRadius(radius), mWidth(150), mHeight(150), mTexture(TextureManager::GetTexture("adjacentAgent"))
 	{
 		mBoundingRect =
 		{
-			static_cast<std::int32_t>(position.x - mWidth / 2 +  mParentWidth/ 2),
-			static_cast<std::int32_t>(position.y - mHeight / 2 + mParentHeight / 2),
+			static_cast<std::int32_t>(position.x - mWidth / 2),
+			static_cast<std::int32_t>(position.y - mHeight / 2),
 			mWidth,
 			mHeight
 		};
@@ -17,8 +16,8 @@ namespace TrafficSimulator
 
 	void AdjacentAgent::Update(const Vector2f& position)
 	{
-		mBoundingRect.x = static_cast<std::int32_t>(position.x) - mWidth / 2 + mParentWidth /2;
-		mBoundingRect.y = static_cast<std::int32_t>(position.y) - mHeight / 2 + mParentHeight / 2;
+		mBoundingRect.x = static_cast<std::int32_t>(position.x) - mWidth / 2;
+		mBoundingRect.y = static_cast<std::int32_t>(position.y) - mHeight / 2;
 	}
 
 	void AdjacentAgent::Draw(SDL_Renderer* renderer)

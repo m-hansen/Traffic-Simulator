@@ -101,10 +101,10 @@ bool TextureManager::LoadFont(const std::string& referenceName, const std::strin
 	return success;
 }
 
-void TextureManager::RenderText(SDL_Renderer* renderer, const std::string& fontName, const std::string& text, const SDL_Rect& rect)
+void TextureManager::RenderText(SDL_Renderer* renderer, const std::string& fontName, const std::string& text, const Vector2& position)
 {
 	SDL_Color black = { 0, 0, 0 };
-	SDL_Surface* surface = TTF_RenderText_Solid(mFontMap[fontName], text.c_str(), black);
+	SDL_Surface* surface = TTF_RenderText_Blended(mFontMap[fontName], text.c_str(), black);
 	if (surface != nullptr)
 	{
 		SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
@@ -118,6 +118,10 @@ void TextureManager::RenderText(SDL_Renderer* renderer, const std::string& fontN
 		}
 		else
 		{
+			std::int32_t width = 0;
+			std::int32_t height = 0;
+			SDL_QueryTexture(texture, nullptr, nullptr, &width, &height);
+			SDL_Rect rect = { position.x, position.y, width, height };
 			SDL_RenderCopy(renderer, texture, nullptr, &rect);
 			SDL_DestroyTexture(texture);
 		}
