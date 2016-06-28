@@ -60,7 +60,7 @@ namespace TrafficSimulator
 		mItinerary = Pathfinder::Dijkstras(mMap, *mMap.GetNodeById(mLastVisitedNode->Id()), *mMap.GetNodeById(targetNode.Id()));
 	}
 
-	void Vehicle::Update(std::uint32_t delta, const std::vector<Vehicle>& vehicles, const std::vector<Wall>& walls)
+	void Vehicle::Update(std::uint32_t delta, const std::list<Vehicle>& vehicles, const std::vector<Wall>& walls)
 	{
 		UNREFERENCED_PARAMETER(vehicles);
 		UNREFERENCED_PARAMETER(delta);

@@ -11,7 +11,7 @@ SDL_Renderer* gRenderer = nullptr;
 TTF_Font* gCalibriFont = nullptr;
 Graph* gGraph = nullptr;
 
-std::vector<TrafficSimulator::Vehicle> gVehicleList;
+std::list<TrafficSimulator::Vehicle> gVehicleList; // TODO: vector of shared_ptr for contiguous access
 std::vector<TrafficSimulator::Wall> gWallList;
 TrafficSimulator::Vehicle* gSelectedVehicle = nullptr;
 
@@ -126,7 +126,10 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 		if (e.button.button == SDL_BUTTON_LEFT)
 		{
 			if (gSelectedVehicle)
+			{
 				gSelectedVehicle->Deselect();
+				gSelectedVehicle = nullptr;
+			}
 
 			for (auto& vehicle : gVehicleList)
 			{
@@ -157,7 +160,7 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 
 				gGraph->CreateEdge(*sourceNode, *targetNode);
 			}
-
+#if(_DEBUG)
 			// Memory debug
 			printf("======\nGraph\n======\n");
 			for (const auto& node : gGraph->Nodes())
@@ -170,6 +173,7 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 					edge.SourceNode().Id(), &edge.SourceNode(), edge.TargetNode().Id(), &edge.TargetNode());
 			}
 			printf("\n");
+#endif
 		}
 		if (e.button.button == SDL_BUTTON_MIDDLE)
 		{
@@ -243,12 +247,15 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 		case SDLK_SPACE:
 		{
 			// For debugging only
-			// Recalculate path
-			srand(static_cast<uint32_t>(std::time(NULL)));
-			std::int32_t randomIndex = rand() % gGraph->GetNodeCount();
-			gGraph->RemoveHighlight(gVehicleList[0].Itinerary());
-			gVehicleList[0].NavigateTo(*gGraph->GetNodeById(randomIndex));
-			gGraph->HighlightPath(gVehicleList[0].Itinerary());
+			// Recalculate path of selected vehicle
+			if (gSelectedVehicle)
+			{
+				srand(static_cast<uint32_t>(std::time(NULL)));
+				std::int32_t randomIndex = rand() % gGraph->GetNodeCount();
+				gGraph->RemoveHighlight(gSelectedVehicle->Itinerary());
+				gSelectedVehicle->NavigateTo(*gGraph->GetNodeById(randomIndex));
+				gGraph->HighlightPath(gSelectedVehicle->Itinerary());
+			}
 			break;
 		}
 		case SDLK_w:

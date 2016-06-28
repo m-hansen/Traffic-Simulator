@@ -17,7 +17,7 @@ namespace TrafficSimulator
 	public:
 		Vehicle(SDL_Texture* texture, const Vector2f& position, std::int32_t width, std::int32_t height, const Graph& map);
 		~Vehicle() = default;
-		void Update(std::uint32_t delta, const std::vector<Vehicle>& vehicles, const std::vector<Wall>& walls);
+		void Update(std::uint32_t delta, const std::list<Vehicle>& vehicles, const std::vector<Wall>& walls);
 		void Draw(SDL_Renderer* renderer);
 		void Select();
 		void Deselect();
