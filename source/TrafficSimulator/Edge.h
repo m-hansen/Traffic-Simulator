@@ -40,4 +40,5 @@ private:
 	const Node& mTargetNode;
 	double mWeight;
 	SDL_Color mColor;
+	std::int32_t mNumLanes;
 };

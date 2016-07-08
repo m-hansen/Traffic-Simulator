@@ -5,10 +5,10 @@ namespace TrafficSimulator
 	std::uint32_t Vehicle::sTotalVehicles = 0;
 
 	Vehicle::Vehicle(SDL_Texture* texture, const Vector2f& position, std::int32_t width, std::int32_t height, const Graph& map)
-		: mSpeed(30), mRotationSpeed(5), mTexture(texture), mPosition(position), mMap(map), mLastVisitedNode(nullptr), mItinerary(),
-		mWidth(width), mHeight(height), mSensors(), mRotation(0), mRangeFinderLeft(100, 125), mRangeFinderCenter(100, 90),
-		mRangeFinderRight(100, 55), mItineraryIndex(0), mTarget(nullptr), mVelocity(Vector2f{ 0, -1 }), mIsSelected(false),
-		mVehicleId(sTotalVehicles++), mAdjacentAgentSensor(mPosition, 100), mPathNodeIdString()
+		: mSpeed(static_cast<float>(rand() % 40 + 20)), mRotationSpeed(5), mTexture(texture), mPosition(position), mMap(map), mLastVisitedNode(nullptr), mItinerary(),
+		mWidth(width), mHeight(height), mSensors(), mRotation(0), mRangeFinderLeft(50, 125), mRangeFinderCenter(50, 90),
+		mRangeFinderRight(50, 55), mItineraryIndex(0), mTarget(nullptr), mVelocity(Vector2f{ 0, -1 }), mIsSelected(false),
+		mVehicleId(sTotalVehicles++), mAdjacentAgentSensor(this, mPosition, 35), mPathNodeIdString()
 	{
 		mBoundingRect = 
 		{
@@ -71,27 +71,10 @@ namespace TrafficSimulator
 
 	void Vehicle::Update(std::uint32_t delta, const std::list<Vehicle>& vehicles, const std::vector<Wall>& walls)
 	{
-		UNREFERENCED_PARAMETER(vehicles);
 		UNREFERENCED_PARAMETER(delta);
-		// For debugging purposes
-		/*const Uint8* currentKeyStates = SDL_GetKeyboardState(NULL);
-		if (currentKeyStates[SDL_SCANCODE_UP])
-		{
-			mPosition.x += mSpeed * static_cast<float>(cos((mRotation - 90) * PI / 180));
-			mPosition.y += mSpeed * static_cast<float>(sin((mRotation - 90) * PI / 180));
-		}
-		else if (currentKeyStates[SDL_SCANCODE_LEFT])
-		{
-			mRotation -= mRotationSpeed * delta;
-		}
-		else if (currentKeyStates[SDL_SCANCODE_RIGHT])
-		{
-			mRotation += mRotationSpeed * delta;
-		}*/
-		////////////////////////////////////////
 
-		// TODO: rotate to face towards target
-		mRotation += atan(mVelocity.x / mVelocity.y) * mRotationSpeed * delta;
+		// Rotate to face towards target
+		mRotation = 90 + static_cast<float>(atan2(mVelocity.y + mSteering.y, mVelocity.x + mSteering.x) * 180 / PI);// *mRotationSpeed * delta;
 
 		// Seek to target
 		if (mTarget != nullptr)
@@ -131,7 +114,7 @@ namespace TrafficSimulator
 		mRangeFinderLeft.Update(mBoundingRect, mRotation, walls);
 		mRangeFinderCenter.Update(mBoundingRect, mRotation, walls);
 		mRangeFinderRight.Update(mBoundingRect, mRotation, walls);
-		mAdjacentAgentSensor.Update(mPosition);
+		mAdjacentAgentSensor.Update(mPosition, vehicles);
 	}
 
 	void Vehicle::Draw(SDL_Renderer* renderer)
@@ -171,10 +154,18 @@ namespace TrafficSimulator
 			Vector2 selectedAgentsPosition = { r.x, r.y + padding };
 			Vector2 agentPositionPosition = { r.x, r.y + padding * 2 };
 			Vector2 pathPosition = { r.x, r.y + padding * 3 };
+			Vector2 adjacentAgentsPosition = { r.x, r.y + padding * 4 };
 			TextureManager::RenderText(renderer, "calibri", "INFO", titlePosition);
 			TextureManager::RenderText(renderer, "calibri", "Agent ID: " + std::to_string(mVehicleId), selectedAgentsPosition);
 			TextureManager::RenderText(renderer, "calibri", "Position: " + std::to_string(static_cast<std::int32_t>(mPosition.x)) + ", " + std::to_string(static_cast<std::int32_t>(mPosition.y)), agentPositionPosition);
 			TextureManager::RenderText(renderer, "calibri", "Path: " + mPathNodeIdString, pathPosition);
+			std::string adjacentAgentsString;
+			for (const auto& agent : mAdjacentAgentSensor.AdjacentAgents())
+			{
+				adjacentAgentsString += std::to_string(agent.first) + ", ";
+			}
+			adjacentAgentsString = adjacentAgentsString.substr(0, adjacentAgentsString.length() - 2);
+			TextureManager::RenderText(renderer, "calibri", "Adjacent Agent IDs: " + adjacentAgentsString, adjacentAgentsPosition);
 		}
 	}
 

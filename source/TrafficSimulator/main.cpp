@@ -13,6 +13,7 @@ Graph* gGraph = nullptr;
 
 std::list<TrafficSimulator::Vehicle> gVehicleList; // TODO: vector of shared_ptr for contiguous access
 std::vector<TrafficSimulator::Wall> gWallList;
+std::vector<TrafficSimulator::Spawner> gSpawnerList;
 TrafficSimulator::Vehicle* gSelectedVehicle = nullptr;
 
 bool InitializeSDL()
@@ -78,6 +79,8 @@ bool LoadResources()
 		TextureManager::LoadTexture(gRenderer, "car", ContentPath + "Images/car-sprite.png") &&
 		TextureManager::LoadTexture(gRenderer, "wall", ContentPath + "Images/wall.png") &&
 		TextureManager::LoadTexture(gRenderer, "node", ContentPath + "Images/node.png") &&
+		TextureManager::LoadTexture(gRenderer, "road", ContentPath + "Images/road.png") &&
+		TextureManager::LoadTexture(gRenderer, "spawner", ContentPath + "Images/spawner.png") &&
 		TextureManager::LoadTexture(gRenderer, "adjacentAgent", ContentPath + "Images/adjacent-agent-sensor.png");
 
 	// Load the calibri font
@@ -144,6 +147,19 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 					break;
 				}
 			}
+
+			for (auto& vehicle : TrafficSimulator::Spawner::Vehicles())
+			{
+				// Check for vehicle selection
+				SDL_Rect mouseRect{ e.button.x, e.button.y, 1, 1 };
+				if (Utils::CollisionChecker(mouseRect, vehicle.GetBoundingRectangle()))
+				{
+					gSelectedVehicle = &vehicle;
+					assert(gSelectedVehicle);
+					gSelectedVehicle->Select();
+					break;
+				}
+			}
 		}
 		if (e.button.button == SDL_BUTTON_RIGHT)
 		{
@@ -179,8 +195,8 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 		if (e.button.button == SDL_BUTTON_MIDDLE)
 		{
 			// Place a vehicle at the mouse position
-			const std::int32_t CarWidth = 26;
-			const std::int32_t CarHeight = 50;
+			const std::int32_t CarWidth = 12;
+			const std::int32_t CarHeight = 24;
 			TrafficSimulator::Vehicle car(
 				TextureManager::GetTexture("car"),
 				Vector2f{ static_cast<float>(e.button.x), static_cast<float>(e.button.y) },
@@ -268,6 +284,15 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 			gWallList.emplace_back(wall);
 			break;
 		}
+		case SDLK_s:
+		{
+			// Place a spawner at the mouse position
+			std::int32_t x, y;
+			SDL_GetMouseState(&x, &y);
+			TrafficSimulator::Spawner spawner(TextureManager::GetTexture("spawner"), Vector2f{ static_cast<float>(x), static_cast<float>(y) }, *gGraph);
+			gSpawnerList.emplace_back(spawner);
+			break;
+		}
 		}
 	}
 }
@@ -277,6 +302,16 @@ void Update(std::uint32_t delta)
 	for (auto& vehicle : gVehicleList)
 	{
 		vehicle.Update(delta, gVehicleList, gWallList);
+	}
+
+	for (auto& spawner : gSpawnerList)
+	{
+		spawner.Update(delta);
+	}
+
+	for (auto& vehicle : TrafficSimulator::Spawner::Vehicles())
+	{
+		vehicle.Update(delta, TrafficSimulator::Spawner::Vehicles(), gWallList);
 	}
 }
 
@@ -295,10 +330,21 @@ void Render()
 		vehicle.Draw(gRenderer);
 	}
 
+	for (auto& vehicle : TrafficSimulator::Spawner::Vehicles())
+	{
+		vehicle.Draw(gRenderer);
+	}
+
 	// Render all walls
 	for (auto& wall : gWallList)
 	{
 		wall.Draw(gRenderer);
+	}
+
+	// Render all spawners
+	for (auto& spawner : gSpawnerList)
+	{
+		spawner.Draw(gRenderer);
 	}
 
 	// Update screen
@@ -334,16 +380,7 @@ int main(int argc, char* argv[])
 	// Load the default graph
 	GraphParser::LoadGraph(gGraph, (ContentPath + "Maps/default-some-1-way.xml").c_str());
 	
-	/*const std::int32_t CarWidth = 26;
-	const std::int32_t CarHeight = 50;
-	TrafficSimulator::Vehicle car(
-		TextureManager::GetTexture("car"),
-		Vector2f{ ScreenWidth / 2, ScreenHeight / 2 },
-		CarWidth, 
-		CarHeight,
-		*gGraph
-	);
-	gVehicleList.emplace_back(car);*/
+	srand((unsigned)time(0));
 
 	while (isRunning)
 	{

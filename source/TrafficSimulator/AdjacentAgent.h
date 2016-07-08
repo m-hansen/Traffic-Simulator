@@ -9,20 +9,23 @@ using namespace Engine;
 
 namespace TrafficSimulator
 {
+	class Vehicle;
 	class AdjacentAgent final : public Sensor, public IDrawable
 	{
 	public:
-		AdjacentAgent(const Vector2f& position, float radius);
+		AdjacentAgent(const Vehicle* owner, const Vector2f& position, float radius);
 		~AdjacentAgent() = default;
-		void Update(const Vector2f& position);
+		void Update(const Vector2f& position, const std::list<Vehicle>& vehicles);
 		void Draw(SDL_Renderer* renderer);
-		//std::list<Vehicle*> AdjacentAgents(const Vehicle& self, const std::list<Vehicle>& vehicles);
+		void CalculateAdjacentAgents(const std::list<Vehicle>& vehicles);
+		std::map<std::uint32_t, const Vehicle*> AdjacentAgents() const { return mAdjacentAgents; }
 
 	private:
+		const Vehicle* mOwner;
+		Vector2f mOwnerPosition;
 		float mRadius;
 		SDL_Rect mBoundingRect;
 		SDL_Texture* mTexture;
-		std::int32_t mWidth;
-		std::int32_t mHeight;
+		std::map<std::uint32_t, const Vehicle*> mAdjacentAgents;
 	};
 }

@@ -2,41 +2,61 @@
 
 namespace TrafficSimulator
 {
-	AdjacentAgent::AdjacentAgent(const Vector2f& position, float radius)
-		: mRadius(radius), mWidth(150), mHeight(150), mTexture(TextureManager::GetTexture("adjacentAgent"))
+	AdjacentAgent::AdjacentAgent(const Vehicle* owner, const Vector2f& position, float radius)
+		: mOwner(owner), mRadius(radius), mTexture(TextureManager::GetTexture("adjacentAgent")), mAdjacentAgents()
 	{
 		mBoundingRect =
 		{
-			static_cast<std::int32_t>(position.x - mWidth / 2),
-			static_cast<std::int32_t>(position.y - mHeight / 2),
-			mWidth,
-			mHeight
+			static_cast<std::int32_t>(position.x - mRadius),
+			static_cast<std::int32_t>(position.y - mRadius),
+			static_cast<std::int32_t>(mRadius * 2),
+			static_cast<std::int32_t>(mRadius * 2)
 		};
 	}
 
-	void AdjacentAgent::Update(const Vector2f& position)
+	void AdjacentAgent::Update(const Vector2f& position, const std::list<Vehicle>& vehicles)
 	{
-		mBoundingRect.x = static_cast<std::int32_t>(position.x) - mWidth / 2;
-		mBoundingRect.y = static_cast<std::int32_t>(position.y) - mHeight / 2;
+		mOwnerPosition = position;
+		mBoundingRect.x = static_cast<std::int32_t>(position.x - mRadius);
+		mBoundingRect.y = static_cast<std::int32_t>(position.y - mRadius);
+		CalculateAdjacentAgents(vehicles);
 	}
 
 	void AdjacentAgent::Draw(SDL_Renderer* renderer)
 	{
 		SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0x00, 0xFF);
 
+		for (const auto& agent : mAdjacentAgents)
+		{
+			SDL_RenderDrawLine(
+				renderer, 
+				static_cast<std::int32_t>(mOwnerPosition.x),
+				static_cast<std::int32_t>(mOwnerPosition.y),
+				static_cast<std::int32_t>(agent.second->Position().x),
+				static_cast<std::int32_t>(agent.second->Position().y)
+			);
+		}
+
 		// Visual representation of the sensor
 		SDL_RenderCopy(renderer, mTexture, nullptr, &mBoundingRect);
 	}
 
-	//std::list<Vehicle*> AdjacentAgent::AdjacentAgents(const Vehicle& self, const std::list<Vehicle>& vehicles)
-	//{
-	//	UNREFERENCED_PARAMETER(self);
-	//	UNREFERENCED_PARAMETER(vehicles);
-	//	//Vector2f pos = self.Position();
-	//	//for (auto& vehicle : vehicles)
-	//	{
-	//		//Vector2f distance = pos - vehicle.Position()
-	//		//if ((pos - vehicle.Position())
-	//	}
-	//}
+	void AdjacentAgent::CalculateAdjacentAgents(const std::list<Vehicle>& vehicles)
+	{
+		Vector2f pos = mOwnerPosition;
+		for (auto& vehicle : vehicles)
+		{
+			if (vehicle.ID() == mOwner->ID()) continue;
+			Vector2f delta = pos - vehicle.Position();
+			float distance = sqrt(delta.x * delta.x + delta.y * delta.y);
+			if (distance <= mRadius)
+			{
+				mAdjacentAgents.emplace(std::pair<std::uint32_t, const Vehicle*>(vehicle.ID(), &vehicle));
+			}
+			else
+			{
+				mAdjacentAgents.erase(vehicle.ID());
+			}
+		}
+	}
 }

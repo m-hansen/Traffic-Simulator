@@ -30,6 +30,7 @@
     <ClCompile Include="AdjacentAgent.cpp">
       <Filter>Sensors</Filter>
     </ClCompile>
+    <ClCompile Include="Spawner.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -61,6 +62,7 @@
     <ClInclude Include="AdjacentAgent.h">
       <Filter>Sensors</Filter>
     </ClInclude>
+    <ClInclude Include="Spawner.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Sensors">
