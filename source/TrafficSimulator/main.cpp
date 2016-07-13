@@ -5,6 +5,7 @@
 const std::uint32_t ScreenWidth = 1280;
 const std::uint32_t ScreenHeight = 720;
 const std::string ContentPath = "../../Content/";
+const std::uint32_t VehicleCap = 40;
 
 SDL_Window* gWindow = nullptr;
 SDL_Renderer* gRenderer = nullptr;
@@ -305,9 +306,12 @@ void Update(std::uint32_t delta)
 		vehicle.Update(delta, gVehicleList, gWallList);
 	}
 	
-	for (auto& spawner : gSpawnerList)
+	if (TrafficSimulator::Vehicle::TotalVehicleCount() < VehicleCap)
 	{
-		spawner.Update(delta);
+		for (auto& spawner : gSpawnerList)
+		{
+			spawner.Update(delta);
+		}
 	}
 
 	for (auto& vehicle : TrafficSimulator::Spawner::Vehicles())
