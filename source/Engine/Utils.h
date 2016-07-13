@@ -1,7 +1,8 @@
 #pragma once
 
 #include <cstdint>
-#include <ostream>
+#include <sstream>
+#include <iomanip>
 #include <string>
 #include <SDL.h>
 
@@ -121,6 +122,13 @@ namespace Engine
 
 			// Both the horizontal and vertical coordinates have an overlap
 			return true;
+		}
+		static std::string Utils::FloatToString(float data, std::uint8_t precision = 6)
+		{
+			std::ostringstream output;
+			output << std::fixed;
+			output << std::setprecision(precision) << data;
+			return output.str();
 		}
 	};
 }

@@ -299,11 +299,12 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 
 void Update(std::uint32_t delta)
 {
+	// Will be removed soon
 	for (auto& vehicle : gVehicleList)
 	{
 		vehicle.Update(delta, gVehicleList, gWallList);
 	}
-
+	
 	for (auto& spawner : gSpawnerList)
 	{
 		spawner.Update(delta);
@@ -347,6 +348,9 @@ void Render()
 		spawner.Draw(gRenderer);
 	}
 
+	TextureManager::RenderText(gRenderer, "calibri", "Total Vehicles: " + 
+		std::to_string(TrafficSimulator::Vehicle::TotalVehicleCount()), Vector2{ 0,0 });
+
 	// Update screen
 	SDL_RenderPresent(gRenderer);
 }
@@ -378,7 +382,7 @@ int main(int argc, char* argv[])
 	gGraph = new Graph(gRenderer, gCalibriFont);
 
 	// Load the default graph
-	GraphParser::LoadGraph(gGraph, (ContentPath + "Maps/default-some-1-way.xml").c_str());
+	GraphParser::LoadGraph(gGraph, (ContentPath + "Maps/default.xml").c_str());
 	
 	srand((unsigned)time(0));
 

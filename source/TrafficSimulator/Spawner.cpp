@@ -15,6 +15,8 @@ namespace TrafficSimulator
 			mWidth,
 			mHeight
 		};
+
+		SDL_SetTextureAlphaMod(mTexture, 175);
 	}
 
 	Spawner::~Spawner()
@@ -52,11 +54,20 @@ namespace TrafficSimulator
 
 	void Spawner::SpawnVehicle()
 	{
+		for (auto& vehicle : sVehicles)
+		{
+			if (Utils::CollisionChecker(vehicle.GetBoundingRectangle(), mBoundingRect))
+			{
+				// Early out - Don't spawn a vehicle if the spawner isn't clear
+				return;
+			}
+		}
+
 		const std::int32_t CarWidth = 12;
 		const std::int32_t CarHeight = 24;
 		Vehicle* car = new Vehicle(
 			TextureManager::GetTexture("car"), 
-			Vector2f{ static_cast<float>(mBoundingRect.x), static_cast<float>(mBoundingRect.y) }, 
+			Vector2f{ static_cast<float>(mBoundingRect.x + mWidth / 2), static_cast<float>(mBoundingRect.y + mHeight / 2) }, 
 			CarWidth, 
 			CarHeight, 
 			mMap);

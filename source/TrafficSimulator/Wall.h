@@ -1,6 +1,8 @@
 #pragma once
 
+#include <cstdint>
 #include <SDL.h>
+#include "IDrawable.h"
 #include "../Engine/Utils.h"
 
 using namespace Engine;

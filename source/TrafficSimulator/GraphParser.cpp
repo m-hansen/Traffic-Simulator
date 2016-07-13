@@ -40,8 +40,7 @@ bool GraphParser::LoadGraph(Graph* graph, const std::string& filename)
 		nodeElement->QueryIntAttribute("x", &xPosition);
 		nodeElement->QueryIntAttribute("y", &yPosition);
 
-		graph->CreateNode(id, Vector2{ xPosition, yPosition });
-
+		graph->CreateNode(id, Vector2{ xPosition, yPosition});
 		nodeElement = nodeElement->NextSiblingElement("node");
 	}
 

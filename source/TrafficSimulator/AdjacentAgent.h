@@ -1,7 +1,7 @@
 #pragma once
 
-#include <SDL.h>
 #include <list>
+#include <SDL.h>
 #include "Sensor.h"
 #include "../Engine/Utils.h"
 

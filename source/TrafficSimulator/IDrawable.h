@@ -1,5 +1,7 @@
 #pragma once
 
+struct SDL_Renderer;
+
 namespace TrafficSimulator
 {
 	class IDrawable

@@ -1,0 +1,1021 @@
+<graphml>
+    <graph id="WorldGraph" edgedefault="directed">
+	<node id="26928286" visible="true" version="3" changeset="4620344" timestamp="2010-05-06T10:39:34Z" user="NE2" uid="207745" x="28.5343615" y="-81.3827357"/>
+ <node id="26928293" visible="true" version="3" changeset="4620344" timestamp="2010-05-06T10:39:34Z" user="NE2" uid="207745" x="28.5348293" y="-81.3826915"/>
+ <node id="26928300" visible="true" version="3" changeset="4620344" timestamp="2010-05-06T10:39:34Z" user="NE2" uid="207745" x="28.5350213" y="-81.3826419"/>
+ <node id="26928309" visible="true" version="3" changeset="4620344" timestamp="2010-05-06T10:39:35Z" user="NE2" uid="207745" x="28.5355480" y="-81.3824206"/>
+ <node id="26928566" visible="true" version="5" changeset="4620344" timestamp="2010-05-06T10:39:36Z" user="NE2" uid="207745" x="28.5378878" y="-81.3807952"/>
+ <node id="26928567" visible="true" version="5" changeset="4620344" timestamp="2010-05-06T10:39:36Z" user="NE2" uid="207745" x="28.5381482" y="-81.3807549"/>
+ <node id="54218830" visible="true" version="32" changeset="3822818" timestamp="2010-02-08T13:07:31Z" user="NE2" uid="207745" x="28.5491561" y="-81.3824572"/>
+ <node id="54218829" visible="true" version="33" changeset="3822818" timestamp="2010-02-08T13:07:31Z" user="NE2" uid="207745" x="28.5496438" y="-81.3824814"/>
+ <node id="54218832" visible="true" version="36" changeset="37767348" timestamp="2016-03-11T18:05:40Z" user="samely" uid="2512300" x="28.5472642" y="-81.3823714"/>
+ <node id="54221031" visible="true" version="33" changeset="3822818" timestamp="2010-02-08T13:07:31Z" user="NE2" uid="207745" x="28.5491561" y="-81.3826611"/>
+ <node id="54221028" visible="true" version="30" changeset="3828744" timestamp="2010-02-09T02:45:51Z" user="NE2" uid="207745" x="28.5515102" y="-81.3827259"/>
+ <node id="54221030" visible="true" version="30" changeset="3828744" timestamp="2010-02-09T02:45:51Z" user="NE2" uid="207745" x="28.5508600" y="-81.3827205"/>
+ <node id="54221032" visible="true" version="36" changeset="37767348" timestamp="2016-03-11T18:05:41Z" user="samely" uid="2512300" x="28.5472829" y="-81.3825863"/>
+ <node id="99461555" visible="true" version="12" changeset="15323769" timestamp="2013-03-11T04:45:12Z" user="NE2" uid="207745" x="28.5457116" y="-81.3818880">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="99464165" visible="true" version="10" changeset="4294372" timestamp="2010-04-01T14:23:07Z" user="scrouds" uid="226482" x="28.5475109" y="-81.3775471">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="99497765" visible="true" version="10" changeset="5209629" timestamp="2010-07-13T16:44:39Z" user="NE2" uid="207745" x="28.5493833" y="-81.3791514">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="99502434" visible="true" version="5" changeset="3822818" timestamp="2010-02-08T12:58:06Z" user="NE2" uid="207745" x="28.5487509" y="-81.3855311"/>
+ <node id="99513607" visible="true" version="5" changeset="5203858" timestamp="2010-07-12T23:52:37Z" user="NE2" uid="207745" x="28.5419945" y="-81.3869983">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="99523747" visible="true" version="7" changeset="5204180" timestamp="2010-07-13T03:16:00Z" user="NE2" uid="207745" x="28.5530157" y="-81.3841818"/>
+ <node id="99526713" visible="true" version="4" changeset="5204180" timestamp="2010-07-13T02:45:33Z" user="NE2" uid="207745" x="28.5475309" y="-81.3891130"/>
+ <node id="99526705" visible="true" version="6" changeset="5204180" timestamp="2010-07-13T01:57:37Z" user="NE2" uid="207745" x="28.5457049" y="-81.3890862">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="99543549" visible="true" version="9" changeset="4620344" timestamp="2010-05-06T10:49:01Z" user="NE2" uid="207745" x="28.5493847" y="-81.3819476">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="99551070" visible="true" version="6" changeset="3822818" timestamp="2010-02-08T12:48:04Z" user="NE2" uid="207745" x="28.5486896" y="-81.3830071"/>
+ <node id="99551074" visible="true" version="4" changeset="3822818" timestamp="2010-02-08T12:58:09Z" user="NE2" uid="207745" x="28.5485341" y="-81.3853540"/>
+ <node id="99552367" visible="true" version="12" changeset="5842173" timestamp="2010-09-22T02:56:11Z" user="NE2" uid="207745" x="28.5456846" y="-81.3790906">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="99572926" visible="true" version="6" changeset="4620344" timestamp="2010-05-06T10:50:46Z" user="NE2" uid="207745" x="28.5456905" y="-81.3836235"/>
+ <node id="99595854" visible="true" version="9" changeset="5204180" timestamp="2010-07-13T03:00:47Z" user="NE2" uid="207745" x="28.5509047" y="-81.3830499"/>
+ <node id="99596024" visible="true" version="6" changeset="4620344" timestamp="2010-05-06T10:49:00Z" user="NE2" uid="207745" x="28.5474717" y="-81.3819472">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="99596020" visible="true" version="5" changeset="4620344" timestamp="2010-05-06T10:50:43Z" user="NE2" uid="207745" x="28.5447799" y="-81.3818104"/>
+ <node id="99601769" visible="true" version="5" changeset="5204180" timestamp="2010-07-13T01:57:39Z" user="NE2" uid="207745" x="28.5456978" y="-81.3859963"/>
+ <node id="99621691" visible="true" version="2" changeset="3425075" timestamp="2009-12-22T07:18:20Z" user="woodpeck_fixbot" uid="147510" x="28.6048770" y="-81.4185920"/>
+ <node id="99621728" visible="true" version="3" changeset="10448819" timestamp="2012-01-20T18:15:23Z" user="NE2" uid="207745" x="28.5785860" y="-81.4063513"/>
+ <node id="99631679" visible="true" version="7" changeset="4294372" timestamp="2010-04-01T14:23:06Z" user="scrouds" uid="226482" x="28.5475043" y="-81.3802344"/>
+ <node id="99631677" visible="true" version="8" changeset="4620344" timestamp="2010-05-06T10:50:44Z" user="NE2" uid="207745" x="28.5456802" y="-81.3802185"/>
+ <node id="275731775" visible="true" version="2" changeset="808222" timestamp="2009-03-14T12:12:52Z" user="Phil Shipley" uid="44659" x="28.5494985" y="-81.3879441"/>
+ <node id="360207939" visible="true" version="13" changeset="808222" timestamp="2009-03-14T13:56:34Z" user="Phil Shipley" uid="44659" x="28.5521789" y="-81.3824235"/>
+ <node id="360207973" visible="true" version="22" changeset="3822818" timestamp="2010-02-08T13:07:31Z" user="NE2" uid="207745" x="28.5496226" y="-81.3826852"/>
+ <node id="360208015" visible="true" version="19" changeset="37767348" timestamp="2016-03-11T18:05:40Z" user="samely" uid="2512300" x="28.5477095" y="-81.3823929"/>
+ <node id="360231845" visible="true" version="6" changeset="37767348" timestamp="2016-03-11T18:05:40Z" user="samely" uid="2512300" x="28.5472760" y="-81.3821783"/>
+ <node id="99583152" visible="true" version="4" changeset="5204180" timestamp="2010-07-13T01:57:30Z" user="NE2" uid="207745" x="28.5447810" y="-81.3870209"/>
+ <node id="99621690" visible="true" version="3" changeset="10666415" timestamp="2012-02-12T18:39:09Z" user="NE2" uid="207745" x="28.6070667" y="-81.4191616"/>
+ <node id="99621700" visible="true" version="3" changeset="5737949" timestamp="2010-09-10T04:08:01Z" user="NE2" uid="207745" x="28.5962419" y="-81.4156536"/>
+ <node id="99621696" visible="true" version="4" changeset="5783775" timestamp="2010-09-15T06:21:44Z" user="NE2" uid="207745" x="28.5992269" y="-81.4171955"/>
+ <node id="99633786" visible="true" version="7" changeset="3822818" timestamp="2010-02-08T12:48:01Z" user="NE2" uid="207745" x="28.5474762" y="-81.3829454">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="552611758" visible="true" version="6" changeset="5204180" timestamp="2010-07-13T03:00:40Z" user="NE2" uid="207745" x="28.5529663" y="-81.3871496"/>
+ <node id="552613307" visible="true" version="3" changeset="5204180" timestamp="2010-07-13T02:33:04Z" user="NE2" uid="207745" x="28.5467769" y="-81.3890969">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="559374094" visible="true" version="3" changeset="3822818" timestamp="2010-02-08T13:37:53Z" user="NE2" uid="207745" x="28.5475941" y="-81.3775729"/>
+ <node id="559374095" visible="true" version="3" changeset="3822818" timestamp="2010-02-08T13:37:54Z" user="NE2" uid="207745" x="28.5476270" y="-81.3776319"/>
+ <node id="559374096" visible="true" version="3" changeset="3822818" timestamp="2010-02-08T13:37:54Z" user="NE2" uid="207745" x="28.5476317" y="-81.3777070"/>
+ <node id="559374097" visible="true" version="7" changeset="15324282" timestamp="2013-03-11T06:50:52Z" user="NE2" uid="207745" x="28.5476240" y="-81.3791270">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="559374099" visible="true" version="10" changeset="15529711" timestamp="2013-03-28T18:15:47Z" user="NE2" uid="207745" x="28.5475823" y="-81.3815319">
+  <tag k="announced_name" v="Livingston Street &amp; Garland Avenue"/>
+  <tag k="highway" v="bus_stop"/>
+  <tag k="operator" v="Lynx"/>
+  <tag k="surface" v="asphalt"/>
+ </node>
+ <node id="559856881" visible="true" version="3" changeset="3822818" timestamp="2010-02-08T12:48:02Z" user="NE2" uid="207745" x="28.5476247" y="-81.3817572"/>
+ <node id="559856885" visible="true" version="4" changeset="5973200" timestamp="2010-10-06T20:27:19Z" user="NE2" uid="207745" x="28.5477104" y="-81.3818419"/>
+ <node id="559857282" visible="true" version="3" changeset="3828744" timestamp="2010-02-09T02:23:25Z" user="NE2" uid="207745" x="28.5486735" y="-81.3818300"/>
+ <node id="559857283" visible="true" version="5" changeset="4620344" timestamp="2010-05-06T10:49:01Z" user="NE2" uid="207745" x="28.5487678" y="-81.3819212"/>
+ <node id="559857275" visible="true" version="4" changeset="4620344" timestamp="2010-05-06T10:49:02Z" user="NE2" uid="207745" x="28.5481185" y="-81.3818466"/>
+ <node id="559857617" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T02:48:47Z" user="NE2" uid="207745" x="28.5494169" y="-81.3848161"/>
+ <node id="559857628" visible="true" version="1" changeset="3070584" timestamp="2009-11-09T04:29:12Z" user="crystalwalrein" uid="12290" x="28.5525877" y="-81.3874821"/>
+ <node id="559857613" visible="true" version="5" changeset="5973200" timestamp="2010-10-06T20:24:51Z" user="NE2" uid="207745" x="28.5493926" y="-81.3811512"/>
+ <node id="559857610" visible="true" version="7" changeset="5973200" timestamp="2010-10-06T20:27:21Z" user="NE2" uid="207745" x="28.5493891" y="-81.3813872"/>
+ <node id="559857647" visible="true" version="1" changeset="3070584" timestamp="2009-11-09T04:29:44Z" user="crystalwalrein" uid="12290" x="28.5493911" y="-81.3882889"/>
+ <node id="559857652" visible="true" version="2" changeset="3822818" timestamp="2010-02-08T12:58:06Z" user="NE2" uid="207745" x="28.5486519" y="-81.3855203"/>
+ <node id="559857651" visible="true" version="2" changeset="3822818" timestamp="2010-02-08T12:58:06Z" user="NE2" uid="207745" x="28.5485907" y="-81.3854908"/>
+ <node id="559857811" visible="true" version="3" changeset="3822818" timestamp="2010-02-08T13:07:35Z" user="NE2" uid="207745" x="28.5440999" y="-81.3822722"/>
+ <node id="559857650" visible="true" version="4" changeset="15440054" timestamp="2013-03-21T08:32:06Z" user="NE2" uid="207745" x="28.5485568" y="-81.3854477">
+  <tag k="crossing" v="uncontrolled"/>
+  <tag k="highway" v="crossing"/>
+ </node>
+ <node id="99550497" visible="true" version="8" changeset="3857800" timestamp="2010-02-12T16:39:05Z" user="NE2" uid="207745" x="28.5509466" y="-81.3791552">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="559857658" visible="true" version="5" changeset="3822818" timestamp="2010-02-08T12:47:57Z" user="NE2" uid="207745" x="28.5483504" y="-81.3829937"/>
+ <node id="559858177" visible="true" version="1" changeset="3070665" timestamp="2009-11-09T04:40:57Z" user="crystalwalrein" uid="12290" x="28.5489509" y="-81.3891198"/>
+ <node id="559857951" visible="true" version="5" changeset="4620344" timestamp="2010-05-06T10:39:24Z" user="NE2" uid="207745" x="28.5446558" y="-81.3808181">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="559858265" visible="true" version="4" changeset="8296704" timestamp="2011-05-30T21:25:03Z" user="NE2" uid="207745" x="28.5455064" y="-81.3825419"/>
+ <node id="599895793" visible="true" version="3" changeset="4620344" timestamp="2010-05-06T10:39:35Z" user="NE2" uid="207745" x="28.5375120" y="-81.3809185"/>
+ <node id="599902844" visible="true" version="2" changeset="3822818" timestamp="2010-02-08T12:48:02Z" user="NE2" uid="207745" x="28.5475799" y="-81.3816606"/>
+ <node id="599902760" visible="true" version="7" changeset="4620344" timestamp="2010-05-06T10:39:14Z" user="NE2" uid="207745" x="28.5509552" y="-81.3808756">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="599902846" visible="true" version="3" changeset="4620344" timestamp="2010-05-06T10:49:00Z" user="NE2" uid="207745" x="28.5475707" y="-81.3819445">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="599902744" visible="true" version="7" changeset="4620344" timestamp="2010-05-06T10:50:44Z" user="NE2" uid="207745" x="28.5456811" y="-81.3808153">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="599902845" visible="true" version="5" changeset="15347034" timestamp="2013-03-13T01:40:44Z" user="NE2" uid="207745" x="28.5475614" y="-81.3829497">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="599902757" visible="true" version="3" changeset="5874542" timestamp="2010-09-25T21:29:16Z" user="NE2" uid="207745" x="28.5521002" y="-81.3823147"/>
+ <node id="599902847" visible="true" version="2" changeset="3822818" timestamp="2010-02-08T12:58:50Z" user="NE2" uid="207745" x="28.5476011" y="-81.3799413"/>
+ <node id="599899067" visible="true" version="6" changeset="5973200" timestamp="2010-10-06T20:24:51Z" user="NE2" uid="207745" x="28.5474971" y="-81.3811217"/>
+ <node id="599903929" visible="true" version="2" changeset="3822818" timestamp="2010-02-08T12:48:06Z" user="NE2" uid="207745" x="28.5459377" y="-81.3828891"/>
+ <node id="599903980" visible="true" version="4" changeset="3822818" timestamp="2010-02-08T12:54:53Z" user="NE2" uid="207745" x="28.5489205" y="-81.3830151"/>
+ <node id="599904019" visible="true" version="4" changeset="4620344" timestamp="2010-05-06T10:39:37Z" user="NE2" uid="207745" x="28.5412915" y="-81.3807804">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="599903995" visible="true" version="4" changeset="5204180" timestamp="2010-07-13T02:30:08Z" user="NE2" uid="207745" x="28.5460983" y="-81.3828916">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="599903927" visible="true" version="4" changeset="37767348" timestamp="2016-03-11T18:05:41Z" user="samely" uid="2512300" x="28.5476945" y="-81.3828019"/>
+ <node id="599904054" visible="true" version="3" changeset="4620344" timestamp="2010-05-06T10:39:37Z" user="NE2" uid="207745" x="28.5436960" y="-81.3808019">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="599904101" visible="true" version="2" changeset="3822818" timestamp="2010-02-08T12:48:01Z" user="NE2" uid="207745" x="28.5484799" y="-81.3831975"/>
+ <node id="599904104" visible="true" version="2" changeset="3822818" timestamp="2010-02-08T12:48:02Z" user="NE2" uid="207745" x="28.5483810" y="-81.3830849"/>
+ <node id="599904113" visible="true" version="2" changeset="3822818" timestamp="2010-02-08T12:48:02Z" user="NE2" uid="207745" x="28.5482090" y="-81.3830607"/>
+ <node id="599904139" visible="true" version="3" changeset="4620344" timestamp="2010-05-06T10:39:37Z" user="NE2" uid="207745" x="28.5420573" y="-81.3807898">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="599904117" visible="true" version="3" changeset="15347034" timestamp="2013-03-13T01:40:44Z" user="NE2" uid="207745" x="28.5475914" y="-81.3830133"/>
+ <node id="599904180" visible="true" version="3" changeset="3822818" timestamp="2010-02-08T12:47:59Z" user="NE2" uid="207745" x="28.5494789" y="-81.3830259">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="599904179" visible="true" version="2" changeset="3822818" timestamp="2010-02-08T12:48:01Z" user="NE2" uid="207745" x="28.5494671" y="-81.3820388"/>
+ <node id="559857274" visible="true" version="3" changeset="4620344" timestamp="2010-05-06T10:49:00Z" user="NE2" uid="207745" x="28.5480490" y="-81.3819163"/>
+ <node id="599904185" visible="true" version="4" changeset="4620344" timestamp="2010-05-06T10:50:44Z" user="NE2" uid="207745" x="28.5456846" y="-81.3813128">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="599904184" visible="true" version="4" changeset="4620344" timestamp="2010-05-06T10:50:46Z" user="NE2" uid="207745" x="28.5460074" y="-81.3819056">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="599904181" visible="true" version="4" changeset="5204180" timestamp="2010-07-13T02:54:22Z" user="NE2" uid="207745" x="28.5494950" y="-81.3840739">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="360231848" visible="true" version="7" changeset="37767348" timestamp="2016-03-11T18:05:40Z" user="samely" uid="2512300" x="28.5477119" y="-81.3821354"/>
+ <node id="599902742" visible="true" version="7" changeset="38017243" timestamp="2016-03-23T10:34:32Z" user="JeopardyTempest" uid="126806" x="28.5474995" y="-81.3808248">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="599902759" visible="true" version="6" changeset="38017243" timestamp="2016-03-23T10:34:32Z" user="JeopardyTempest" uid="126806" x="28.5493942" y="-81.3808514">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="599905945" visible="true" version="3" changeset="4620344" timestamp="2010-05-06T10:39:37Z" user="NE2" uid="207745" x="28.5403219" y="-81.3807670">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="599907474" visible="true" version="5" changeset="15374479" timestamp="2013-03-15T15:08:39Z" user="NE2" uid="207745" x="28.5598599" y="-81.3752250">
+  <tag k="railway" v="switch"/>
+ </node>
+ <node id="599925897" visible="true" version="5" changeset="15324282" timestamp="2013-03-11T06:50:53Z" user="NE2" uid="207745" x="28.5589760" y="-81.3769208">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="599925788" visible="true" version="3" changeset="4620344" timestamp="2010-05-06T10:39:20Z" user="NE2" uid="207745" x="28.5567462" y="-81.3799905">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="599925789" visible="true" version="3" changeset="4620344" timestamp="2010-05-06T10:39:21Z" user="NE2" uid="207745" x="28.5575660" y="-81.3792515">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="599929538" visible="true" version="2" changeset="5874542" timestamp="2010-09-25T21:29:04Z" user="NE2" uid="207745" x="28.5517680" y="-81.3827076"/>
+ <node id="599933696" visible="true" version="2" changeset="3822818" timestamp="2010-02-08T12:58:05Z" user="NE2" uid="207745" x="28.5489370" y="-81.3855311"/>
+ <node id="599933694" visible="true" version="3" changeset="3822818" timestamp="2010-02-08T12:58:08Z" user="NE2" uid="207745" x="28.5494860" y="-81.3843911"/>
+ <node id="599933695" visible="true" version="2" changeset="3822818" timestamp="2010-02-08T12:58:08Z" user="NE2" uid="207745" x="28.5493941" y="-81.3844367">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="599933691" visible="true" version="3" changeset="3822818" timestamp="2010-02-08T13:02:04Z" user="NE2" uid="207745" x="28.5485318" y="-81.3844394">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="602412106" visible="true" version="1" changeset="3505316" timestamp="2010-01-01T04:23:29Z" user="NE2" uid="207745" x="28.5565111" y="-81.3954629"/>
+ <node id="602412107" visible="true" version="1" changeset="3505316" timestamp="2010-01-01T04:23:29Z" user="NE2" uid="207745" x="28.5569729" y="-81.3955058"/>
+ <node id="602412108" visible="true" version="1" changeset="3505316" timestamp="2010-01-01T04:23:29Z" user="NE2" uid="207745" x="28.5574252" y="-81.3956238"/>
+ <node id="602412112" visible="true" version="1" changeset="3505316" timestamp="2010-01-01T04:23:29Z" user="NE2" uid="207745" x="28.5651334" y="-81.4002265"/>
+ <node id="602412113" visible="true" version="1" changeset="3505316" timestamp="2010-01-01T04:23:30Z" user="NE2" uid="207745" x="28.5669237" y="-81.4013208"/>
+ <node id="602412114" visible="true" version="1" changeset="3505316" timestamp="2010-01-01T04:23:30Z" user="NE2" uid="207745" x="28.5690721" y="-81.4026512"/>
+ <node id="602412115" visible="true" version="1" changeset="3505316" timestamp="2010-01-01T04:23:30Z" user="NE2" uid="207745" x="28.5701180" y="-81.4032091"/>
+ <node id="602412116" visible="true" version="1" changeset="3505316" timestamp="2010-01-01T04:23:30Z" user="NE2" uid="207745" x="28.5707210" y="-81.4034881"/>
+ <node id="602412117" visible="true" version="1" changeset="3505316" timestamp="2010-01-01T04:23:30Z" user="NE2" uid="207745" x="28.5711544" y="-81.4036275"/>
+ <node id="602412118" visible="true" version="1" changeset="3505316" timestamp="2010-01-01T04:23:30Z" user="NE2" uid="207745" x="28.5727751" y="-81.4040245"/>
+ <node id="602412119" visible="true" version="1" changeset="3505316" timestamp="2010-01-01T04:23:30Z" user="NE2" uid="207745" x="28.5746124" y="-81.4045073"/>
+ <node id="602412120" visible="true" version="1" changeset="3505316" timestamp="2010-01-01T04:23:30Z" user="NE2" uid="207745" x="28.5752436" y="-81.4046575"/>
+ <node id="602412121" visible="true" version="1" changeset="3505316" timestamp="2010-01-01T04:23:30Z" user="NE2" uid="207745" x="28.5758655" y="-81.4049150"/>
+ <node id="602412109" visible="true" version="2" changeset="5789738" timestamp="2010-09-15T18:50:58Z" user="NE2" uid="207745" x="28.5581531" y="-81.3959828"/>
+ <node id="602412110" visible="true" version="2" changeset="5789738" timestamp="2010-09-15T18:50:58Z" user="NE2" uid="207745" x="28.5618140" y="-81.3982197"/>
+ <node id="26928315" visible="true" version="3" changeset="4620344" timestamp="2010-05-06T10:39:35Z" user="NE2" uid="207745" x="28.5359615" y="-81.3821269"/>
+ <node id="599905941" visible="true" version="4" changeset="4620344" timestamp="2010-05-06T10:39:36Z" user="NE2" uid="207745" x="28.5383709" y="-81.3807455">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="599905943" visible="true" version="5" changeset="4620344" timestamp="2010-05-06T10:39:36Z" user="NE2" uid="207745" x="28.5384416" y="-81.3807442">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="26928617" visible="true" version="3" changeset="4620344" timestamp="2010-05-06T10:39:38Z" user="NE2" uid="207745" x="28.5544044" y="-81.3808998"/>
+ <node id="26928619" visible="true" version="3" changeset="4620344" timestamp="2010-05-06T10:39:39Z" user="NE2" uid="207745" x="28.5547472" y="-81.3808555"/>
+ <node id="26928622" visible="true" version="3" changeset="4620344" timestamp="2010-05-06T10:39:39Z" user="NE2" uid="207745" x="28.5549027" y="-81.3808233"/>
+ <node id="26928626" visible="true" version="3" changeset="4620344" timestamp="2010-05-06T10:39:40Z" user="NE2" uid="207745" x="28.5559051" y="-81.3804894"/>
+ <node id="26928628" visible="true" version="4" changeset="4620344" timestamp="2010-05-06T10:39:41Z" user="NE2" uid="207745" x="28.5572338" y="-81.3795908"/>
+ <node id="633222131" visible="true" version="1" changeset="3822818" timestamp="2010-02-08T12:47:57Z" user="NE2" uid="207745" x="28.5485294" y="-81.3834792"/>
+ <node id="633222163" visible="true" version="1" changeset="3822818" timestamp="2010-02-08T12:48:01Z" user="NE2" uid="207745" x="28.5484847" y="-81.3832726"/>
+ <node id="633222166" visible="true" version="1" changeset="3822818" timestamp="2010-02-08T12:48:01Z" user="NE2" uid="207745" x="28.5484587" y="-81.3831439"/>
+ <node id="633222168" visible="true" version="1" changeset="3822818" timestamp="2010-02-08T12:48:01Z" user="NE2" uid="207745" x="28.5484234" y="-81.3831090"/>
+ <node id="633222172" visible="true" version="1" changeset="3822818" timestamp="2010-02-08T12:48:02Z" user="NE2" uid="207745" x="28.5483409" y="-81.3830715"/>
+ <node id="633228155" visible="true" version="5" changeset="5973343" timestamp="2010-10-06T20:57:58Z" user="NE2" uid="207745" x="28.5489229" y="-81.3831693"/>
+ <node id="633222150" visible="true" version="3" changeset="4620344" timestamp="2010-05-06T10:50:48Z" user="NE2" uid="207745" x="28.5459473" y="-81.3819016"/>
+ <node id="633222137" visible="true" version="4" changeset="5986481" timestamp="2010-10-08T15:09:05Z" user="NE2" uid="207745" x="28.5458252" y="-81.3820946"/>
+ <node id="633222143" visible="true" version="4" changeset="5986481" timestamp="2010-10-08T15:09:06Z" user="NE2" uid="207745" x="28.5459571" y="-81.3820929"/>
+ <node id="633222133" visible="true" version="4" changeset="5986481" timestamp="2010-10-08T15:09:06Z" user="NE2" uid="207745" x="28.5459630" y="-81.3827099"/>
+ <node id="633222100" visible="true" version="1" changeset="3822818" timestamp="2010-02-08T12:47:53Z" user="NE2" uid="207745" x="28.5485600" y="-81.3835435"/>
+ <node id="633222101" visible="true" version="1" changeset="3822818" timestamp="2010-02-08T12:47:53Z" user="NE2" uid="207745" x="28.5485883" y="-81.3835865"/>
+ <node id="633222102" visible="true" version="1" changeset="3822818" timestamp="2010-02-08T12:47:54Z" user="NE2" uid="207745" x="28.5486284" y="-81.3836133"/>
+ <node id="633222103" visible="true" version="1" changeset="3822818" timestamp="2010-02-08T12:47:54Z" user="NE2" uid="207745" x="28.5485301" y="-81.3837501"/>
+ <node id="633222104" visible="true" version="1" changeset="3822818" timestamp="2010-02-08T12:47:54Z" user="NE2" uid="207745" x="28.5485506" y="-81.3836803"/>
+ <node id="633222105" visible="true" version="1" changeset="3822818" timestamp="2010-02-08T12:47:54Z" user="NE2" uid="207745" x="28.5485860" y="-81.3836347"/>
+ <node id="633226278" visible="true" version="1" changeset="3822818" timestamp="2010-02-08T12:53:45Z" user="NE2" uid="207745" x="28.5467388" y="-81.3820737"/>
+ <node id="633226312" visible="true" version="1" changeset="3822818" timestamp="2010-02-08T12:53:45Z" user="NE2" uid="207745" x="28.5482820" y="-81.3820039"/>
+ <node id="633222107" visible="true" version="5" changeset="5973343" timestamp="2010-10-06T20:57:58Z" user="NE2" uid="207745" x="28.5486786" y="-81.3836133"/>
+ <node id="633222115" visible="true" version="5" changeset="5973343" timestamp="2010-10-06T20:57:58Z" user="NE2" uid="207745" x="28.5491621" y="-81.3831677"/>
+ <node id="633222112" visible="true" version="5" changeset="5973343" timestamp="2010-10-06T20:57:58Z" user="NE2" uid="207745" x="28.5491669" y="-81.3840689"/>
+ <node id="633222120" visible="true" version="5" changeset="5973343" timestamp="2010-10-06T20:57:59Z" user="NE2" uid="207745" x="28.5486810" y="-81.3840722"/>
+ <node id="633222117" visible="true" version="5" changeset="5973343" timestamp="2010-10-06T20:57:59Z" user="NE2" uid="207745" x="28.5486763" y="-81.3831710"/>
+ <node id="633232809" visible="true" version="1" changeset="3822818" timestamp="2010-02-08T12:58:07Z" user="NE2" uid="207745" x="28.5495018" y="-81.3843483"/>
+ <node id="633232810" visible="true" version="1" changeset="3822818" timestamp="2010-02-08T12:58:08Z" user="NE2" uid="207745" x="28.5494506" y="-81.3844233"/>
+ <node id="633232807" visible="true" version="5" changeset="5973343" timestamp="2010-10-06T20:57:58Z" user="NE2" uid="207745" x="28.5489323" y="-81.3853165"/>
+ <node id="633232805" visible="true" version="5" changeset="5973343" timestamp="2010-10-06T20:58:00Z" user="NE2" uid="207745" x="28.5486811" y="-81.3843015"/>
+ <node id="633241466" visible="true" version="1" changeset="3822818" timestamp="2010-02-08T13:02:04Z" user="NE2" uid="207745" x="28.5485012" y="-81.3844377"/>
+ <node id="633241469" visible="true" version="1" changeset="3822818" timestamp="2010-02-08T13:02:05Z" user="NE2" uid="207745" x="28.5484847" y="-81.3844153"/>
+ <node id="633252182" visible="true" version="1" changeset="3822818" timestamp="2010-02-08T13:07:31Z" user="NE2" uid="207745" x="28.5462882" y="-81.3822866"/>
+ <node id="633281408" visible="true" version="3" changeset="4620344" timestamp="2010-05-06T10:49:01Z" user="NE2" uid="207745" x="28.5480136" y="-81.3818439">
+  <tag k="highway" v="stop"/>
+ </node>
+ <node id="633916828" visible="true" version="1" changeset="3828744" timestamp="2010-02-09T02:56:37Z" user="NE2" uid="207745" x="28.5480845" y="-81.3821010"/>
+ <node id="646887408" visible="true" version="2" changeset="5973200" timestamp="2010-10-06T20:24:54Z" user="NE2" uid="207745" x="28.5487765" y="-81.3816528"/>
+ <node id="646887431" visible="true" version="4" changeset="5973200" timestamp="2010-10-06T20:30:38Z" user="NE2" uid="207745" x="28.5486806" y="-81.3814884"/>
+ <node id="646878529" visible="true" version="4" changeset="5973200" timestamp="2010-10-06T20:30:40Z" user="NE2" uid="207745" x="28.5492745" y="-81.3813304"/>
+ <node id="646887405" visible="true" version="4" changeset="5973200" timestamp="2010-10-06T20:30:40Z" user="NE2" uid="207745" x="28.5488554" y="-81.3814887"/>
+ <node id="646878522" visible="true" version="4" changeset="5973200" timestamp="2010-10-06T20:30:46Z" user="NE2" uid="207745" x="28.5491510" y="-81.3814893"/>
+ <node id="646878527" visible="true" version="4" changeset="5973200" timestamp="2010-10-06T20:30:51Z" user="NE2" uid="207745" x="28.5476672" y="-81.3809552"/>
+ <node id="646887442" visible="true" version="4" changeset="5973200" timestamp="2010-10-06T20:30:52Z" user="NE2" uid="207745" x="28.5486804" y="-81.3816540"/>
+ <node id="633232803" visible="true" version="5" changeset="5973343" timestamp="2010-10-06T20:57:59Z" user="NE2" uid="207745" x="28.5491697" y="-81.3846352"/>
+ <node id="633232802" visible="true" version="5" changeset="5973343" timestamp="2010-10-06T20:58:00Z" user="NE2" uid="207745" x="28.5491733" y="-81.3853148"/>
+ <node id="646878541" visible="true" version="4" changeset="5973200" timestamp="2010-10-06T20:30:38Z" user="NE2" uid="207745" x="28.5491993" y="-81.3812171"/>
+ <node id="646878538" visible="true" version="4" changeset="5973200" timestamp="2010-10-06T20:30:39Z" user="NE2" uid="207745" x="28.5485575" y="-81.3810497"/>
+ <node id="646878540" visible="true" version="4" changeset="5973200" timestamp="2010-10-06T20:30:40Z" user="NE2" uid="207745" x="28.5485561" y="-81.3812100"/>
+ <node id="646878537" visible="true" version="4" changeset="5973200" timestamp="2010-10-06T20:30:46Z" user="NE2" uid="207745" x="28.5483823" y="-81.3812103"/>
+ <node id="646878542" visible="true" version="4" changeset="5973200" timestamp="2010-10-06T20:30:51Z" user="NE2" uid="207745" x="28.5492007" y="-81.3810569"/>
+ <node id="646878528" visible="true" version="4" changeset="5973200" timestamp="2010-10-06T20:30:52Z" user="NE2" uid="207745" x="28.5492751" y="-81.3809583"/>
+ <node id="646878533" visible="true" version="4" changeset="5973200" timestamp="2010-10-06T20:30:52Z" user="NE2" uid="207745" x="28.5483826" y="-81.3810474"/>
+ <node id="647401786" visible="true" version="1" changeset="3920086" timestamp="2010-02-20T01:06:43Z" user="NE2" uid="207745" x="28.5476312" y="-81.3777648"/>
+ <node id="647401781" visible="true" version="1" changeset="3920086" timestamp="2010-02-20T01:06:42Z" user="NE2" uid="207745" x="28.5476296" y="-81.3781345"/>
+ <node id="647401878" visible="true" version="1" changeset="3920086" timestamp="2010-02-20T01:07:10Z" user="NE2" uid="207745" x="28.5476122" y="-81.3784268"/>
+ <node id="672475046" visible="true" version="1" changeset="4207650" timestamp="2010-03-22T22:05:05Z" user="NE2" uid="207745" x="28.5438336" y="-81.3806724"/>
+ <node id="672475050" visible="true" version="1" changeset="4207650" timestamp="2010-03-22T22:05:05Z" user="NE2" uid="207745" x="28.5463214" y="-81.3807376"/>
+ <node id="672475054" visible="true" version="1" changeset="4207650" timestamp="2010-03-22T22:05:06Z" user="NE2" uid="207745" x="28.5498649" y="-81.3807859"/>
+ <node id="672475057" visible="true" version="1" changeset="4207650" timestamp="2010-03-22T22:05:06Z" user="NE2" uid="207745" x="28.5541576" y="-81.3808396"/>
+ <node id="672475059" visible="true" version="1" changeset="4207650" timestamp="2010-03-22T22:05:06Z" user="NE2" uid="207745" x="28.5546099" y="-81.3807859"/>
+ <node id="672475060" visible="true" version="1" changeset="4207650" timestamp="2010-03-22T22:05:06Z" user="NE2" uid="207745" x="28.5551471" y="-81.3806572"/>
+ <node id="672475061" visible="true" version="1" changeset="4207650" timestamp="2010-03-22T22:05:06Z" user="NE2" uid="207745" x="28.5557408" y="-81.3804533"/>
+ <node id="672475066" visible="true" version="1" changeset="4207650" timestamp="2010-03-22T22:05:06Z" user="NE2" uid="207745" x="28.5562732" y="-81.3801744"/>
+ <node id="672475069" visible="true" version="1" changeset="4207650" timestamp="2010-03-22T22:05:06Z" user="NE2" uid="207745" x="28.5568622" y="-81.3797667"/>
+ <node id="672475078" visible="true" version="1" changeset="4207650" timestamp="2010-03-22T22:05:06Z" user="NE2" uid="207745" x="28.5576632" y="-81.3789781"/>
+ <node id="672475082" visible="true" version="1" changeset="4207650" timestamp="2010-03-22T22:05:06Z" user="NE2" uid="207745" x="28.5580826" y="-81.3783880"/>
+ <node id="672475086" visible="true" version="1" changeset="4207650" timestamp="2010-03-22T22:05:07Z" user="NE2" uid="207745" x="28.5585066" y="-81.3776263"/>
+ <node id="724113855" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:14Z" user="NE2" uid="207745" x="28.5509543" y="-81.3809186">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="724113858" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:16Z" user="NE2" uid="207745" x="28.5474996" y="-81.3808743">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="724113861" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:17Z" user="NE2" uid="207745" x="28.5475929" y="-81.3808729">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="724114017" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:24Z" user="NE2" uid="207745" x="28.5446718" y="-81.3808533">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="724114054" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:26Z" user="NE2" uid="207745" x="28.5449248" y="-81.3809078"/>
+ <node id="724114055" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:26Z" user="NE2" uid="207745" x="28.5450426" y="-81.3809293"/>
+ <node id="724114056" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:26Z" user="NE2" uid="207745" x="28.5451616" y="-81.3809695"/>
+ <node id="724114057" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:26Z" user="NE2" uid="207745" x="28.5452805" y="-81.3810205"/>
+ <node id="724114058" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:26Z" user="NE2" uid="207745" x="28.5453936" y="-81.3810821"/>
+ <node id="724114065" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:30Z" user="NE2" uid="207745" x="28.5493953" y="-81.3808984">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="724114073" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:33Z" user="NE2" uid="207745" x="28.5305889" y="-81.3823750"/>
+ <node id="724114076" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:33Z" user="NE2" uid="207745" x="28.5316198" y="-81.3824756"/>
+ <node id="724114077" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:33Z" user="NE2" uid="207745" x="28.5324541" y="-81.3825572">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="724114078" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:33Z" user="NE2" uid="207745" x="28.5331821" y="-81.3826325"/>
+ <node id="724114074" visible="true" version="2" changeset="5201196" timestamp="2010-07-12T17:59:35Z" user="NE2" uid="207745" x="28.5310988" y="-81.3824193">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="724114083" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:34Z" user="NE2" uid="207745" x="28.5342037" y="-81.3827344"/>
+ <node id="724114086" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:34Z" user="NE2" uid="207745" x="28.5345006" y="-81.3827304"/>
+ <node id="724114087" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:34Z" user="NE2" uid="207745" x="28.5346573" y="-81.3827183"/>
+ <node id="724114088" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:34Z" user="NE2" uid="207745" x="28.5351969" y="-81.3825842"/>
+ <node id="724114089" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:34Z" user="NE2" uid="207745" x="28.5353606" y="-81.3825144"/>
+ <node id="724114091" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:35Z" user="NE2" uid="207745" x="28.5356681" y="-81.3823482"/>
+ <node id="724114092" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:35Z" user="NE2" uid="207745" x="28.5358166" y="-81.3822409"/>
+ <node id="724114093" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:35Z" user="NE2" uid="207745" x="28.5361371" y="-81.3819646"/>
+ <node id="724114094" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:35Z" user="NE2" uid="207745" x="28.5369630" y="-81.3812096"/>
+ <node id="724114095" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:35Z" user="NE2" uid="207745" x="28.5370926" y="-81.3811197"/>
+ <node id="724114096" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:35Z" user="NE2" uid="207745" x="28.5373211" y="-81.3809977"/>
+ <node id="724114099" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:35Z" user="NE2" uid="207745" x="28.5376734" y="-81.3808555"/>
+ <node id="724114100" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:36Z" user="NE2" uid="207745" x="28.5380210" y="-81.3807697"/>
+ <node id="724114137" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:38Z" user="NE2" uid="207745" x="28.5541052" y="-81.3809185"/>
+ <node id="724114153" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:38Z" user="NE2" uid="207745" x="28.5542583" y="-81.3809118"/>
+ <node id="724114169" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:39Z" user="NE2" uid="207745" x="28.5545881" y="-81.3808783"/>
+ <node id="724114187" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:39Z" user="NE2" uid="207745" x="28.5551241" y="-81.3807697"/>
+ <node id="724114189" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:39Z" user="NE2" uid="207745" x="28.5553220" y="-81.3807174"/>
+ <node id="724114191" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:40Z" user="NE2" uid="207745" x="28.5555835" y="-81.3806235"/>
+ <node id="724114193" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:40Z" user="NE2" uid="207745" x="28.5557614" y="-81.3805538"/>
+ <node id="724114199" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:40Z" user="NE2" uid="207745" x="28.5560724" y="-81.3804103"/>
+ <node id="724114201" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:40Z" user="NE2" uid="207745" x="28.5562432" y="-81.3803217"/>
+ <node id="724114205" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:41Z" user="NE2" uid="207745" x="28.5565400" y="-81.3801420"/>
+ <node id="724114207" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:41Z" user="NE2" uid="207745" x="28.5569547" y="-81.3798336"/>
+ <node id="724114209" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:41Z" user="NE2" uid="207745" x="28.5571078" y="-81.3797075"/>
+ <node id="724114314" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:54Z" user="NE2" uid="207745" x="28.5324531" y="-81.3825963">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="724114330" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:58Z" user="NE2" uid="207745" x="28.5574788" y="-81.3794004"/>
+ <node id="724114333" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:58Z" user="NE2" uid="207745" x="28.5572739" y="-81.3796043"/>
+ <node id="724114334" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:58Z" user="NE2" uid="207745" x="28.5571090" y="-81.3797545"/>
+ <node id="724114335" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:58Z" user="NE2" uid="207745" x="28.5569664" y="-81.3798752"/>
+ <node id="724114336" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:58Z" user="NE2" uid="207745" x="28.5565883" y="-81.3801514"/>
+ <node id="724114337" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:58Z" user="NE2" uid="207745" x="28.5564293" y="-81.3802560"/>
+ <node id="724114340" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:59Z" user="NE2" uid="207745" x="28.5562444" y="-81.3803633"/>
+ <node id="724114342" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:59Z" user="NE2" uid="207745" x="28.5560865" y="-81.3804491"/>
+ <node id="724114344" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:59Z" user="NE2" uid="207745" x="28.5559122" y="-81.3805323"/>
+ <node id="724114346" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:59Z" user="NE2" uid="207745" x="28.5557131" y="-81.3806195"/>
+ <node id="724114348" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:59Z" user="NE2" uid="207745" x="28.5555093" y="-81.3807013"/>
+ <node id="724114351" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:59Z" user="NE2" uid="207745" x="28.5553102" y="-81.3807656"/>
+ <node id="724114212" visible="true" version="2" changeset="5916761" timestamp="2010-09-30T02:51:19Z" user="NE2" uid="207745" x="28.5573894" y="-81.3794395"/>
+ <node id="724113867" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:20Z" user="NE2" uid="207745" x="28.5567463" y="-81.3800415">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="724113901" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:39:21Z" user="NE2" uid="207745" x="28.5576143" y="-81.3792515">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="724114380" visible="true" version="2" changeset="38017243" timestamp="2016-03-23T10:34:32Z" user="JeopardyTempest" uid="126806" x="28.5371924" y="-81.3811269"/>
+ <node id="724114385" visible="true" version="2" changeset="38017243" timestamp="2016-03-23T10:34:32Z" user="JeopardyTempest" uid="126806" x="28.5367319" y="-81.3814792"/>
+ <node id="724114353" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:00Z" user="NE2" uid="207745" x="28.5550770" y="-81.3808273"/>
+ <node id="724114354" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:00Z" user="NE2" uid="207745" x="28.5548343" y="-81.3808810"/>
+ <node id="724114355" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:00Z" user="NE2" uid="207745" x="28.5546883" y="-81.3809065"/>
+ <node id="724114356" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:00Z" user="NE2" uid="207745" x="28.5544692" y="-81.3809360"/>
+ <node id="724114357" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:00Z" user="NE2" uid="207745" x="28.5542960" y="-81.3809507"/>
+ <node id="724114359" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:00Z" user="NE2" uid="207745" x="28.5541311" y="-81.3809588"/>
+ <node id="724114360" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:01Z" user="NE2" uid="207745" x="28.5538672" y="-81.3809601"/>
+ <node id="724114361" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:01Z" user="NE2" uid="207745" x="28.5437305" y="-81.3808417">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="724114363" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:01Z" user="NE2" uid="207745" x="28.5420492" y="-81.3808304">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="724114364" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:01Z" user="NE2" uid="207745" x="28.5412903" y="-81.3808206">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="724114365" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:01Z" user="NE2" uid="207745" x="28.5403219" y="-81.3808099">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="724114366" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:02Z" user="NE2" uid="207745" x="28.5392380" y="-81.3807925"/>
+ <node id="724114368" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:02Z" user="NE2" uid="207745" x="28.5384426" y="-81.3807830">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="724114369" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:02Z" user="NE2" uid="207745" x="28.5383717" y="-81.3807830">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="724114372" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:03Z" user="NE2" uid="207745" x="28.5381411" y="-81.3807965"/>
+ <node id="724114374" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:03Z" user="NE2" uid="207745" x="28.5379809" y="-81.3808180"/>
+ <node id="724114375" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:04Z" user="NE2" uid="207745" x="28.5378136" y="-81.3808515"/>
+ <node id="724114377" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:04Z" user="NE2" uid="207745" x="28.5376522" y="-81.3809038"/>
+ <node id="724114378" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:05Z" user="NE2" uid="207745" x="28.5374778" y="-81.3809708"/>
+ <node id="724114379" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:05Z" user="NE2" uid="207745" x="28.5373200" y="-81.3810406"/>
+ <node id="724114386" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:06Z" user="NE2" uid="207745" x="28.5361842" y="-81.3819767"/>
+ <node id="724114387" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:07Z" user="NE2" uid="207745" x="28.5360393" y="-81.3821041"/>
+ <node id="724114389" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:07Z" user="NE2" uid="207745" x="28.5359050" y="-81.3822221"/>
+ <node id="724114390" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:07Z" user="NE2" uid="207745" x="28.5357494" y="-81.3823374"/>
+ <node id="724114391" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:08Z" user="NE2" uid="207745" x="28.5356316" y="-81.3824152"/>
+ <node id="724114393" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:08Z" user="NE2" uid="207745" x="28.5355056" y="-81.3824876"/>
+ <node id="724114395" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:09Z" user="NE2" uid="207745" x="28.5353571" y="-81.3825641"/>
+ <node id="724114396" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:09Z" user="NE2" uid="207745" x="28.5351757" y="-81.3826351"/>
+ <node id="724114397" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:09Z" user="NE2" uid="207745" x="28.5350307" y="-81.3826834"/>
+ <node id="724114399" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:09Z" user="NE2" uid="207745" x="28.5349070" y="-81.3827156"/>
+ <node id="724114400" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:09Z" user="NE2" uid="207745" x="28.5347386" y="-81.3827491"/>
+ <node id="724114401" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:10Z" user="NE2" uid="207745" x="28.5345712" y="-81.3827706"/>
+ <node id="724114403" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:10Z" user="NE2" uid="207745" x="28.5344075" y="-81.3827786"/>
+ <node id="724114412" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:10Z" user="NE2" uid="207745" x="28.5342461" y="-81.3827773"/>
+ <node id="724114432" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:11Z" user="NE2" uid="207745" x="28.5334673" y="-81.3827009"/>
+ <node id="724114444" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:40:11Z" user="NE2" uid="207745" x="28.5306207" y="-81.3824152"/>
+ <node id="724114421" visible="true" version="2" changeset="15374479" timestamp="2013-03-15T15:08:39Z" user="NE2" uid="207745" x="28.5340482" y="-81.3827658">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="724118802" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:50:46Z" user="NE2" uid="207745" x="28.5460463" y="-81.3820397"/>
+ <node id="724118806" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:50:48Z" user="NE2" uid="207745" x="28.5463102" y="-81.3819270"/>
+ <node id="724113864" visible="true" version="2" changeset="4620344" timestamp="2010-05-06T10:50:44Z" user="NE2" uid="207745" x="28.5456814" y="-81.3808529">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="724118796" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:50:45Z" user="NE2" uid="207745" x="28.5457235" y="-81.3820303"/>
+ <node id="724118798" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:50:45Z" user="NE2" uid="207745" x="28.5457282" y="-81.3821671"/>
+ <node id="724118799" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:50:45Z" user="NE2" uid="207745" x="28.5457270" y="-81.3826217"/>
+ <node id="724118800" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:50:45Z" user="NE2" uid="207745" x="28.5457176" y="-81.3827558"/>
+ <node id="724117305" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:47:26Z" user="NE2" uid="207745" x="28.5440224" y="-81.3808453"/>
+ <node id="724114059" visible="true" version="2" changeset="4620344" timestamp="2010-05-06T10:48:57Z" user="NE2" uid="207745" x="28.5454902" y="-81.3811479"/>
+ <node id="724118012" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:48:57Z" user="NE2" uid="207745" x="28.5455986" y="-81.3812310"/>
+ <node id="724118014" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:48:57Z" user="NE2" uid="207745" x="28.5457588" y="-81.3813986"/>
+ <node id="724118015" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:48:57Z" user="NE2" uid="207745" x="28.5458248" y="-81.3814979"/>
+ <node id="724118016" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:48:57Z" user="NE2" uid="207745" x="28.5458814" y="-81.3816065"/>
+ <node id="724118017" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:48:57Z" user="NE2" uid="207745" x="28.5459697" y="-81.3818023"/>
+ <node id="724118018" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:48:58Z" user="NE2" uid="207745" x="28.5460651" y="-81.3821269"/>
+ <node id="724118019" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:48:58Z" user="NE2" uid="207745" x="28.5460852" y="-81.3822610"/>
+ <node id="724118021" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:48:58Z" user="NE2" uid="207745" x="28.5460946" y="-81.3824219"/>
+ <node id="724118025" visible="true" version="1" changeset="4620344" timestamp="2010-05-06T10:49:00Z" user="NE2" uid="207745" x="28.5473115" y="-81.3819525"/>
+ <node id="724114316" visible="true" version="2" changeset="5201196" timestamp="2010-07-12T17:59:35Z" user="NE2" uid="207745" x="28.5310988" y="-81.3824622">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="814309703" visible="true" version="1" changeset="5203858" timestamp="2010-07-13T00:03:20Z" user="NE2" uid="207745" x="28.5437535" y="-81.3870165">
+  <tag k="highway" v="stop"/>
+ </node>
+ <node id="99583151" visible="true" version="6" changeset="5203858" timestamp="2010-07-13T00:03:20Z" user="NE2" uid="207745" x="28.5438548" y="-81.3870171"/>
+ <node id="814309712" visible="true" version="1" changeset="5203858" timestamp="2010-07-13T00:03:20Z" user="NE2" uid="207745" x="28.5439537" y="-81.3870197">
+  <tag k="highway" v="stop"/>
+ </node>
+ <node id="99526700" visible="true" version="6" changeset="5203858" timestamp="2010-07-13T00:03:22Z" user="NE2" uid="207745" x="28.5438501" y="-81.3890649">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="814316473" visible="true" version="1" changeset="5203858" timestamp="2010-07-13T00:08:47Z" user="NE2" uid="207745" x="28.5427521" y="-81.3870071"/>
+ <node id="99604542" visible="true" version="4" changeset="5203858" timestamp="2010-07-12T23:44:56Z" user="NE2" uid="207745" x="28.5401567" y="-81.3869768">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="99572922" visible="true" version="6" changeset="5203858" timestamp="2010-07-13T00:03:15Z" user="NE2" uid="207745" x="28.5438583" y="-81.3836040"/>
+ <node id="814309588" visible="true" version="1" changeset="5203858" timestamp="2010-07-13T00:03:15Z" user="NE2" uid="207745" x="28.5439761" y="-81.3836052">
+  <tag k="highway" v="stop"/>
+ </node>
+ <node id="99617870" visible="true" version="8" changeset="5203858" timestamp="2010-07-13T00:03:16Z" user="NE2" uid="207745" x="28.5438548" y="-81.3828717">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="99484319" visible="true" version="4" changeset="5203858" timestamp="2010-07-12T23:59:01Z" user="NE2" uid="207745" x="28.5434047" y="-81.3870144"/>
+ <node id="99583150" visible="true" version="4" changeset="5203858" timestamp="2010-07-12T23:59:02Z" user="NE2" uid="207745" x="28.5430313" y="-81.3870104"/>
+ <node id="99526710" visible="true" version="4" changeset="5204180" timestamp="2010-07-13T01:57:27Z" user="NE2" uid="207745" x="28.5462208" y="-81.3890956"/>
+ <node id="814425341" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:00:12Z" user="NE2" uid="207745" x="28.5460950" y="-81.3891804">
+  <tag k="railway" v="crossing"/>
+ </node>
+ <node id="814425429" visible="true" version="2" changeset="15350047" timestamp="2013-03-13T10:45:16Z" user="NE2" uid="207745" x="28.5457054" y="-81.3891733">
+  <tag k="crossing" v="traffic_signals"/>
+  <tag k="highway" v="crossing"/>
+ </node>
+ <node id="814425404" visible="true" version="3" changeset="15440054" timestamp="2013-03-21T08:32:21Z" user="NE2" uid="207745" x="28.5462192" y="-81.3891827">
+  <tag k="crossing" v="uncontrolled"/>
+  <tag k="highway" v="crossing"/>
+ </node>
+ <node id="814420267" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:25Z" user="NE2" uid="207745" x="28.5458003" y="-81.3921877">
+  <tag k="railway" v="crossing"/>
+ </node>
+ <node id="99573648" visible="true" version="6" changeset="5204180" timestamp="2010-07-13T01:57:37Z" user="NE2" uid="207745" x="28.5457096" y="-81.3898184"/>
+ <node id="99526702" visible="true" version="4" changeset="5204180" timestamp="2010-07-13T01:57:37Z" user="NE2" uid="207745" x="28.5447801" y="-81.3890754"/>
+ <node id="814420642" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:39Z" user="NE2" uid="207745" x="28.5455918" y="-81.3859963">
+  <tag k="highway" v="stop"/>
+ </node>
+ <node id="99447055" visible="true" version="9" changeset="5204180" timestamp="2010-07-13T01:57:46Z" user="NE2" uid="207745" x="28.5457084" y="-81.3828836">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="814420802" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:46Z" user="NE2" uid="207745" x="28.5456954" y="-81.3830271"/>
+ <node id="814420379" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:30Z" user="NE2" uid="207745" x="28.5455882" y="-81.3870290">
+  <tag k="highway" v="stop"/>
+ </node>
+ <node id="99583153" visible="true" version="5" changeset="5204180" timestamp="2010-07-13T01:57:30Z" user="NE2" uid="207745" x="28.5457072" y="-81.3870303"/>
+ <node id="814420417" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:31Z" user="NE2" uid="207745" x="28.5455647" y="-81.3836222">
+  <tag k="highway" v="stop"/>
+ </node>
+ <node id="814420426" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:32Z" user="NE2" uid="207745" x="28.5460983" y="-81.3848121"/>
+ <node id="814420427" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:32Z" user="NE2" uid="207745" x="28.5461007" y="-81.3867339"/>
+ <node id="814420428" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:32Z" user="NE2" uid="207745" x="28.5461066" y="-81.3887509"/>
+ <node id="814420430" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:32Z" user="NE2" uid="207745" x="28.5461042" y="-81.3889588"/>
+ <node id="814420432" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:32Z" user="NE2" uid="207745" x="28.5460995" y="-81.3890933">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="814420437" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:32Z" user="NE2" uid="207745" x="28.5460771" y="-81.3894751"/>
+ <node id="814420439" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:32Z" user="NE2" uid="207745" x="28.5460547" y="-81.3896883"/>
+ <node id="814420441" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:32Z" user="NE2" uid="207745" x="28.5460194" y="-81.3899257"/>
+ <node id="814420443" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:32Z" user="NE2" uid="207745" x="28.5459758" y="-81.3901979"/>
+ <node id="814420446" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:32Z" user="NE2" uid="207745" x="28.5458945" y="-81.3906673"/>
+ <node id="602412094" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T01:57:32Z" user="NE2" uid="207745" x="28.5458509" y="-81.3909879"/>
+ <node id="602412095" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T01:57:32Z" user="NE2" uid="207745" x="28.5458038" y="-81.3913969"/>
+ <node id="814420452" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:33Z" user="NE2" uid="207745" x="28.5457991" y="-81.3915766"/>
+ <node id="814420456" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:33Z" user="NE2" uid="207745" x="28.5458015" y="-81.3929593"/>
+ <node id="814420457" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:33Z" user="NE2" uid="207745" x="28.5458038" y="-81.3931081"/>
+ <node id="814420459" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:33Z" user="NE2" uid="207745" x="28.5458073" y="-81.3932185">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="814420461" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:33Z" user="NE2" uid="207745" x="28.5458121" y="-81.3933106"/>
+ <node id="814420463" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:33Z" user="NE2" uid="207745" x="28.5458179" y="-81.3934085"/>
+ <node id="814420465" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:33Z" user="NE2" uid="207745" x="28.5458309" y="-81.3935413"/>
+ <node id="814420467" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:33Z" user="NE2" uid="207745" x="28.5458545" y="-81.3936714"/>
+ <node id="814420469" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:33Z" user="NE2" uid="207745" x="28.5458839" y="-81.3937961"/>
+ <node id="814420471" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:33Z" user="NE2" uid="207745" x="28.5459204" y="-81.3939168"/>
+ <node id="814420474" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:33Z" user="NE2" uid="207745" x="28.5459640" y="-81.3940469"/>
+ <node id="814420477" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:33Z" user="NE2" uid="207745" x="28.5460182" y="-81.3941824"/>
+ <node id="814420479" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:33Z" user="NE2" uid="207745" x="28.5460736" y="-81.3942950"/>
+ <node id="814420480" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:33Z" user="NE2" uid="207745" x="28.5461525" y="-81.3944251"/>
+ <node id="814420482" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:33Z" user="NE2" uid="207745" x="28.5462126" y="-81.3945243"/>
+ <node id="814420484" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:33Z" user="NE2" uid="207745" x="28.5462833" y="-81.3946196"/>
+ <node id="814420486" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:33Z" user="NE2" uid="207745" x="28.5463481" y="-81.3946960"/>
+ <node id="814420314" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:57:27Z" user="NE2" uid="207745" x="28.5458215" y="-81.3912185">
+  <tag k="railway" v="crossing"/>
+ </node>
+ <node id="814422609" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:58:58Z" user="NE2" uid="207745" x="28.5459039" y="-81.3912197"/>
+ <node id="814422617" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:58:58Z" user="NE2" uid="207745" x="28.5459039" y="-81.3911126"/>
+ <node id="814422620" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:58:58Z" user="NE2" uid="207745" x="28.5459287" y="-81.3910576"/>
+ <node id="814422621" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:58:58Z" user="NE2" uid="207745" x="28.5459275" y="-81.3908041"/>
+ <node id="814422623" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:58:58Z" user="NE2" uid="207745" x="28.5461089" y="-81.3896870"/>
+ <node id="814422625" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:58:58Z" user="NE2" uid="207745" x="28.5461219" y="-81.3894965"/>
+ <node id="814422627" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T01:58:58Z" user="NE2" uid="207745" x="28.5461643" y="-81.3892270"/>
+ <node id="814422629" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T02:00:14Z" user="NE2" uid="207745" x="28.5461678" y="-81.3891818"/>
+ <node id="599903939" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T02:32:06Z" user="NE2" uid="207745" x="28.5466061" y="-81.3837566"/>
+ <node id="814448827" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:32:06Z" user="NE2" uid="207745" x="28.5466061" y="-81.3841254"/>
+ <node id="679835960" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T02:32:06Z" user="NE2" uid="207745" x="28.5474767" y="-81.3838304"/>
+ <node id="814420329" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T02:37:21Z" user="NE2" uid="207745" x="28.5462185" y="-81.3892149">
+  <tag k="highway" v="stop"/>
+ </node>
+ <node id="814420331" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T02:37:21Z" user="NE2" uid="207745" x="28.5459758" y="-81.3907612"/>
+ <node id="814448557" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:30:08Z" user="NE2" uid="207745" x="28.5460983" y="-81.3831424"/>
+ <node id="814448559" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:30:09Z" user="NE2" uid="207745" x="28.5460913" y="-81.3832886"/>
+ <node id="814448560" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:30:09Z" user="NE2" uid="207745" x="28.5460795" y="-81.3834361"/>
+ <node id="814448561" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:30:09Z" user="NE2" uid="207745" x="28.5460571" y="-81.3837218"/>
+ <node id="814448562" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:30:09Z" user="NE2" uid="207745" x="28.5460524" y="-81.3838612"/>
+ <node id="814448563" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:30:09Z" user="NE2" uid="207745" x="28.5460453" y="-81.3840195"/>
+ <node id="814448564" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:30:09Z" user="NE2" uid="207745" x="28.5460512" y="-81.3850038"/>
+ <node id="814448565" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:30:10Z" user="NE2" uid="207745" x="28.5460630" y="-81.3863798"/>
+ <node id="814448566" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:30:10Z" user="NE2" uid="207745" x="28.5460665" y="-81.3880347"/>
+ <node id="814448568" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:30:10Z" user="NE2" uid="207745" x="28.5460724" y="-81.3882453"/>
+ <node id="814448569" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:30:10Z" user="NE2" uid="207745" x="28.5460877" y="-81.3884491"/>
+ <node id="814448570" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:30:10Z" user="NE2" uid="207745" x="28.5460995" y="-81.3885846"/>
+ <node id="814449167" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:34:53Z" user="NE2" uid="207745" x="28.5461796" y="-81.3841268"/>
+ <node id="814449168" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:34:53Z" user="NE2" uid="207745" x="28.5461714" y="-81.3856315"/>
+ <node id="814449169" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:34:53Z" user="NE2" uid="207745" x="28.5461749" y="-81.3870396"/>
+ <node id="814449170" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:34:53Z" user="NE2" uid="207745" x="28.5461902" y="-81.3877397"/>
+ <node id="814449171" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:34:53Z" user="NE2" uid="207745" x="28.5461949" y="-81.3887764"/>
+ <node id="814449172" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:34:53Z" user="NE2" uid="207745" x="28.5461890" y="-81.3888595"/>
+ <node id="814449173" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:34:53Z" user="NE2" uid="207745" x="28.5461667" y="-81.3889910"/>
+ <node id="814449175" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:34:54Z" user="NE2" uid="207745" x="28.5461667" y="-81.3890946"/>
+ <node id="679835950" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T02:32:07Z" user="NE2" uid="207745" x="28.5467851" y="-81.3867634"/>
+ <node id="814448829" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:32:07Z" user="NE2" uid="207745" x="28.5474743" y="-81.3840597"/>
+ <node id="814448830" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:32:07Z" user="NE2" uid="207745" x="28.5474684" y="-81.3842193"/>
+ <node id="814448831" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:32:07Z" user="NE2" uid="207745" x="28.5474555" y="-81.3843212"/>
+ <node id="814448832" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:32:07Z" user="NE2" uid="207745" x="28.5474260" y="-81.3844124"/>
+ <node id="814448833" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:32:07Z" user="NE2" uid="207745" x="28.5473765" y="-81.3845143"/>
+ <node id="814448835" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:32:08Z" user="NE2" uid="207745" x="28.5471786" y="-81.3848282"/>
+ <node id="814448836" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:32:08Z" user="NE2" uid="207745" x="28.5469736" y="-81.3851406"/>
+ <node id="814448837" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:32:08Z" user="NE2" uid="207745" x="28.5469041" y="-81.3852654"/>
+ <node id="814448838" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:32:08Z" user="NE2" uid="207745" x="28.5468570" y="-81.3853820"/>
+ <node id="814448839" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:32:08Z" user="NE2" uid="207745" x="28.5468264" y="-81.3855001"/>
+ <node id="814448840" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:32:08Z" user="NE2" uid="207745" x="28.5467969" y="-81.3856704"/>
+ <node id="814448842" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:32:08Z" user="NE2" uid="207745" x="28.5467851" y="-81.3859909"/>
+ <node id="599903937" visible="true" version="3" changeset="5204180" timestamp="2010-07-13T02:32:09Z" user="NE2" uid="207745" x="28.5466061" y="-81.3829104"/>
+ <node id="814448843" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:32:09Z" user="NE2" uid="207745" x="28.5466061" y="-81.3830324">
+  <tag k="highway" v="stop"/>
+ </node>
+ <node id="814448828" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T02:33:04Z" user="NE2" uid="207745" x="28.5467875" y="-81.3889601"/>
+ <node id="814456595" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:42:27Z" user="NE2" uid="207745" x="28.5464447" y="-81.3948046"/>
+ <node id="814456599" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:42:27Z" user="NE2" uid="207745" x="28.5465366" y="-81.3948972"/>
+ <node id="814456602" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:42:27Z" user="NE2" uid="207745" x="28.5466485" y="-81.3949857"/>
+ <node id="814456605" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:42:27Z" user="NE2" uid="207745" x="28.5467604" y="-81.3950662"/>
+ <node id="814456608" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:42:27Z" user="NE2" uid="207745" x="28.5468829" y="-81.3951399"/>
+ <node id="814456610" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:42:28Z" user="NE2" uid="207745" x="28.5470325" y="-81.3952150"/>
+ <node id="814456612" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:42:28Z" user="NE2" uid="207745" x="28.5471586" y="-81.3952606"/>
+ <node id="814456613" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:42:28Z" user="NE2" uid="207745" x="28.5472787" y="-81.3953008"/>
+ <node id="814456614" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:42:28Z" user="NE2" uid="207745" x="28.5473918" y="-81.3953277"/>
+ <node id="814456615" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:42:28Z" user="NE2" uid="207745" x="28.5475462" y="-81.3953572"/>
+ <node id="814456616" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:42:28Z" user="NE2" uid="207745" x="28.5476439" y="-81.3953679"/>
+ <node id="814456619" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:42:28Z" user="NE2" uid="207745" x="28.5477464" y="-81.3953746"/>
+ <node id="814456621" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:42:28Z" user="NE2" uid="207745" x="28.5478913" y="-81.3953773"/>
+ <node id="814456624" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:42:28Z" user="NE2" uid="207745" x="28.5483249" y="-81.3953840"/>
+ <node id="814456637" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:42:28Z" user="NE2" uid="207745" x="28.5505890" y="-81.3954095"/>
+ <node id="814456639" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:42:28Z" user="NE2" uid="207745" x="28.5513453" y="-81.3954229"/>
+ <node id="814456640" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:42:29Z" user="NE2" uid="207745" x="28.5520262" y="-81.3954296"/>
+ <node id="814449306" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:35:13Z" user="NE2" uid="207745" x="28.5461831" y="-81.3833771"/>
+ <node id="814456544" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:42:25Z" user="NE2" uid="207745" x="28.5467533" y="-81.3910978"/>
+ <node id="99527059" visible="true" version="5" changeset="5204180" timestamp="2010-07-13T02:42:25Z" user="NE2" uid="207745" x="28.5467675" y="-81.3911716"/>
+ <node id="814456452" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:42:21Z" user="NE2" uid="207745" x="28.5474625" y="-81.3953424">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="814460692" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:45:33Z" user="NE2" uid="207745" x="28.5475309" y="-81.3892122">
+  <tag k="highway" v="stop"/>
+ </node>
+ <node id="633232808" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T02:48:47Z" user="NE2" uid="207745" x="28.5493969" y="-81.3846283"/>
+ <node id="814464988" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:48:48Z" user="NE2" uid="207745" x="28.5494499" y="-81.3849931"/>
+ <node id="559857618" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T02:48:48Z" user="NE2" uid="207745" x="28.5494817" y="-81.3851326"/>
+ <node id="99502437" visible="true" version="6" changeset="5204180" timestamp="2010-07-13T02:48:48Z" user="NE2" uid="207745" x="28.5495995" y="-81.3855457"/>
+ <node id="275731774" visible="true" version="4" changeset="5204180" timestamp="2010-07-13T02:48:48Z" user="NE2" uid="207745" x="28.5496360" y="-81.3875198"/>
+ <node id="814465014" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:48:48Z" user="NE2" uid="207745" x="28.5493486" y="-81.3885028"/>
+ <node id="559857648" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T02:48:49Z" user="NE2" uid="207745" x="28.5493297" y="-81.3886892"/>
+ <node id="633222132" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T02:48:50Z" user="NE2" uid="207745" x="28.5485310" y="-81.3832309"/>
+ <node id="559857656" visible="true" version="3" changeset="5204180" timestamp="2010-07-13T02:48:50Z" user="NE2" uid="207745" x="28.5485110" y="-81.3831411">
+  <tag k="highway" v="stop"/>
+ </node>
+ <node id="559857657" visible="true" version="3" changeset="5204180" timestamp="2010-07-13T02:48:50Z" user="NE2" uid="207745" x="28.5484662" y="-81.3830660"/>
+ <node id="814465058" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:48:50Z" user="NE2" uid="207745" x="28.5484203" y="-81.3830311"/>
+ <node id="814465071" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:48:51Z" user="NE2" uid="207745" x="28.5494122" y="-81.3855403">
+  <tag k="highway" v="stop"/>
+ </node>
+ <node id="814465074" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:48:51Z" user="NE2" uid="207745" x="28.5497714" y="-81.3855557">
+  <tag k="highway" v="stop"/>
+ </node>
+ <node id="633222188" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T02:48:52Z" user="NE2" uid="207745" x="28.5486111" y="-81.3830566"/>
+ <node id="633222190" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T02:48:52Z" user="NE2" uid="207745" x="28.5485640" y="-81.3831799"/>
+ <node id="633222189" visible="true" version="4" changeset="15440054" timestamp="2013-03-21T08:32:19Z" user="NE2" uid="207745" x="28.5485828" y="-81.3831048">
+  <tag k="crossing" v="uncontrolled"/>
+  <tag k="highway" v="crossing"/>
+ </node>
+ <node id="99526716" visible="true" version="4" changeset="5204180" timestamp="2010-07-13T02:51:05Z" user="NE2" uid="207745" x="28.5480315" y="-81.3891184"/>
+ <node id="814467569" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:51:06Z" user="NE2" uid="207745" x="28.5480315" y="-81.3892243">
+  <tag k="highway" v="stop"/>
+ </node>
+ <node id="99620471" visible="true" version="4" changeset="5204180" timestamp="2010-07-13T02:51:06Z" user="NE2" uid="207745" x="28.5480303" y="-81.3910992"/>
+ <node id="99526718" visible="true" version="4" changeset="5204180" timestamp="2010-07-13T02:51:07Z" user="NE2" uid="207745" x="28.5484839" y="-81.3890982"/>
+ <node id="814467587" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:51:07Z" user="NE2" uid="207745" x="28.5486429" y="-81.3890553"/>
+ <node id="814467591" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:51:07Z" user="NE2" uid="207745" x="28.5488137" y="-81.3890124"/>
+ <node id="814467593" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:51:07Z" user="NE2" uid="207745" x="28.5489975" y="-81.3889990"/>
+ <node id="814467613" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:51:08Z" user="NE2" uid="207745" x="28.5484842" y="-81.3892283">
+  <tag k="highway" v="stop"/>
+ </node>
+ <node id="99526719" visible="true" version="6" changeset="5204180" timestamp="2010-07-13T02:53:17Z" user="NE2" uid="207745" x="28.5493121" y="-81.3889950">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="559858176" visible="true" version="3" changeset="5204180" timestamp="2010-07-13T02:53:18Z" user="NE2" uid="207745" x="28.5493073" y="-81.3891358">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="814469947" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:53:18Z" user="NE2" uid="207745" x="28.5492979" y="-81.3898211"/>
+ <node id="814469950" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:53:18Z" user="NE2" uid="207745" x="28.5493085" y="-81.3905198"/>
+ <node id="814469952" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:53:18Z" user="NE2" uid="207745" x="28.5493274" y="-81.3917080"/>
+ <node id="99543556" visible="true" version="6" changeset="5204180" timestamp="2010-07-13T02:53:18Z" user="NE2" uid="207745" x="28.5493427" y="-81.3932597">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="814456485" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T02:53:18Z" user="NE2" uid="207745" x="28.5493215" y="-81.3953974">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="814482229" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:00:46Z" user="NE2" uid="207745" x="28.5507740" y="-81.3855672">
+  <tag k="highway" v="stop"/>
+ </node>
+ <node id="99502439" visible="true" version="5" changeset="5204180" timestamp="2010-07-13T03:00:46Z" user="NE2" uid="207745" x="28.5508788" y="-81.3855685"/>
+ <node id="559858078" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T03:00:47Z" user="NE2" uid="207745" x="28.5511309" y="-81.3891452"/>
+ <node id="559858178" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T03:00:47Z" user="NE2" uid="207745" x="28.5508423" y="-81.3891465"/>
+ <node id="814482310" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:00:48Z" user="NE2" uid="207745" x="28.5508436" y="-81.3889051">
+  <tag k="highway" v="stop"/>
+ </node>
+ <node id="99526725" visible="true" version="4" changeset="5204180" timestamp="2010-07-13T03:00:48Z" user="NE2" uid="207745" x="28.5508423" y="-81.3890044"/>
+ <node id="99543553" visible="true" version="11" changeset="5204180" timestamp="2010-07-13T02:54:22Z" user="NE2" uid="207745" x="28.5493874" y="-81.3830244">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="599933698" visible="true" version="3" changeset="5204180" timestamp="2010-07-13T02:54:22Z" user="NE2" uid="207745" x="28.5493910" y="-81.3840704">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="814472448" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T02:54:22Z" user="NE2" uid="207745" x="28.5498740" y="-81.3840865"/>
+ <node id="99523746" visible="true" version="5" changeset="5204180" timestamp="2010-07-13T03:00:36Z" user="NE2" uid="207745" x="28.5508977" y="-81.3841576"/>
+ <node id="814482029" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:00:36Z" user="NE2" uid="207745" x="28.5510072" y="-81.3841590">
+  <tag k="highway" v="stop"/>
+ </node>
+ <node id="99595857" visible="true" version="4" changeset="5204180" timestamp="2010-07-13T03:00:37Z" user="NE2" uid="207745" x="28.5508741" y="-81.3861492"/>
+ <node id="814482037" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:00:37Z" user="NE2" uid="207745" x="28.5509908" y="-81.3861478">
+  <tag k="highway" v="stop"/>
+ </node>
+ <node id="559857629" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T03:00:37Z" user="NE2" uid="207745" x="28.5510873" y="-81.3861492"/>
+ <node id="559857630" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T03:00:37Z" user="NE2" uid="207745" x="28.5511710" y="-81.3861317"/>
+ <node id="814482042" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:00:37Z" user="NE2" uid="207745" x="28.5512523" y="-81.3860942"/>
+ <node id="814482044" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:00:37Z" user="NE2" uid="207745" x="28.5513500" y="-81.3860325"/>
+ <node id="559857631" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T03:00:37Z" user="NE2" uid="207745" x="28.5514242" y="-81.3859694"/>
+ <node id="814482047" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:00:37Z" user="NE2" uid="207745" x="28.5515161" y="-81.3858608"/>
+ <node id="559857632" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T03:00:37Z" user="NE2" uid="207745" x="28.5516186" y="-81.3857669"/>
+ <node id="559857633" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T03:00:38Z" user="NE2" uid="207745" x="28.5517176" y="-81.3857146"/>
+ <node id="814482053" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:00:38Z" user="NE2" uid="207745" x="28.5518307" y="-81.3856556"/>
+ <node id="559857634" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T03:00:38Z" user="NE2" uid="207745" x="28.5519331" y="-81.3856301"/>
+ <node id="559857635" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T03:00:38Z" user="NE2" uid="207745" x="28.5520651" y="-81.3856208"/>
+ <node id="559857636" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T03:00:38Z" user="NE2" uid="207745" x="28.5521876" y="-81.3856342"/>
+ <node id="814482059" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:00:38Z" user="NE2" uid="207745" x="28.5523254" y="-81.3856717"/>
+ <node id="559857637" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T03:00:38Z" user="NE2" uid="207745" x="28.5524373" y="-81.3857120"/>
+ <node id="99613290" visible="true" version="8" changeset="5204180" timestamp="2010-07-13T03:00:38Z" user="NE2" uid="207745" x="28.5529663" y="-81.3860580"/>
+ <node id="99595859" visible="true" version="4" changeset="5204180" timestamp="2010-07-13T03:00:39Z" user="NE2" uid="207745" x="28.5508670" y="-81.3871094"/>
+ <node id="814482074" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:00:39Z" user="NE2" uid="207745" x="28.5509813" y="-81.3871105">
+  <tag k="highway" v="stop"/>
+ </node>
+ <node id="559857620" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T03:00:39Z" user="NE2" uid="207745" x="28.5511250" y="-81.3871107"/>
+ <node id="814482075" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:00:39Z" user="NE2" uid="207745" x="28.5511780" y="-81.3871215"/>
+ <node id="559857621" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T03:00:39Z" user="NE2" uid="207745" x="28.5512334" y="-81.3871456"/>
+ <node id="814482077" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:00:39Z" user="NE2" uid="207745" x="28.5512770" y="-81.3871858"/>
+ <node id="559857622" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T03:00:39Z" user="NE2" uid="207745" x="28.5513524" y="-81.3872985"/>
+ <node id="814482086" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:00:40Z" user="NE2" uid="207745" x="28.5514502" y="-81.3874339"/>
+ <node id="559857623" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T03:00:40Z" user="NE2" uid="207745" x="28.5515562" y="-81.3875519"/>
+ <node id="814482089" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:00:40Z" user="NE2" uid="207745" x="28.5516563" y="-81.3876190"/>
+ <node id="559857624" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T03:00:40Z" user="NE2" uid="207745" x="28.5517470" y="-81.3876592"/>
+ <node id="559857625" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T03:00:40Z" user="NE2" uid="207745" x="28.5518778" y="-81.3876941"/>
+ <node id="814482095" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:00:40Z" user="NE2" uid="207745" x="28.5519932" y="-81.3876995"/>
+ <node id="559857626" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T03:00:40Z" user="NE2" uid="207745" x="28.5520957" y="-81.3876981"/>
+ <node id="814482098" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:00:40Z" user="NE2" uid="207745" x="28.5522288" y="-81.3876713"/>
+ <node id="559857627" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T03:00:40Z" user="NE2" uid="207745" x="28.5523443" y="-81.3876297"/>
+ <node id="814482100" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:00:40Z" user="NE2" uid="207745" x="28.5524821" y="-81.3875573"/>
+ <node id="814482101" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:00:40Z" user="NE2" uid="207745" x="28.5527000" y="-81.3873977"/>
+ <node id="99563929" visible="true" version="4" changeset="5204180" timestamp="2010-07-13T03:00:43Z" user="NE2" uid="207745" x="28.5508506" y="-81.3883848"/>
+ <node id="814482140" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:00:43Z" user="NE2" uid="207745" x="28.5509731" y="-81.3883867">
+  <tag k="highway" v="stop"/>
+ </node>
+ <node id="99595847" visible="true" version="4" changeset="5204180" timestamp="2010-07-13T03:00:44Z" user="NE2" uid="207745" x="28.5511109" y="-81.3919964"/>
+ <node id="814482371" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:00:50Z" user="NE2" uid="207745" x="28.5511294" y="-81.3892551">
+  <tag k="highway" v="stop"/>
+ </node>
+ <node id="814482374" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:00:50Z" user="NE2" uid="207745" x="28.5511109" y="-81.3931658">
+  <tag k="highway" v="stop"/>
+ </node>
+ <node id="99583529" visible="true" version="5" changeset="5204180" timestamp="2010-07-13T03:00:50Z" user="NE2" uid="207745" x="28.5511345" y="-81.3932959"/>
+ <node id="559858057" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T03:04:50Z" user="NE2" uid="207745" x="28.5521075" y="-81.3891680"/>
+ <node id="814456504" visible="true" version="2" changeset="5204180" timestamp="2010-07-13T03:04:52Z" user="NE2" uid="207745" x="28.5529568" y="-81.3954537">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="559858171" visible="true" version="5" changeset="5204180" timestamp="2010-07-13T03:04:53Z" user="NE2" uid="207745" x="28.5529922" y="-81.3891827">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="99526735" visible="true" version="8" changeset="5204180" timestamp="2010-07-13T03:04:53Z" user="NE2" uid="207745" x="28.5529922" y="-81.3890459">
+  <tag k="highway" v="traffic_signals"/>
+ </node>
+ <node id="814490687" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:42Z" user="NE2" uid="207745" x="28.5527542" y="-81.3871067"/>
+ <node id="814490688" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:42Z" user="NE2" uid="207745" x="28.5527684" y="-81.3870356"/>
+ <node id="814490690" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:42Z" user="NE2" uid="207745" x="28.5527601" y="-81.3865904"/>
+ <node id="814490691" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:42Z" user="NE2" uid="207745" x="28.5527896" y="-81.3864549"/>
+ <node id="814490692" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:43Z" user="NE2" uid="207745" x="28.5528013" y="-81.3863275"/>
+ <node id="814490693" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:43Z" user="NE2" uid="207745" x="28.5527790" y="-81.3861947"/>
+ <node id="814490694" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:43Z" user="NE2" uid="207745" x="28.5527448" y="-81.3861143"/>
+ <node id="814490695" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:43Z" user="NE2" uid="207745" x="28.5526682" y="-81.3860378"/>
+ <node id="814490696" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:43Z" user="NE2" uid="207745" x="28.5525174" y="-81.3859265"/>
+ <node id="814490697" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:43Z" user="NE2" uid="207745" x="28.5523525" y="-81.3858394"/>
+ <node id="814490699" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:43Z" user="NE2" uid="207745" x="28.5522288" y="-81.3857884"/>
+ <node id="814490700" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:43Z" user="NE2" uid="207745" x="28.5521311" y="-81.3857803"/>
+ <node id="814490701" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:43Z" user="NE2" uid="207745" x="28.5518825" y="-81.3858340"/>
+ <node id="814490702" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:43Z" user="NE2" uid="207745" x="28.5517482" y="-81.3859037"/>
+ <node id="814490703" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:43Z" user="NE2" uid="207745" x="28.5516045" y="-81.3859936"/>
+ <node id="814490704" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:43Z" user="NE2" uid="207745" x="28.5514513" y="-81.3861465"/>
+ <node id="814490705" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:43Z" user="NE2" uid="207745" x="28.5513300" y="-81.3863181"/>
+ <node id="814490706" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:44Z" user="NE2" uid="207745" x="28.5512676" y="-81.3864509"/>
+ <node id="814490707" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:44Z" user="NE2" uid="207745" x="28.5512546" y="-81.3865153"/>
+ <node id="814490708" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:44Z" user="NE2" uid="207745" x="28.5512688" y="-81.3866883"/>
+ <node id="814490709" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:44Z" user="NE2" uid="207745" x="28.5513029" y="-81.3868881"/>
+ <node id="814490710" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:44Z" user="NE2" uid="207745" x="28.5513383" y="-81.3870021"/>
+ <node id="814490711" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:44Z" user="NE2" uid="207745" x="28.5514136" y="-81.3871831"/>
+ <node id="814490712" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:44Z" user="NE2" uid="207745" x="28.5515079" y="-81.3873333"/>
+ <node id="814490714" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:44Z" user="NE2" uid="207745" x="28.5515939" y="-81.3874138"/>
+ <node id="814490715" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:44Z" user="NE2" uid="207745" x="28.5516893" y="-81.3874621"/>
+ <node id="814490716" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:44Z" user="NE2" uid="207745" x="28.5518330" y="-81.3874956"/>
+ <node id="814490717" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:44Z" user="NE2" uid="207745" x="28.5519944" y="-81.3875144"/>
+ <node id="814490718" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:44Z" user="NE2" uid="207745" x="28.5521181" y="-81.3875037"/>
+ <node id="814490719" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:44Z" user="NE2" uid="207745" x="28.5522771" y="-81.3874621"/>
+ <node id="814490720" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:44Z" user="NE2" uid="207745" x="28.5524173" y="-81.3874084"/>
+ <node id="814490721" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:44Z" user="NE2" uid="207745" x="28.5525198" y="-81.3873441"/>
+ <node id="814490722" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:44Z" user="NE2" uid="207745" x="28.5526341" y="-81.3872596"/>
+ <node id="814490724" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:45Z" user="NE2" uid="207745" x="28.5527012" y="-81.3871818"/>
+ <node id="814490746" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:54Z" user="NE2" uid="207745" x="28.5528422" y="-81.3859768">
+  <tag k="highway" v="stop"/>
+ </node>
+ <node id="814490749" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:15:56Z" user="NE2" uid="207745" x="28.5528458" y="-81.3872619">
+  <tag k="highway" v="stop"/>
+ </node>
+ <node id="814490766" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:16:01Z" user="NE2" uid="207745" x="28.5528814" y="-81.3841802">
+  <tag k="highway" v="stop"/>
+ </node>
+ <node id="814490871" visible="true" version="1" changeset="5204180" timestamp="2010-07-13T03:17:05Z" user="NE2" uid="207745" x="28.5528202" y="-81.3830727"/>
+ <node id="99456005" visible="true" version="6" changeset="5209629" timestamp="2010-07-13T16:47:11Z" user="NE2" uid="207745" x="28.5509525" y="-81.3819784"/>
+ <node id="815329041" visible="true" version="1" changeset="5209629" timestamp="2010-07-13T16:47:11Z" user="NE2" uid="207745" x="28.5509527" y="-81.3818416">
+  <tag k="highway" v="stop"/>
+ </node>
+ <node id="815332821" visible="true" version="1" changeset="5209629" timestamp="2010-07-13T16:48:41Z" user="NE2" uid="207745" x="28.5493810" y="-81.3802967"/>
+ <node id="646895013" visible="true" version="3" changeset="5209629" timestamp="2010-07-13T16:48:41Z" user="NE2" uid="207745" x="28.5493951" y="-81.3806588"/>
+ <node id="832027544" visible="true" version="1" changeset="5307782" timestamp="2010-07-24T22:49:28Z" user="NE2" uid="207745" x="28.5572358" y="-81.3794389"/>
+ <node id="832027545" visible="true" version="1" changeset="5307782" timestamp="2010-07-24T22:49:28Z" user="NE2" uid="207745" x="28.5574467" y="-81.3792491"/>
+ <node id="833688035" visible="true" version="1" changeset="5318563" timestamp="2010-07-26T07:36:19Z" user="NE2" uid="207745" x="28.5476566" y="-81.3817917"/>
+ <node id="559857612" visible="true" version="5" changeset="5973200" timestamp="2010-10-06T20:24:51Z" user="NE2" uid="207745" x="28.5475926" y="-81.3811232"/>
+ <node id="833688067" visible="true" version="3" changeset="5973200" timestamp="2010-10-06T20:24:51Z" user="NE2" uid="207745" x="28.5476432" y="-81.3811240"/>
+ <node id="833686318" visible="true" version="2" changeset="15323769" timestamp="2013-03-11T04:45:12Z" user="NE2" uid="207745" x="28.5458610" y="-81.3818970"/>
+ <node id="833686308" visible="true" version="1" changeset="5318563" timestamp="2010-07-26T07:26:12Z" user="NE2" uid="207745" x="28.5456859" y="-81.3815571"/>
+ <node id="833686316" visible="true" version="1" changeset="5318563" timestamp="2010-07-26T07:26:13Z" user="NE2" uid="207745" x="28.5457704" y="-81.3815598"/>
+ <node id="833686175" visible="true" version="2" changeset="5976490" timestamp="2010-10-07T09:40:07Z" user="NE2" uid="207745" x="28.5455537" y="-81.3815507"/>
+ <node id="833686161" visible="true" version="1" changeset="5318563" timestamp="2010-07-26T07:25:07Z" user="NE2" uid="207745" x="28.5456847" y="-81.3813304"/>
+ <node id="833687225" visible="true" version="1" changeset="5318563" timestamp="2010-07-26T07:32:58Z" user="NE2" uid="207745" x="28.5474917" y="-81.3812956"/>
+ <node id="833687227" visible="true" version="2" changeset="5976490" timestamp="2010-10-07T09:40:08Z" user="NE2" uid="207745" x="28.5464768" y="-81.3811587"/>
+ <node id="833687221" visible="true" version="2" changeset="5980034" timestamp="2010-10-07T20:30:06Z" user="NE2" uid="207745" x="28.5468241" y="-81.3812190"/>
+ <node id="833687222" visible="true" version="2" changeset="5980034" timestamp="2010-10-07T20:30:07Z" user="NE2" uid="207745" x="28.5468220" y="-81.3809655"/>
+ <node id="833687219" visible="true" version="2" changeset="5980034" timestamp="2010-10-07T20:30:08Z" user="NE2" uid="207745" x="28.5471011" y="-81.3809624"/>
+ <node id="647401788" visible="true" version="5" changeset="38017243" timestamp="2016-03-23T10:34:34Z" user="JeopardyTempest" uid="126806" x="28.5476494" y="-81.3808297">
+  <tag k="railway" v="crossing"/>
+ </node>
+ <node id="833687801" visible="true" version="2" changeset="5318563" timestamp="2010-07-26T07:36:22Z" user="NE2" uid="207745" x="28.5476459" y="-81.3808731">
+  <tag k="railway" v="crossing"/>
+ </node>
+ <node id="833686573" visible="true" version="1" changeset="5318563" timestamp="2010-07-26T07:28:45Z" user="NE2" uid="207745" x="28.5460487" y="-81.3817812">
+  <tag k="barrier" v="gate"/>
+ </node>
+ <node id="833686583" visible="true" version="1" changeset="5318563" timestamp="2010-07-26T07:28:46Z" user="NE2" uid="207745" x="28.5460391" y="-81.3819078"/>
+ <node id="833686586" visible="true" version="1" changeset="5318563" timestamp="2010-07-26T07:28:46Z" user="NE2" uid="207745" x="28.5456843" y="-81.3812634"/>
+ <node id="833686595" visible="true" version="1" changeset="5318563" timestamp="2010-07-26T07:28:47Z" user="NE2" uid="207745" x="28.5456845" y="-81.3812915"/>
+ <node id="559857611" visible="true" version="4" changeset="5318563" timestamp="2010-07-26T07:38:41Z" user="NE2" uid="207745" x="28.5475868" y="-81.3813677"/>
+ <node id="833688057" visible="true" version="5" changeset="5973200" timestamp="2010-10-06T20:27:26Z" user="NE2" uid="207745" x="28.5476542" y="-81.3813684"/>
+ <node id="892382387" visible="true" version="1" changeset="5656360" timestamp="2010-09-01T19:06:01Z" user="NE2" uid="207745" x="28.5474988" y="-81.3809502"/>
+ <node id="892382436" visible="true" version="1" changeset="5656360" timestamp="2010-09-01T19:06:02Z" user="NE2" uid="207745" x="28.5447009" y="-81.3809172"/>
+ <node id="892382471" visible="true" version="1" changeset="5656360" timestamp="2010-09-01T19:06:02Z" user="NE2" uid="207745" x="28.5456820" y="-81.3809314"/>
+ <node id="892382525" visible="true" version="1" changeset="5656360" timestamp="2010-09-01T19:06:04Z" user="NE2" uid="207745" x="28.5474330" y="-81.3809495"/>
+ <node id="907696642" visible="true" version="1" changeset="5755305" timestamp="2010-09-12T01:53:08Z" user="NE2" uid="207745" x="28.5468776" y="-81.3890056"/>
+ <node id="907696643" visible="true" version="1" changeset="5755305" timestamp="2010-09-12T01:53:08Z" user="NE2" uid="207745" x="28.5468835" y="-81.3875867"/>
+ <node id="907696645" visible="true" version="1" changeset="5755305" timestamp="2010-09-12T01:53:08Z" user="NE2" uid="207745" x="28.5487920" y="-81.3889305"/>
+ <node id="907696646" visible="true" version="1" changeset="5755305" timestamp="2010-09-12T01:53:08Z" user="NE2" uid="207745" x="28.5482065" y="-81.3890230"/>
+ <node id="907696644" visible="true" version="2" changeset="5850580" timestamp="2010-09-23T01:46:13Z" user="NE2" uid="207745" x="28.5487955" y="-81.3876349"/>
+ <node id="907773643" visible="true" version="1" changeset="5755615" timestamp="2010-09-12T04:48:03Z" user="NE2" uid="207745" x="28.5496440" y="-81.3856998"/>
+ <node id="912636378" visible="true" version="1" changeset="5782795" timestamp="2010-09-14T22:08:39Z" user="NE2" uid="207745" x="28.5208269" y="-81.3814062"/>
+ <node id="912636379" visible="true" version="1" changeset="5782795" timestamp="2010-09-14T22:08:39Z" user="NE2" uid="207745" x="28.5212535" y="-81.3814437"/>
+ <node id="912636380" visible="true" version="1" changeset="5782795" timestamp="2010-09-14T22:08:39Z" user="NE2" uid="207745" x="28.5217484" y="-81.3814933"/>
+ <node id="912636383" visible="true" version="1" changeset="5782795" timestamp="2010-09-14T22:08:39Z" user="NE2" uid="207745" x="28.5220748" y="-81.3815255"/>
+ <node id="912636392" visible="true" version="1" changeset="5782795" timestamp="2010-09-14T22:08:40Z" user="NE2" uid="207745" x="28.5232956" y="-81.3816167"/>
+ <node id="912636394" visible="true" version="1" changeset="5782795" timestamp="2010-09-14T22:08:40Z" user="NE2" uid="207745" x="28.5235147" y="-81.3816261"/>
+ <node id="912636399" visible="true" version="1" changeset="5782795" timestamp="2010-09-14T22:08:40Z" user="NE2" uid="207745" x="28.5247484" y="-81.3817495"/>
+ <node id="912636407" visible="true" version="1" changeset="5782795" timestamp="2010-09-14T22:08:40Z" user="NE2" uid="207745" x="28.5283387" y="-81.3821424"/>
+ <node id="912636409" visible="true" version="1" changeset="5782795" timestamp="2010-09-14T22:08:40Z" user="NE2" uid="207745" x="28.5287841" y="-81.3821907"/>
+ <node id="912636470" visible="true" version="1" changeset="5782795" timestamp="2010-09-14T22:08:43Z" user="NE2" uid="207745" x="28.5215693" y="-81.3815202"/>
+ <node id="912636471" visible="true" version="1" changeset="5782795" timestamp="2010-09-14T22:08:43Z" user="NE2" uid="207745" x="28.5208741" y="-81.3814477"/>
+ <node id="912636472" visible="true" version="1" changeset="5782795" timestamp="2010-09-14T22:08:43Z" user="NE2" uid="207745" x="28.5197747" y="-81.3813431"/>
+ <node id="912636474" visible="true" version="1" changeset="5782795" timestamp="2010-09-14T22:08:43Z" user="NE2" uid="207745" x="28.5195001" y="-81.3813150"/>
+ <node id="912636476" visible="true" version="1" changeset="5782795" timestamp="2010-09-14T22:08:43Z" user="NE2" uid="207745" x="28.5191949" y="-81.3812828"/>
+ <node id="912636216" visible="true" version="1" changeset="5782795" timestamp="2010-09-14T22:08:32Z" user="NE2" uid="207745" x="28.5201700" y="-81.3813391">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="912636217" visible="true" version="1" changeset="5782795" timestamp="2010-09-14T22:08:33Z" user="NE2" uid="207745" x="28.5201699" y="-81.3813780">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="912636177" visible="true" version="2" changeset="15374479" timestamp="2013-03-15T15:08:41Z" user="NE2" uid="207745" x="28.5278638" y="-81.3820839">
+  <tag k="railway" v="level_crossing"/>
+ </node>
+ <node id="99621705" visible="true" version="3" changeset="5783775" timestamp="2010-09-15T05:44:52Z" user="NE2" uid="207745" x="28.5901129" y="-81.4124252"/>
+ <node id="99621711" visible="true" version="3" changeset="5783775" timestamp="2010-09-15T05:40:58Z" user="NE2" uid="207745" x="28.5875257" y="-81.4110533"/>
+ <node id="913051103" visible="true" version="1" changeset="5783775" timestamp="2010-09-15T06:21:44Z" user="NE2" uid="207745" x="28.5985899" y="-81.4168857"/>
+ <node id="913051105" visible="true" version="1" changeset="5783775" timestamp="2010-09-15T06:21:44Z" user="NE2" uid="207745" x="28.5988560" y="-81.4170239"/>
+ <node id="913051107" visible="true" version="1" changeset="5783775" timestamp="2010-09-15T06:21:44Z" user="NE2" uid="207745" x="28.5994895" y="-81.4172988"/>
+ <node id="913827734" visible="true" version="1" changeset="5789738" timestamp="2010-09-15T18:50:58Z" user="NE2" uid="207745" x="28.5577502" y="-81.3957669"/>
+ <node id="914043308" visible="true" version="1" changeset="5791747" timestamp="2010-09-15T23:17:03Z" user="NE2" uid="207745" x="28.6123062" y="-81.4227667"/>
+ <node id="921086587" visible="true" version="6" changeset="11097526" timestamp="2012-03-25T17:31:31Z" user="NE2" uid="207745" x="28.5456830" y="-81.3808608"/>
+ <node id="921107961" visible="true" version="2" changeset="11116362" timestamp="2012-03-27T13:20:48Z" user="NE2" uid="207745" x="28.5438547" y="-81.3870083"/>
+ <node id="921117663" visible="true" version="3" changeset="11097526" timestamp="2012-03-25T17:31:33Z" user="NE2" uid="207745" x="28.5456934" y="-81.3844371"/>
+ <node id="921117664" visible="true" version="2" changeset="11115245" timestamp="2012-03-27T11:12:50Z" user="NE2" uid="207745" x="28.5438560" y="-81.3844237"/>
+ <node id="922119787" visible="true" version="1" changeset="5850384" timestamp="2010-09-23T00:17:09Z" user="NE2" uid="207745" x="28.5509022" y="-81.3830241"/>
+ <node id="922119788" visible="true" version="1" changeset="5850384" timestamp="2010-09-23T00:17:09Z" user="NE2" uid="207745" x="28.5508951" y="-81.3841601"/>
+ <node id="922134942" visible="true" version="4" changeset="11097526" timestamp="2012-03-25T17:31:35Z" user="NE2" uid="207745" x="28.5530160" y="-81.3891900">
+  <tag k="source" v="Orange County GIS data"/>
+ </node>
+ <node id="922134948" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:29:02Z" user="NE2" uid="207745" x="28.5466597" y="-81.3840220"/>
+ <node id="922134949" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:29:02Z" user="NE2" uid="207745" x="28.5466903" y="-81.3839925"/>
+ <node id="922134947" visible="true" version="2" changeset="11128288" timestamp="2012-03-28T15:44:56Z" user="NE2" uid="207745" x="28.5462397" y="-81.3840206"/>
+ <node id="922145756" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:37:38Z" user="NE2" uid="207745" x="28.5471427" y="-81.3846550"/>
+ <node id="922145757" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:37:38Z" user="NE2" uid="207745" x="28.5468894" y="-81.3849782"/>
+ <node id="922145759" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:37:38Z" user="NE2" uid="207745" x="28.5467892" y="-81.3851700"/>
+ <node id="922145767" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:37:39Z" user="NE2" uid="207745" x="28.5467244" y="-81.3853591"/>
+ <node id="922145768" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:37:39Z" user="NE2" uid="207745" x="28.5466809" y="-81.3855428"/>
+ <node id="922145769" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:37:39Z" user="NE2" uid="207745" x="28.5466597" y="-81.3857775"/>
+ <node id="922145771" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:37:39Z" user="NE2" uid="207745" x="28.5466549" y="-81.3874284"/>
+ <node id="922145780" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:37:39Z" user="NE2" uid="207745" x="28.5466655" y="-81.3889948"/>
+ <node id="922145787" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:37:39Z" user="NE2" uid="207745" x="28.5472510" y="-81.3845088"/>
+ <node id="922145790" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:37:39Z" user="NE2" uid="207745" x="28.5473170" y="-81.3843962"/>
+ <node id="922145792" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:37:39Z" user="NE2" uid="207745" x="28.5473571" y="-81.3842862"/>
+ <node id="922145793" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:37:39Z" user="NE2" uid="207745" x="28.5473759" y="-81.3841869"/>
+ <node id="922145794" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:37:40Z" user="NE2" uid="207745" x="28.5473818" y="-81.3840729"/>
+ <node id="922145795" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:37:40Z" user="NE2" uid="207745" x="28.5473865" y="-81.3831328"/>
+ <node id="922145804" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:37:40Z" user="NE2" uid="207745" x="28.5473677" y="-81.3830752"/>
+ <node id="922145805" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:37:40Z" user="NE2" uid="207745" x="28.5473476" y="-81.3830470"/>
+ <node id="922145806" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:37:40Z" user="NE2" uid="207745" x="28.5473182" y="-81.3830282"/>
+ <node id="922145807" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:37:40Z" user="NE2" uid="207745" x="28.5472805" y="-81.3830255"/>
+ <node id="922145810" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:37:40Z" user="NE2" uid="207745" x="28.5467362" y="-81.3830041"/>
+ <node id="922145813" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:37:40Z" user="NE2" uid="207745" x="28.5467103" y="-81.3830175"/>
+ <node id="922145816" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:37:40Z" user="NE2" uid="207745" x="28.5466903" y="-81.3830497"/>
+ <node id="922156274" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:46:13Z" user="NE2" uid="207745" x="28.5480863" y="-81.3876054"/>
+ <node id="922156275" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:46:13Z" user="NE2" uid="207745" x="28.5480863" y="-81.3876228"/>
+ <node id="922156285" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:46:13Z" user="NE2" uid="207745" x="28.5475891" y="-81.3830805"/>
+ <node id="922156288" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:46:13Z" user="NE2" uid="207745" x="28.5475585" y="-81.3842366"/>
+ <node id="922156291" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:46:14Z" user="NE2" uid="207745" x="28.5475408" y="-81.3844082"/>
+ <node id="922156293" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:46:14Z" user="NE2" uid="207745" x="28.5475020" y="-81.3845249"/>
+ <node id="922156296" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:46:14Z" user="NE2" uid="207745" x="28.5474513" y="-81.3846349"/>
+ <node id="922156297" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:46:14Z" user="NE2" uid="207745" x="28.5471438" y="-81.3850573"/>
+ <node id="922156298" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:46:14Z" user="NE2" uid="207745" x="28.5470331" y="-81.3852263"/>
+ <node id="922156299" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:46:14Z" user="NE2" uid="207745" x="28.5469707" y="-81.3853591"/>
+ <node id="922156300" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:46:14Z" user="NE2" uid="207745" x="28.5469165" y="-81.3855294"/>
+ <node id="922156301" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:46:14Z" user="NE2" uid="207745" x="28.5468882" y="-81.3856903"/>
+ <node id="922156303" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:46:14Z" user="NE2" uid="207745" x="28.5468847" y="-81.3858432"/>
+ <node id="922162946" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:52:54Z" user="NE2" uid="207745" x="28.5487921" y="-81.3888942"/>
+ <node id="922162947" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:52:55Z" user="NE2" uid="207745" x="28.5484044" y="-81.3855720"/>
+ <node id="922162948" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:52:55Z" user="NE2" uid="207745" x="28.5484114" y="-81.3847220"/>
+ <node id="922162949" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:52:55Z" user="NE2" uid="207745" x="28.5484668" y="-81.3845128"/>
+ <node id="922162950" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:52:55Z" user="NE2" uid="207745" x="28.5484750" y="-81.3831529"/>
+ <node id="922162951" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:52:55Z" user="NE2" uid="207745" x="28.5484621" y="-81.3831181"/>
+ <node id="922162952" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:52:55Z" user="NE2" uid="207745" x="28.5484421" y="-81.3830926"/>
+ <node id="922162953" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:52:55Z" user="NE2" uid="207745" x="28.5484150" y="-81.3830698"/>
+ <node id="922162954" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:52:55Z" user="NE2" uid="207745" x="28.5476198" y="-81.3830443"/>
+ <node id="922162955" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:52:56Z" user="NE2" uid="207745" x="28.5481016" y="-81.3855683"/>
+ <node id="922162956" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:52:56Z" user="NE2" uid="207745" x="28.5484291" y="-81.3855723"/>
+ <node id="922162957" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:52:56Z" user="NE2" uid="207745" x="28.5484291" y="-81.3856353"/>
+ <node id="922162958" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:52:56Z" user="NE2" uid="207745" x="28.5494646" y="-81.3856501"/>
+ <node id="922162959" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:52:56Z" user="NE2" uid="207745" x="28.5495247" y="-81.3857078"/>
+ <node id="922162960" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:52:56Z" user="NE2" uid="207745" x="28.5496166" y="-81.3860283"/>
+ <node id="922162961" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:52:56Z" user="NE2" uid="207745" x="28.5496802" y="-81.3863126"/>
+ <node id="922162962" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:52:56Z" user="NE2" uid="207745" x="28.5496931" y="-81.3865459"/>
+ <node id="922162963" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:52:56Z" user="NE2" uid="207745" x="28.5496919" y="-81.3867203"/>
+ <node id="922162964" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:52:56Z" user="NE2" uid="207745" x="28.5496731" y="-81.3869134"/>
+ <node id="922162965" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:52:56Z" user="NE2" uid="207745" x="28.5495942" y="-81.3872232"/>
+ <node id="922162967" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:52:56Z" user="NE2" uid="207745" x="28.5492961" y="-81.3881995"/>
+ <node id="922162968" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:52:56Z" user="NE2" uid="207745" x="28.5492278" y="-81.3884892"/>
+ <node id="922162969" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:52:56Z" user="NE2" uid="207745" x="28.5492101" y="-81.3886783"/>
+ <node id="922162970" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:52:56Z" user="NE2" uid="207745" x="28.5492007" y="-81.3888352"/>
+ <node id="922162971" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:52:56Z" user="NE2" uid="207745" x="28.5491465" y="-81.3888982"/>
+ <node id="922163060" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:57:34Z" user="NE2" uid="207745" x="28.5480545" y="-81.3838986"/>
+ <node id="922163061" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:57:34Z" user="NE2" uid="207745" x="28.5477105" y="-81.3838879"/>
+ <node id="922163062" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:57:34Z" user="NE2" uid="207745" x="28.5476492" y="-81.3839603"/>
+ <node id="922163063" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:57:34Z" user="NE2" uid="207745" x="28.5476457" y="-81.3840193"/>
+ <node id="922163064" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:57:34Z" user="NE2" uid="207745" x="28.5475691" y="-81.3841065"/>
+ <node id="922163066" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:57:34Z" user="NE2" uid="207745" x="28.5477776" y="-81.3842902"/>
+ <node id="922163067" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:57:34Z" user="NE2" uid="207745" x="28.5478142" y="-81.3843291"/>
+ <node id="922163068" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T01:57:35Z" user="NE2" uid="207745" x="28.5480439" y="-81.3843345"/>
+ <node id="922163065" visible="true" version="2" changeset="5973343" timestamp="2010-10-06T21:01:32Z" user="NE2" uid="207745" x="28.5476889" y="-81.3842891"/>
+ <node id="922163057" visible="true" version="2" changeset="5982275" timestamp="2010-10-07T23:54:08Z" user="NE2" uid="207745" x="28.5481332" y="-81.3838316"/>
+ <node id="922163496" visible="true" version="2" changeset="5850580" timestamp="2010-09-23T02:09:21Z" user="NE2" uid="207745" x="28.5466493" y="-81.3889844"/>
+ <node id="922163494" visible="true" version="2" changeset="5850580" timestamp="2010-09-23T02:09:21Z" user="NE2" uid="207745" x="28.5463101" y="-81.3885432"/>
+ <node id="922163497" visible="true" version="2" changeset="5850580" timestamp="2010-09-23T02:09:21Z" user="NE2" uid="207745" x="28.5463095" y="-81.3889837"/>
+ <node id="922163495" visible="true" version="2" changeset="5850580" timestamp="2010-09-23T02:09:21Z" user="NE2" uid="207745" x="28.5466500" y="-81.3885438"/>
+ <node id="922163307" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:33Z" user="NE2" uid="207745" x="28.5470838" y="-81.3852089"/>
+ <node id="922163308" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:33Z" user="NE2" uid="207745" x="28.5470001" y="-81.3853913"/>
+ <node id="922163309" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:33Z" user="NE2" uid="207745" x="28.5469436" y="-81.3856407"/>
+ <node id="922163310" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:33Z" user="NE2" uid="207745" x="28.5469330" y="-81.3858459"/>
+ <node id="922163311" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:33Z" user="NE2" uid="207745" x="28.5469235" y="-81.3875464"/>
+ <node id="922163312" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:33Z" user="NE2" uid="207745" x="28.5482924" y="-81.3875679"/>
+ <node id="922163313" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:33Z" user="NE2" uid="207745" x="28.5481640" y="-81.3870717"/>
+ <node id="922163314" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:33Z" user="NE2" uid="207745" x="28.5481240" y="-81.3867753"/>
+ <node id="922163315" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:33Z" user="NE2" uid="207745" x="28.5481181" y="-81.3865768"/>
+ <node id="922163316" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:33Z" user="NE2" uid="207745" x="28.5481346" y="-81.3863609"/>
+ <node id="922163317" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:34Z" user="NE2" uid="207745" x="28.5481511" y="-81.3862013"/>
+ <node id="922163318" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:34Z" user="NE2" uid="207745" x="28.5481452" y="-81.3860953"/>
+ <node id="922163319" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:34Z" user="NE2" uid="207745" x="28.5481216" y="-81.3860082"/>
+ <node id="922163320" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:34Z" user="NE2" uid="207745" x="28.5480580" y="-81.3858727"/>
+ <node id="922163321" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:34Z" user="NE2" uid="207745" x="28.5477411" y="-81.3852250"/>
+ <node id="922163322" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:34Z" user="NE2" uid="207745" x="28.5473653" y="-81.3831650"/>
+ <node id="922163323" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:34Z" user="NE2" uid="207745" x="28.5473606" y="-81.3838879"/>
+ <node id="922163324" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:34Z" user="NE2" uid="207745" x="28.5467021" y="-81.3838798"/>
+ <node id="922163325" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:34Z" user="NE2" uid="207745" x="28.5467080" y="-81.3830215"/>
+ <node id="922163326" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:34Z" user="NE2" uid="207745" x="28.5472593" y="-81.3830443"/>
+ <node id="922163327" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:34Z" user="NE2" uid="207745" x="28.5472675" y="-81.3830953"/>
+ <node id="922163328" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:34Z" user="NE2" uid="207745" x="28.5472887" y="-81.3831355"/>
+ <node id="922163329" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:34Z" user="NE2" uid="207745" x="28.5473194" y="-81.3831543"/>
+ <node id="922163334" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:35Z" user="NE2" uid="207745" x="28.5483619" y="-81.3831825"/>
+ <node id="922163335" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:35Z" user="NE2" uid="207745" x="28.5483926" y="-81.3832200"/>
+ <node id="922163336" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:35Z" user="NE2" uid="207745" x="28.5484150" y="-81.3832750"/>
+ <node id="922163337" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:35Z" user="NE2" uid="207745" x="28.5484220" y="-81.3833259"/>
+ <node id="922163338" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:35Z" user="NE2" uid="207745" x="28.5484161" y="-81.3837886"/>
+ <node id="922163339" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:35Z" user="NE2" uid="207745" x="28.5477305" y="-81.3837766"/>
+ <node id="922163340" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:35Z" user="NE2" uid="207745" x="28.5476952" y="-81.3837538"/>
+ <node id="922163341" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:35Z" user="NE2" uid="207745" x="28.5476610" y="-81.3837189"/>
+ <node id="922163342" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:35Z" user="NE2" uid="207745" x="28.5476339" y="-81.3836706"/>
+ <node id="922163343" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:35Z" user="NE2" uid="207745" x="28.5476257" y="-81.3836009"/>
+ <node id="922163344" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:36Z" user="NE2" uid="207745" x="28.5476268" y="-81.3833005"/>
+ <node id="922163345" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:36Z" user="NE2" uid="207745" x="28.5476469" y="-81.3832401"/>
+ <node id="922163346" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:36Z" user="NE2" uid="207745" x="28.5476751" y="-81.3832039"/>
+ <node id="922163347" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:36Z" user="NE2" uid="207745" x="28.5477176" y="-81.3831731"/>
+ <node id="922163348" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:36Z" user="NE2" uid="207745" x="28.5477765" y="-81.3831529"/>
+ <node id="922163349" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:36Z" user="NE2" uid="207745" x="28.5482807" y="-81.3831583"/>
+ <node id="922163350" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:36Z" user="NE2" uid="207745" x="28.5483278" y="-81.3831677"/>
+ <node id="922163351" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:37Z" user="NE2" uid="207745" x="28.5498251" y="-81.3856796"/>
+ <node id="922163352" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:37Z" user="NE2" uid="207745" x="28.5498875" y="-81.3859478"/>
+ <node id="922163353" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:37Z" user="NE2" uid="207745" x="28.5499299" y="-81.3861678"/>
+ <node id="922163354" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:37Z" user="NE2" uid="207745" x="28.5499570" y="-81.3863877"/>
+ <node id="922163355" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:37Z" user="NE2" uid="207745" x="28.5507651" y="-81.3863931"/>
+ <node id="922163356" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:37Z" user="NE2" uid="207745" x="28.5507769" y="-81.3856890"/>
+ <node id="922163361" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:38Z" user="NE2" uid="207745" x="28.5507651" y="-81.3868826"/>
+ <node id="922163362" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:38Z" user="NE2" uid="207745" x="28.5507345" y="-81.3888808"/>
+ <node id="922163363" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:38Z" user="NE2" uid="207745" x="28.5494976" y="-81.3888647"/>
+ <node id="922163364" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:38Z" user="NE2" uid="207745" x="28.5494940" y="-81.3886850"/>
+ <node id="922163365" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:38Z" user="NE2" uid="207745" x="28.5495082" y="-81.3885428"/>
+ <node id="922163366" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:38Z" user="NE2" uid="207745" x="28.5495624" y="-81.3883162"/>
+ <node id="922163367" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:38Z" user="NE2" uid="207745" x="28.5498145" y="-81.3875477"/>
+ <node id="922163368" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:38Z" user="NE2" uid="207745" x="28.5499005" y="-81.3872152"/>
+ <node id="922163369" visible="true" version="1" changeset="5850580" timestamp="2010-09-23T02:02:38Z" user="NE2" uid="207745" x="28.5499546" y="-81.3868678"/>
+ <node id="922163374" visible="true" version="2" changeset="5850580" timestamp="2010-09-23T02:05:23Z" user="NE2" uid="207745" x="28.5470469" y="-81.3880350"/>
+ <node id="922163378" visible="true" version="2" changeset="5850580" timestamp="2010-09-23T02:05:23Z" user="NE2" uid="207745" x="28.5475414" y="-81.3888234"/>
+ <node id="922163359" visible="true" version="2" changeset="5850580" timestamp="2010-09-23T02:05:24Z" user="NE2" uid="207745" x="28.5502312" y="-81.3842517"/>
+ <node id="922163372" visible="true" version="2" changeset="5850580" timestamp="2010-09-23T02:05:24Z" user="NE2" uid="207745" x="28.5472796" y="-81.3877723"/>
+ <node id="922163376" visible="true" version="2" changeset="5850580" timestamp="2010-09-23T02:05:24Z" user="NE2" uid="207745" x="28.5469771" y="-81.3884829"/>
+ <node id="922163357" visible="true" version="2" changeset="5850580" timestamp="2010-09-23T02:05:24Z" user="NE2" uid="207745" x="28.5507347" y="-81.3853614"/>
+ <node id="922163305" visible="true" version="2" changeset="5850580" timestamp="2010-09-23T02:05:24Z" user="NE2" uid="207745" x="28.5488147" y="-81.3888001"/>
+ <node id="922163370" visible="true" version="2" changeset="5850580" timestamp="2010-09-23T02:05:24Z" user="NE2" uid="207745" x="28.5479683" y="-81.3876498"/>
+ <node id="922163383" visible="true" version="2" changeset="5850580" timestamp="2010-09-23T02:05:24Z" user="NE2" uid="207745" x="28.5469210" y="-81.3876414"/>
+ <node id="922163381" visible="true" version="2" changeset="5850580" timestamp="2010-09-23T02:05:24Z" user="NE2" uid="207745" x="28.5468784" y="-81.3881625"/>
+ <node id="922163375" visible="true" version="2" changeset="5850580" timestamp="2010-09-23T02:05:24Z" user="NE2" uid="207745" x="28.5470441" y="-81.3884834"/>
+ <node id="922163379" visible="true" version="2" changeset="5850580" timestamp="2010-09-23T02:05:24Z" user="NE2" uid="207745" x="28.5475403" y="-81.3890002"/>
+ <node id="922163303" visible="true" version="2" changeset="5850580" timestamp="2010-09-23T02:05:24Z" user="NE2" uid="207745" x="28.5491920" y="-81.3878625"/>
+ <node id="922163373" visible="true" version="2" changeset="5850580" timestamp="2010-09-23T02:05:24Z" user="NE2" uid="207745" x="28.5472779" y="-81.3880368"/>
+ <node id="922163330" visible="true" version="3" changeset="5973343" timestamp="2010-10-06T21:01:03Z" user="NE2" uid="207745" x="28.5480646" y="-81.3846269"/>
+ <node id="922163332" visible="true" version="3" changeset="5973343" timestamp="2010-10-06T21:01:03Z" user="NE2" uid="207745" x="28.5483807" y="-81.3854642"/>
+ <node id="922163377" visible="true" version="2" changeset="5850580" timestamp="2010-09-23T02:05:24Z" user="NE2" uid="207745" x="28.5469750" y="-81.3888188"/>
+ <node id="922163358" visible="true" version="2" changeset="5850580" timestamp="2010-09-23T02:05:25Z" user="NE2" uid="207745" x="28.5507425" y="-81.3842563"/>
+ <node id="922163306" visible="true" version="2" changeset="5850580" timestamp="2010-09-23T02:05:25Z" user="NE2" uid="207745" x="28.5488209" y="-81.3878593"/>
+ <node id="922163371" visible="true" version="2" changeset="5850580" timestamp="2010-09-23T02:05:25Z" user="NE2" uid="207745" x="28.5479675" y="-81.3877778"/>
+ <node id="922163304" visible="true" version="2" changeset="5850580" timestamp="2010-09-23T02:05:25Z" user="NE2" uid="207745" x="28.5491859" y="-81.3888032"/>
+ <node id="922163382" visible="true" version="2" changeset="5850580" timestamp="2010-09-23T02:05:25Z" user="NE2" uid="207745" x="28.5469178" y="-81.3881628"/>
+ <node id="922163360" visible="true" version="2" changeset="5850580" timestamp="2010-09-23T02:05:25Z" user="NE2" uid="207745" x="28.5502235" y="-81.3853568"/>
+ <node id="922163380" visible="true" version="2" changeset="5850580" timestamp="2010-09-23T02:05:25Z" user="NE2" uid="207745" x="28.5468732" y="-81.3889948"/>
+ <node id="633232804" visible="true" version="5" changeset="5973343" timestamp="2010-10-06T20:57:58Z" user="NE2" uid="207745" x="28.5491679" y="-81.3842982"/>
+ <node id="633232806" visible="true" version="5" changeset="5973343" timestamp="2010-10-06T20:57:59Z" user="NE2" uid="207745" x="28.5486865" y="-81.3853182"/>
+    </graph>
+</graphml>
