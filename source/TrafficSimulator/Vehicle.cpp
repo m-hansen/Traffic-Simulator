@@ -9,7 +9,7 @@ namespace TrafficSimulator
 		mWidth(width), mHeight(height), mSensors(), mRotation(0), mRangeFinderLeft(*this, 50, 125), mRangeFinderCenter(*this, 50, 90),
 		mRangeFinderRight(*this, 50, 55), mItineraryIndex(0), mTarget(nullptr), mVelocity(Vector2f{ 0, -1 }), mIsSelected(false),
 		mVehicleId(sTotalVehicles++), mAdjacentAgentSensor(this, mPosition, 35), mPathNodeIdString(),
-		mAcceleration(0.01f), mDeacceleration(0.02f)
+		mAcceleration(0.01f), mDeceleration(0.02f)
 	{
 		mBoundingRect = 
 		{
@@ -98,7 +98,7 @@ namespace TrafficSimulator
 		}
 		else if (mSpeed > mTargetSpeed)
 		{
-			mSpeed = max(mSpeed - (mDeacceleration * delta), mTargetSpeed);
+			mSpeed = max(mSpeed - (mDeceleration * delta), mTargetSpeed);
 		}
 
 		// Seek to target
@@ -135,7 +135,7 @@ namespace TrafficSimulator
 
 		if (mRangeFinderCenter.IsIntersecting())
 		{
-			// Begin to deaccelerate
+			// Begin to decelerate
 			SetTargetSpeed(0.0f);
 		}
 		else
