@@ -5,12 +5,15 @@
 const std::uint32_t ScreenWidth = 1280;
 const std::uint32_t ScreenHeight = 720;
 const std::string ContentPath = "../../Content/";
-const std::uint32_t VehicleCap = 40;
+const std::uint32_t VehicleCap = 38;
 
 SDL_Window* gWindow = nullptr;
 SDL_Renderer* gRenderer = nullptr;
 TTF_Font* gCalibriFont = nullptr;
 Graph* gGraph = nullptr;
+std::uint32_t gFrameCount = 0;
+std::uint32_t gPreviousFrameCount = 0;
+std::uint32_t gFpsTime = 0;
 
 std::list<TrafficSimulator::Vehicle> gVehicleList; // TODO: vector of shared_ptr for contiguous access
 std::vector<TrafficSimulator::Wall> gWallList;
@@ -300,6 +303,19 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 
 void Update(std::uint32_t delta)
 {
+	// Calculate the frames processed per second
+	gFpsTime += delta;
+	if (gFpsTime <= 1000)
+	{
+		++gFrameCount;
+	}
+	else
+	{
+		gPreviousFrameCount = gFrameCount;
+		gFrameCount = 0;
+		gFpsTime = 0;
+	}
+
 	// Will be removed soon
 	for (auto& vehicle : gVehicleList)
 	{
@@ -352,8 +368,11 @@ void Render()
 		spawner.Draw(gRenderer);
 	}
 
-	TextureManager::RenderText(gRenderer, "calibri", "Total Vehicles: " + 
-		std::to_string(TrafficSimulator::Vehicle::TotalVehicleCount()), Vector2{ 0,0 });
+	TextureManager::RenderText(gRenderer, "calibri", "FPS: " +
+		std::to_string(gPreviousFrameCount), Vector2{ 0, 0 });
+
+	TextureManager::RenderText(gRenderer, "calibri", "Total Vehicles: " +
+		std::to_string(TrafficSimulator::Vehicle::TotalVehicleCount()), Vector2{ 0, 20 });
 
 	// Update screen
 	SDL_RenderPresent(gRenderer);
