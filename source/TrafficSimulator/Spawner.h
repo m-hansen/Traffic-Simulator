@@ -13,7 +13,7 @@ namespace TrafficSimulator
 	{
 	public:
 		Spawner(SDL_Texture* texture, const Vector2f& position, const Graph& map);
-		~Spawner();
+		~Spawner() = default;
 		void Update(std::uint32_t delta);
 		void Draw(SDL_Renderer* renderer);
 		const SDL_Rect& GetBoundingRect() const;

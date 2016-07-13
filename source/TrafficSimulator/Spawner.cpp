@@ -6,7 +6,7 @@ namespace TrafficSimulator
 
 	Spawner::Spawner(SDL_Texture* texture, const Vector2f& position, const Graph& map)
 		: mTexture(texture), mWidth(25), mHeight(25), mRotation(0), mMap(map), 
-		mNextSpawnTime(0), mTimeSinceLastSpawn(0)
+		mNextSpawnTime(1000), mTimeSinceLastSpawn(0)
 	{
 		mBoundingRect =
 		{
@@ -17,17 +17,6 @@ namespace TrafficSimulator
 		};
 
 		SDL_SetTextureAlphaMod(mTexture, 175);
-	}
-
-	Spawner::~Spawner()
-	{
-		if (!sVehicles.empty())
-		{
-			for (auto vehicle : sVehicles)
-			{
-				delete &vehicle;
-			}
-		}
 	}
 
 	void Spawner::Update(std::uint32_t delta)
