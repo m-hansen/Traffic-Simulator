@@ -62,15 +62,15 @@ std::list<const Node*> Pathfinder::Dijkstras(const Graph& graph, const Node& sou
 	}
 	shortestPath.reverse();
 
-#if (_DEBUG)
-	// Display the shortest path in the console
-	printf("Path (Dijkstra's): ");
-	for (const Node* node : shortestPath)
-	{
-		printf("%d ", node->Id());
-	}
-	printf("\n");
-#endif
+//#if (_DEBUG)
+//	// Display the shortest path in the console
+//	printf("Path (Dijkstra's): ");
+//	for (const Node* node : shortestPath)
+//	{
+//		printf("%d ", node->Id());
+//	}
+//	printf("\n");
+//#endif
 
 	return shortestPath;
 }

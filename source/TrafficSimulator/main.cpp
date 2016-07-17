@@ -5,7 +5,7 @@
 const std::uint32_t ScreenWidth = 1280;
 const std::uint32_t ScreenHeight = 720;
 const std::string ContentPath = "../../Content/";
-const std::uint32_t VehicleCap = 38;
+const std::uint32_t VehicleCap = 35;
 
 SDL_Window* gWindow = nullptr;
 SDL_Renderer* gRenderer = nullptr;
@@ -314,6 +314,7 @@ void Update(std::uint32_t delta)
 		gPreviousFrameCount = gFrameCount;
 		gFrameCount = 0;
 		gFpsTime = 0;
+		//printf("%d,%d\n", gPreviousFrameCount, TrafficSimulator::Vehicle::TotalVehicleCount());
 	}
 
 	// Will be removed soon

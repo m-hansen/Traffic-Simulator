@@ -5,7 +5,7 @@ namespace TrafficSimulator
 	std::uint32_t Vehicle::sTotalVehicles = 0;
 
 	Vehicle::Vehicle(SDL_Texture* texture, const Vector2f& position, std::int32_t width, std::int32_t height, const Graph& map)
-		: mInitialTargetSpeed(static_cast<float>(rand() % 40 + 20)), mSpeed(0.0f), mTargetSpeed(0.0f), mRotationSpeed(5), mTexture(texture), mPosition(position), mMap(map), mLastVisitedNode(nullptr), mItinerary(),
+		: mInitialTargetSpeed(static_cast<float>(rand() % 10 + 30)), mSpeed(0.0f), mTargetSpeed(0.0f), mRotationSpeed(5), mTexture(texture), mPosition(position), mMap(map), mLastVisitedNode(nullptr), mItinerary(),
 		mWidth(width), mHeight(height), mSensors(), mRotation(0), mRangeFinderLeft(*this, 50, 125), mRangeFinderCenter(*this, 50, 90),
 		mRangeFinderRight(*this, 50, 55), mItineraryIndex(0), mTarget(nullptr), mVelocity(Vector2f{ 0, -1 }), mIsSelected(false),
 		mVehicleId(sTotalVehicles++), mAdjacentAgentSensor(this, mPosition, 35), mPathNodeIdString(),
