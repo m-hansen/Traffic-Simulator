@@ -31,6 +31,9 @@ Edge::~Edge()
 
 void Edge::Draw(SDL_Renderer* renderer)
 {
+	if (!IsVisible())
+		return;
+
 	SDL_SetRenderDrawColor(renderer, mColor.r, mColor.g, mColor.b, mColor.a);
 	Vector2 sourcePosition = mSourceNode.Position();
 	Vector2 targetPosition = mTargetNode.Position();
@@ -38,7 +41,14 @@ void Edge::Draw(SDL_Renderer* renderer)
 	// Draw lanes
 	for (std::int32_t i = 0; i < mNumLanes; ++i)
 	{
-		const std::int32_t laneOffset = 24;
+		const std::int32_t laneWidth = 24;
+
+		// Calculate the midpoint
+		Vector2 midpoint = 
+		{
+			(sourcePosition.x + targetPosition.x) / 2,
+			(sourcePosition.y + targetPosition.y) / 2 
+		};
 
 		// Calculate rotation of road
 		std::int32_t deltaX = targetPosition.x - sourcePosition.x;
@@ -46,19 +56,19 @@ void Edge::Draw(SDL_Renderer* renderer)
 		double angle = 90 + atan2(deltaY, deltaX) * (180 / PI);
 
 		double distance = sqrt(deltaX * deltaX + deltaY * deltaY);
-		SDL_Rect rect = { targetPosition.x + (laneOffset * i), targetPosition.y + (laneOffset * i), laneOffset, static_cast<std::int32_t>(distance) };
-		SDL_Point origin{ 0, 0 };
-		SDL_RenderCopyEx(renderer, TextureManager::GetTexture("road"), nullptr, &rect, angle, &origin, SDL_RendererFlip::SDL_FLIP_NONE);
+		SDL_Rect rect = { midpoint.x - static_cast<std::int32_t>(laneWidth / 2), midpoint.y - static_cast<std::int32_t>(distance / 2), laneWidth, static_cast<std::int32_t>(distance) };
+		//SDL_Point origin{ laneWidth / 2, 0 };
+		SDL_RenderCopyEx(renderer, TextureManager::GetTexture("road"), nullptr, &rect, angle, nullptr, SDL_RendererFlip::SDL_FLIP_NONE);
 		//SDL_RenderDrawLine(renderer, sourcePosition.x + (laneOffset * i + 1), sourcePosition.y + (laneOffset * i + 1), targetPosition.x + (laneOffset * i + 1), targetPosition.y + (laneOffset * i + 1));
 	}
 
-	SDL_RenderDrawLine(renderer, sourcePosition.x, sourcePosition.y, targetPosition.x, targetPosition.y);
+	//SDL_RenderDrawLine(renderer, sourcePosition.x, sourcePosition.y, targetPosition.x, targetPosition.y);
 
 	// TODO: remove this - for presentation only after complaints of being unable to see debugging info
-	SDL_RenderDrawLine(renderer, sourcePosition.x - 1, sourcePosition.y - 1, targetPosition.x - 1, targetPosition.y - 1);
+	/*SDL_RenderDrawLine(renderer, sourcePosition.x - 1, sourcePosition.y - 1, targetPosition.x - 1, targetPosition.y - 1);
 	SDL_RenderDrawLine(renderer, sourcePosition.x + 1, sourcePosition.y + 1, targetPosition.x + 1, targetPosition.y + 1);
 	SDL_RenderDrawLine(renderer, sourcePosition.x - 2, sourcePosition.y - 2, targetPosition.x - 2, targetPosition.y - 2);
-	SDL_RenderDrawLine(renderer, sourcePosition.x + 2, sourcePosition.y + 2, targetPosition.x + 2, targetPosition.y + 2);
+	SDL_RenderDrawLine(renderer, sourcePosition.x + 2, sourcePosition.y + 2, targetPosition.x + 2, targetPosition.y + 2);*/
 }
 
 const Node& Edge::SourceNode() const

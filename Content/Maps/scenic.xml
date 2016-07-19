@@ -1,0 +1,170 @@
+<graphml>
+    <graph id="WorldGraph" edgedefault="directed">
+        <node id="0" x="199" y="155"/>
+        <node id="1" x="176" y="185"/>
+        <node id="2" x="159" y="205"/>
+        <node id="3" x="150" y="244"/>
+        <node id="4" x="150" y="284"/>
+        <node id="5" x="153" y="324"/>
+        <node id="6" x="161" y="357"/>
+        <node id="7" x="171" y="379"/>
+        <node id="8" x="177" y="388"/>
+        <node id="9" x="193" y="401"/>
+        <node id="10" x="204" y="411"/>
+        <node id="11" x="216" y="415"/>
+        <node id="12" x="233" y="418"/>
+        <node id="13" x="245" y="419"/>
+        <node id="14" x="263" y="422"/>
+        <node id="15" x="313" y="425"/>
+        <node id="16" x="357" y="420"/>
+        <node id="17" x="406" y="404"/>
+        <node id="18" x="434" y="388"/>
+        <node id="19" x="467" y="367"/>
+        <node id="20" x="483" y="357"/>
+        <node id="21" x="512" y="355"/>
+        <node id="22" x="527" y="360"/>
+        <node id="23" x="547" y="371"/>
+        <node id="24" x="563" y="381"/>
+        <node id="25" x="582" y="395"/>
+        <node id="26" x="601" y="414"/>
+        <node id="27" x="633" y="434"/>
+        <node id="28" x="657" y="435"/>
+        <node id="29" x="685" y="430"/>
+        <node id="30" x="710" y="420"/>
+        <node id="31" x="735" y="408"/>
+        <node id="32" x="754" y="392"/>
+        <node id="33" x="766" y="375"/>
+        <node id="34" x="780" y="346"/>
+        <node id="35" x="782" y="324"/>
+        <node id="36" x="773" y="308"/>
+        <node id="37" x="750" y="293"/>
+        <node id="38" x="722" y="297"/>
+        <node id="39" x="703" y="315"/>
+        <node id="40" x="713" y="329"/>
+        <node id="41" x="725" y="341"/>
+        <node id="42" x="734" y="351"/>
+        <node id="43" x="737" y="364"/>
+        <node id="44" x="733" y="374"/>
+        <node id="45" x="718" y="384"/>
+        <node id="46" x="698" y="390"/>
+        <node id="47" x="669" y="392"/>
+        <node id="48" x="637" y="391"/>
+        <node id="49" x="612" y="382"/>
+        <node id="50" x="595" y="362"/>
+        <node id="51" x="579" y="338"/>
+        <node id="52" x="557" y="323"/>
+        <node id="53" x="536" y="316"/>
+        <node id="54" x="508" y="312"/>
+        <node id="55" x="483" y="311"/>
+        <node id="56" x="454" y="317"/>
+        <node id="57" x="431" y="326"/>
+        <node id="58" x="419" y="337"/>
+        <node id="59" x="406" y="349"/>
+        <node id="60" x="389" y="359"/>
+        <node id="61" x="351" y="369"/>
+        <node id="62" x="331" y="373"/>
+        <node id="63" x="285" y="370"/>
+        <node id="64" x="255" y="367"/>
+        <node id="65" x="218" y="358"/>
+        <node id="66" x="199" y="346"/>
+        <node id="67" x="188" y="326"/>
+        <node id="68" x="184" y="305"/>
+        <node id="69" x="186" y="290"/>
+        <node id="70" x="190" y="271"/>
+        <node id="71" x="194" y="257"/>
+        <node id="72" x="204" y="235"/>
+        <node id="73" x="218" y="206"/>
+        <node id="74" x="234" y="188"/>
+        <node id="75" x="251" y="165"/>
+        <node id="76" x="268" y="143"/>
+        <node id="77" x="272" y="110"/>
+        <node id="78" x="260" y="89"/>
+        <node id="79" x="238" y="79"/>
+        <node id="80" x="213" y="77"/>
+        <node id="81" x="180" y="96"/>
+        <node id="82" x="190" y="124"/>
+        <edge source="0" target="1"/>
+        <edge source="1" target="2"/>
+        <edge source="2" target="3"/>
+        <edge source="3" target="4"/>
+        <edge source="4" target="5"/>
+        <edge source="5" target="6"/>
+        <edge source="6" target="7"/>
+        <edge source="7" target="8"/>
+        <edge source="8" target="9"/>
+        <edge source="9" target="10"/>
+        <edge source="10" target="11"/>
+        <edge source="11" target="12"/>
+        <edge source="12" target="13"/>
+        <edge source="13" target="14"/>
+        <edge source="14" target="15"/>
+        <edge source="15" target="16"/>
+        <edge source="16" target="17"/>
+        <edge source="17" target="18"/>
+        <edge source="18" target="19"/>
+        <edge source="19" target="20"/>
+        <edge source="20" target="21"/>
+        <edge source="21" target="22"/>
+        <edge source="22" target="23"/>
+        <edge source="23" target="24"/>
+        <edge source="24" target="25"/>
+        <edge source="25" target="26"/>
+        <edge source="26" target="27"/>
+        <edge source="27" target="28"/>
+        <edge source="28" target="29"/>
+        <edge source="29" target="30"/>
+        <edge source="30" target="31"/>
+        <edge source="31" target="32"/>
+        <edge source="32" target="33"/>
+        <edge source="33" target="34"/>
+        <edge source="34" target="35"/>
+        <edge source="35" target="36"/>
+        <edge source="36" target="37"/>
+        <edge source="37" target="38"/>
+        <edge source="38" target="39"/>
+        <edge source="39" target="40"/>
+        <edge source="40" target="41"/>
+        <edge source="41" target="42"/>
+        <edge source="42" target="43"/>
+        <edge source="43" target="44"/>
+        <edge source="44" target="45"/>
+        <edge source="45" target="46"/>
+        <edge source="46" target="47"/>
+        <edge source="47" target="48"/>
+        <edge source="48" target="49"/>
+        <edge source="49" target="50"/>
+        <edge source="50" target="51"/>
+        <edge source="51" target="52"/>
+        <edge source="52" target="53"/>
+        <edge source="53" target="54"/>
+        <edge source="54" target="55"/>
+        <edge source="55" target="56"/>
+        <edge source="56" target="57"/>
+        <edge source="57" target="58"/>
+        <edge source="58" target="59"/>
+        <edge source="59" target="60"/>
+        <edge source="60" target="61"/>
+        <edge source="61" target="62"/>
+        <edge source="62" target="63"/>
+        <edge source="63" target="64"/>
+        <edge source="64" target="65"/>
+        <edge source="65" target="66"/>
+        <edge source="66" target="67"/>
+        <edge source="67" target="68"/>
+        <edge source="68" target="69"/>
+        <edge source="69" target="70"/>
+        <edge source="70" target="71"/>
+        <edge source="71" target="72"/>
+        <edge source="72" target="73"/>
+        <edge source="73" target="74"/>
+        <edge source="74" target="75"/>
+        <edge source="75" target="76"/>
+        <edge source="76" target="77"/>
+        <edge source="77" target="78"/>
+        <edge source="78" target="79"/>
+        <edge source="79" target="80"/>
+        <edge source="80" target="81"/>
+        <edge source="81" target="82"/>
+        <edge source="82" target="0"/>
+    </graph>
+</graphml>

@@ -6,7 +6,7 @@ bool GraphParser::LoadGraph(Graph* graph, const std::string& filename)
 
 	if (xmlDocument.LoadFile(filename.c_str()) != 0)
 	{
-		fprintf(stderr, "Error: The GraphParser failed to load %s.\n", filename.c_str());
+		fprintf(stderr, "Error: The GraphParser failed to load %s.\nError Description: %s\n", filename.c_str(), xmlDocument.ErrorName());
 		return false;
 	}
 
@@ -50,14 +50,17 @@ bool GraphParser::LoadGraph(Graph* graph, const std::string& filename)
 	{
 		std::int32_t sourceNodeId = 0;
 		std::int32_t targetNodeId = 0;
+		bool isVisible = true;
 
 		edgeElement->QueryIntAttribute("source", &sourceNodeId);
 		edgeElement->QueryIntAttribute("target", &targetNodeId);
+		edgeElement->QueryBoolAttribute("visible", &isVisible);
+
 
 		const Node* sourceNode = graph->GetNodeById(sourceNodeId);
 		const Node* targetNode = graph->GetNodeById(targetNodeId);
 
-		graph->CreateEdge(*sourceNode, *targetNode);
+		graph->CreateEdge(*sourceNode, *targetNode, isVisible);
 
 		// Add connected nodes to the source adjacency list
 		const_cast<Node*>(sourceNode)->AddAdjacentNode(*targetNode);
@@ -96,6 +99,7 @@ bool GraphParser::SaveGraph(const Graph& graph, const std::string& filename)
 		XMLElement* edgeElement = mXmlDocument.NewElement("edge");
 		edgeElement->SetAttribute("source", std::to_string(edge.SourceNode().Id()).c_str());
 		edgeElement->SetAttribute("target", std::to_string(edge.TargetNode().Id()).c_str());
+		edgeElement->SetAttribute("visible", "true");
 		element->InsertEndChild(edgeElement);
 	}
 	root->InsertEndChild(element);

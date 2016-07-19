@@ -4,12 +4,12 @@ namespace TrafficSimulator
 {
 	std::uint32_t Vehicle::sTotalVehicles = 0;
 
-	Vehicle::Vehicle(SDL_Texture* texture, const Vector2f& position, std::int32_t width, std::int32_t height, const Graph& map)
-		: mInitialTargetSpeed(static_cast<float>(rand() % 10 + 30)), mSpeed(0.0f), mTargetSpeed(0.0f), mRotationSpeed(5), mTexture(texture), mPosition(position), mMap(map), mLastVisitedNode(nullptr), mItinerary(),
+	Vehicle::Vehicle(SDL_Texture* texture, const Vector2f& position, std::int32_t width, std::int32_t height, const Graph& map, const Node& startNode)
+		: mInitialTargetSpeed(static_cast<float>(rand() % 10 + 30)), mSpeed(0.0f), mTargetSpeed(0.0f), mRotationSpeed(5), mTexture(texture), mPosition(position), mMap(map), mLastVisitedNode(&startNode), mItinerary(),
 		mWidth(width), mHeight(height), mSensors(), mRotation(0), mRangeFinderLeft(*this, 50, 125), mRangeFinderCenter(*this, 50, 90),
 		mRangeFinderRight(*this, 50, 55), mItineraryIndex(0), mTarget(nullptr), mVelocity(Vector2f{ 0, -1 }), mIsSelected(false),
 		mVehicleId(sTotalVehicles++), mAdjacentAgentSensor(this, mPosition, 35), mPathNodeIdString(),
-		mAcceleration(0.01f), mDeceleration(0.02f)
+		mAcceleration(0.05f), mDeceleration(0.05f)
 	{
 		mBoundingRect = 
 		{
@@ -26,8 +26,6 @@ namespace TrafficSimulator
 
 		// Set the color
 		SDL_SetTextureColorMod(mTexture, 0x33, 0x99, 0xCC);
-
-		mLastVisitedNode = const_cast<Node*>(mMap.GetNodeById(0));
 
 		// Pick a random target location to navigate to
 		srand(static_cast<uint32_t>(std::time(NULL)));
@@ -108,8 +106,8 @@ namespace TrafficSimulator
 			mPosition += ((mVelocity + mSteering) * mSpeed) * (static_cast<float>(delta) / 1000);
 
 			// Check if we reached target, set a new one if so
-			if (abs(mPosition.x - mTarget->Position().x) < 50 &&
-				abs(mPosition.y - mTarget->Position().y) < 50)
+			if (abs(mPosition.x - mTarget->Position().x) < 5 &&
+				abs(mPosition.y - mTarget->Position().y) < 5)
 			{
 				mLastVisitedNode = mTarget;
 				++mItineraryIndex;

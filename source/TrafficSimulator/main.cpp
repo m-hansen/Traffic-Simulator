@@ -5,7 +5,7 @@
 const std::uint32_t ScreenWidth = 1280;
 const std::uint32_t ScreenHeight = 720;
 const std::string ContentPath = "../../Content/";
-const std::uint32_t VehicleCap = 35;
+const std::uint32_t VehicleCap = 10;
 
 SDL_Window* gWindow = nullptr;
 SDL_Renderer* gRenderer = nullptr;
@@ -83,6 +83,7 @@ bool LoadResources()
 		TextureManager::LoadTexture(gRenderer, "car", ContentPath + "Images/car-sprite.png") &&
 		TextureManager::LoadTexture(gRenderer, "wall", ContentPath + "Images/wall.png") &&
 		TextureManager::LoadTexture(gRenderer, "node", ContentPath + "Images/node.png") &&
+		TextureManager::LoadTexture(gRenderer, "nodeSM", ContentPath + "Images/node_sm.png") &&
 		TextureManager::LoadTexture(gRenderer, "road", ContentPath + "Images/road.png") &&
 		TextureManager::LoadTexture(gRenderer, "spawner", ContentPath + "Images/spawner.png") &&
 		TextureManager::LoadTexture(gRenderer, "adjacentAgent", ContentPath + "Images/adjacent-agent-sensor.png");
@@ -198,17 +199,17 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 		}
 		if (e.button.button == SDL_BUTTON_MIDDLE)
 		{
-			// Place a vehicle at the mouse position
-			const std::int32_t CarWidth = 12;
-			const std::int32_t CarHeight = 24;
-			TrafficSimulator::Vehicle car(
-				TextureManager::GetTexture("car"),
-				Vector2f{ static_cast<float>(e.button.x), static_cast<float>(e.button.y) },
-				CarWidth,
-				CarHeight,
-				*gGraph
-			);
-			gVehicleList.emplace_back(car);
+			//// Place a vehicle at the mouse position
+			//const std::int32_t CarWidth = 12;
+			//const std::int32_t CarHeight = 24;
+			//TrafficSimulator::Vehicle car(
+			//	TextureManager::GetTexture("car"),
+			//	Vector2f{ static_cast<float>(e.button.x), static_cast<float>(e.button.y) },
+			//	CarWidth,
+			//	CarHeight,
+			//	*gGraph
+			//);
+			//gVehicleList.emplace_back(car);
 		}
 	}
 	else if (e.type == SDL_MOUSEBUTTONUP)
@@ -234,7 +235,8 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 				{ SDL_MESSAGEBOX_BUTTON_RETURNKEY_DEFAULT,	0,	"Default" },
 				{ 0,										1,	"Web" },
 				{ 0,										2,	"Test" },
-				{ SDL_MESSAGEBOX_BUTTON_ESCAPEKEY_DEFAULT,	3,	"Cancel" },
+				{ 0,										3,	"City" },
+				{ SDL_MESSAGEBOX_BUTTON_ESCAPEKEY_DEFAULT,	4,	"Cancel" },
 			};
 			const SDL_MessageBoxData messageBoxData =
 			{
@@ -259,6 +261,9 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 					break;
 				case 2:
 					GraphParser::LoadGraph(gGraph, (ContentPath + "Test/test001.xml").c_str());
+					break;
+				case 3:
+					GraphParser::LoadGraph(gGraph, (ContentPath + "Maps/city.xml").c_str());
 					break;
 				}
 			}
@@ -406,7 +411,7 @@ int main(int argc, char* argv[])
 	gGraph = new Graph(gRenderer, gCalibriFont);
 
 	// Load the default graph
-	GraphParser::LoadGraph(gGraph, (ContentPath + "Maps/default.xml").c_str());
+	GraphParser::LoadGraph(gGraph, (ContentPath + "Maps/empty.xml").c_str());
 	
 	srand((unsigned)time(0));
 

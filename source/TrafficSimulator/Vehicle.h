@@ -23,7 +23,7 @@ namespace TrafficSimulator
 	class Vehicle : public IDrawable
 	{
 	public:
-		Vehicle(SDL_Texture* texture, const Vector2f& position, std::int32_t width, std::int32_t height, const Graph& map);
+		Vehicle(SDL_Texture* texture, const Vector2f& position, std::int32_t width, std::int32_t height, const Graph& map, const Node& startNode);
 		bool operator==(const Vehicle& rhs) const;
 		bool operator!=(const Vehicle& rhs) const;
 		~Vehicle() = default;

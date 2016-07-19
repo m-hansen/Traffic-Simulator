@@ -55,9 +55,10 @@ void Graph::RemoveHighlight(const std::list<const Node*>& nodes)
 	HighlightPath(nodes, sDefaultEdgeColor);
 }
 
-void Graph::CreateEdge(const Node& source, const Node& target)
+void Graph::CreateEdge(const Node& source, const Node& target, bool isVisible)
 {
 	Edge edge(source, target);
+	edge.SetVisible(isVisible);
 	mEdgeList.emplace_back(edge);
 }
 

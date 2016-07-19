@@ -5,7 +5,7 @@
 
 class Node;
 
-class Edge : TrafficSimulator::IDrawable
+class Edge : public TrafficSimulator::IDrawable
 {
 private:
 	enum class RoadType

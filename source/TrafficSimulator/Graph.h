@@ -17,7 +17,7 @@ public:
 	void Draw(SDL_Renderer* renderer);
 	void HighlightPath(const std::list<const Node*>& nodes, SDL_Color color = SDL_Color{ 0x00,0x72,0xB2,0xFF });
 	void RemoveHighlight(const std::list<const Node*>& nodes);
-	void CreateEdge(const Node& source, const Node& target);
+	void CreateEdge(const Node& source, const Node& target, bool isVisible = true);
 	void CreateNode(std::uint32_t id, const Vector2& position);
 	std::uint32_t GetNodeCount() const;
 	const Node* GetNodeById(std::uint32_t id) const;

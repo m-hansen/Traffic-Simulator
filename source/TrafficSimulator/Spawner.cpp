@@ -16,6 +16,20 @@ namespace TrafficSimulator
 			mHeight
 		};
 
+		// Find the closest node
+		float smallestDistanceSq = FLT_MAX;
+		for (auto& node : mMap.Nodes())
+		{
+			float deltaX = position.x - node.Position().x;
+			float deltaY = position.y - node.Position().y;
+			float distanceSq = deltaX * deltaX + deltaY * deltaY;
+			if (distanceSq < smallestDistanceSq)
+			{
+				mClosestNode = &node;
+				smallestDistanceSq = distanceSq;
+			}
+		}
+
 		SDL_SetTextureAlphaMod(mTexture, 175);
 	}
 
@@ -43,6 +57,8 @@ namespace TrafficSimulator
 
 	void Spawner::SpawnVehicle()
 	{
+		assert(mClosestNode != nullptr);
+
 		for (auto& vehicle : sVehicles)
 		{
 			if (Utils::CollisionChecker(vehicle.GetBoundingRectangle(), mBoundingRect))
@@ -59,7 +75,14 @@ namespace TrafficSimulator
 			Vector2f{ static_cast<float>(mBoundingRect.x + mWidth / 2), static_cast<float>(mBoundingRect.y + mHeight / 2) }, 
 			CarWidth, 
 			CarHeight, 
-			mMap);
+			mMap, 
+			*mClosestNode);
 		sVehicles.emplace_back(*car);
+	}
+
+	const Node& Spawner::ClosestNode() const
+	{
+		assert(mClosestNode != nullptr);
+		return *mClosestNode;
 	}
 }

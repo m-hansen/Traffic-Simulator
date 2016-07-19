@@ -1,8 +1,8 @@
 #include "pch.h"
 
 std::uint32_t Node::sTotalNodes = 0;
-std::int32_t Node::sWidth = 50;
-std::int32_t Node::sHeight = 50;
+std::int32_t Node::sWidth = 25;
+std::int32_t Node::sHeight = 25;
 
 Node::Node(SDL_Renderer* renderer, SDL_Texture* texture, TTF_Font* font, std::uint32_t id, const Vector2& position)
 	: mTexture(texture), mFont(font), mNodeId(id), mPosition(position), mAdjacentNodes()

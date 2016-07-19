@@ -19,6 +19,7 @@ namespace TrafficSimulator
 		const SDL_Rect& GetBoundingRect() const;
 		void Spawner::SpawnVehicle();
 		static std::list<Vehicle>& Vehicles() { return sVehicles; };
+		const Node& ClosestNode() const;
 
 	private:
 		static std::list<Vehicle> sVehicles;
@@ -31,5 +32,6 @@ namespace TrafficSimulator
 		std::int32_t mHeight;
 		std::uint32_t mTimeSinceLastSpawn;
 		std::uint32_t mNextSpawnTime;
+		const Node* mClosestNode;
 	};
 }
