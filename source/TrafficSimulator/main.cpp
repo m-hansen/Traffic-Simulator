@@ -296,10 +296,13 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 		case SDLK_s:
 		{
 			// Place a spawner at the mouse position
-			std::int32_t x, y;
-			SDL_GetMouseState(&x, &y);
-			TrafficSimulator::Spawner spawner(TextureManager::GetTexture("spawner"), Vector2f{ static_cast<float>(x), static_cast<float>(y) }, *gGraph);
-			gSpawnerList.emplace_back(spawner);
+			if (gGraph->Nodes().size() > 0) 
+			{
+				std::int32_t x, y;
+				SDL_GetMouseState(&x, &y);
+				TrafficSimulator::Spawner spawner(TextureManager::GetTexture("spawner"), Vector2f{ static_cast<float>(x), static_cast<float>(y) }, *gGraph);
+				gSpawnerList.emplace_back(spawner);
+			}
 			break;
 		}
 		}

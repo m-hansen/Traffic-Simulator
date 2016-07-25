@@ -35,6 +35,8 @@ namespace TrafficSimulator
 
 	void Spawner::Update(std::uint32_t delta)
 	{
+		assert(mMap.Nodes().size() > 0);
+
 		mTimeSinceLastSpawn += delta;
 		if (mTimeSinceLastSpawn > mNextSpawnTime)
 		{
