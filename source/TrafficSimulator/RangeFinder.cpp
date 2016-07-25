@@ -13,7 +13,9 @@ namespace TrafficSimulator
 
 	void RangeFinder::Update(const SDL_Rect& position, float rotation, const std::vector<Wall>& walls, const std::list<Vehicle>& vehicles)
 	{
-		mStartPosition = { static_cast<float>(position.x + position.w / 2), static_cast<float>(position.y + position.h / 2) };
+		double rotationInRadians = (rotation - 90) * PI / 180;
+		Vector2 vehicleOrigin = { position.x + position.w / 2, position.y + position.h / 2 };
+		mStartPosition = { static_cast<float>(vehicleOrigin.x + position.h / 2 * cos(rotationInRadians)), static_cast<float>(vehicleOrigin.y + position.h / 2 * sin(rotationInRadians)) };
 
 		// Calculate the begin and and of each line segment based on its rotation
 		mEndPosition.x = mStartPosition.x - mLength * static_cast<float>(cos((mAngleInDegrees + rotation) * PI / 180));

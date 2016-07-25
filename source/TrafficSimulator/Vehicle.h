@@ -56,6 +56,8 @@ namespace TrafficSimulator
 		float mRotationSpeed;
 		float mAcceleration;
 		float mDeceleration;
+		float mDefaultAcceleration;
+		float mDefaultDeceleration;
 		std::uint32_t mVehicleId;
 		SDL_Rect mVisibleRect;
 		SDL_Rect mBoundingRect;

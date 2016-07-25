@@ -6,10 +6,10 @@ namespace TrafficSimulator
 
 	Vehicle::Vehicle(SDL_Texture* texture, const Vector2f& position, std::int32_t width, std::int32_t height, const Graph& map, const Node& startNode)
 		: mInitialTargetSpeed(static_cast<float>(rand() % 10 + 30)), mSpeed(0.0f), mTargetSpeed(0.0f), mRotationSpeed(5), mTexture(texture), mPosition(position), mMap(map), mLastVisitedNode(&startNode), mItinerary(),
-		mWidth(width), mHeight(height), mSensors(), mRotation(0), mRangeFinderLeft(*this, 50, 125), mRangeFinderCenter(*this, 50, 90),
-		mRangeFinderRight(*this, 50, 55), mItineraryIndex(0), mTarget(nullptr), mVelocity(Vector2f{ 0, -1 }), mIsSelected(false),
+		mWidth(width), mHeight(height), mSensors(), mRotation(0), mRangeFinderLeft(*this, 30, 100), mRangeFinderCenter(*this, 50, 90),
+		mRangeFinderRight(*this, 30, 80), mItineraryIndex(0), mTarget(nullptr), mVelocity(Vector2f{ 0, -1 }), mIsSelected(false),
 		mVehicleId(sTotalVehicles++), mAdjacentAgentSensor(this, mPosition, 35), mPathNodeIdString(),
-		mAcceleration(0.05f), mDeceleration(0.05f)
+		mAcceleration(0.05f), mDeceleration(0.05f), mDefaultAcceleration(mAcceleration), mDefaultDeceleration(mDeceleration)
 	{
 		mBoundingRect = 
 		{
@@ -131,13 +131,19 @@ namespace TrafficSimulator
 			}
 		}
 
-		if (mRangeFinderCenter.IsIntersecting())
+		std::uint8_t rangefinderCollisionCount = 0;
+		if (mRangeFinderCenter.IsIntersecting()) ++rangefinderCollisionCount;
+		if (mRangeFinderLeft.IsIntersecting()) ++rangefinderCollisionCount;
+		if (mRangeFinderRight.IsIntersecting()) ++rangefinderCollisionCount;
+		if (rangefinderCollisionCount > 0)
 		{
 			// Begin to decelerate
+			mDeceleration = mDefaultDeceleration * rangefinderCollisionCount;
 			SetTargetSpeed(0.0f);
 		}
 		else
 		{
+			mDeceleration = mDefaultDeceleration;
 			SetTargetSpeed(mInitialTargetSpeed);
 		}
 
@@ -169,6 +175,9 @@ namespace TrafficSimulator
 		}
 
 		SDL_RenderCopyEx(renderer, mTexture, nullptr, &mBoundingRect, mRotation, nullptr, SDL_FLIP_NONE);
+		
+		// Draw bounding rectangles
+		SDL_RenderDrawRect(renderer, &mBoundingRect);
 
 		// Render the vehicle info box
 		if (mIsSelected)
