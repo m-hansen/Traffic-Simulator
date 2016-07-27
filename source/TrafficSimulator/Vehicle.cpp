@@ -6,12 +6,20 @@ namespace TrafficSimulator
 
 	Vehicle::Vehicle(SDL_Texture* texture, const Vector2f& position, std::int32_t width, std::int32_t height, const Graph& map, const Node& startNode)
 		: mInitialTargetSpeed(static_cast<float>(rand() % 10 + 30)), mSpeed(0.0f), mTargetSpeed(0.0f), mRotationSpeed(5), mTexture(texture), mPosition(position), mMap(map), mLastVisitedNode(&startNode), mItinerary(),
-		mWidth(width), mHeight(height), mSensors(), mRotation(0), mRangeFinderLeft(*this, 30, 100), mRangeFinderCenter(*this, 50, 90),
-		mRangeFinderRight(*this, 30, 80), mItineraryIndex(0), mTarget(nullptr), mVelocity(Vector2f{ 0, -1 }), mIsSelected(false),
+		mWidth(width), mHeight(height), mSensors(), mRotation(0), mRangeFinderLeft(*this, 25, 98), mRangeFinderCenter(*this, 35, 90),
+		mRangeFinderRight(*this, 25, 82), mItineraryIndex(0), mTarget(nullptr), mVelocity(Vector2f{ 0, -1 }), mIsSelected(false),
 		mVehicleId(sTotalVehicles++), mAdjacentAgentSensor(this, mPosition, 35), mPathNodeIdString(),
 		mAcceleration(0.05f), mDeceleration(0.05f), mDefaultAcceleration(mAcceleration), mDefaultDeceleration(mDeceleration)
 	{
 		mBoundingRect = 
+		{
+			static_cast<std::int32_t>(mPosition.x - mWidth / 2),
+			static_cast<std::int32_t>(mPosition.y - mHeight / 2),
+			mWidth,
+			mWidth
+		};
+
+		mVisibleRect =
 		{
 			static_cast<std::int32_t>(mPosition.x - mWidth / 2),
 			static_cast<std::int32_t>(mPosition.y - mHeight / 2),
@@ -151,6 +159,8 @@ namespace TrafficSimulator
 		// Update the bounding rectangle to reflect the vehicles current position
 		mBoundingRect.x = static_cast<std::int32_t>(mPosition.x) - mBoundingRect.w / 2;
 		mBoundingRect.y = static_cast<std::int32_t>(mPosition.y) - mBoundingRect.h / 2;
+		mVisibleRect.x = mBoundingRect.x;
+		mVisibleRect.y = mBoundingRect.y - mBoundingRect.h / 2;
 
 		// Update all sensors - do this after the vehicle update logic
 		mRangeFinderLeft.Update(mBoundingRect, mRotation, intersectionManagers, walls, vehicles);
@@ -175,7 +185,7 @@ namespace TrafficSimulator
 			mAdjacentAgentSensor.Draw(renderer);
 		}
 
-		SDL_RenderCopyEx(renderer, mTexture, nullptr, &mBoundingRect, mRotation, nullptr, SDL_FLIP_NONE);
+		SDL_RenderCopyEx(renderer, mTexture, nullptr, &mVisibleRect, mRotation, nullptr, SDL_FLIP_NONE);
 		
 		// Draw bounding rectangles
 		//SDL_RenderDrawRect(renderer, &mBoundingRect);

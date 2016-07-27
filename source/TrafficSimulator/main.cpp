@@ -405,6 +405,7 @@ int main(int argc, char* argv[])
 	// Load the default graph
 	GraphParser::LoadGraph(gGraph, (ContentPath + "Test/test001.xml").c_str());
 
+	// Build the intersection signals
 	TrafficSimulator::IntersectionManager intersectionManager(5000);
 	for (int i = 0; i < 8; i += 2)
 	{
