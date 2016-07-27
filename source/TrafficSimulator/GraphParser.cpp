@@ -56,7 +56,6 @@ bool GraphParser::LoadGraph(Graph* graph, const std::string& filename)
 		edgeElement->QueryIntAttribute("target", &targetNodeId);
 		edgeElement->QueryBoolAttribute("visible", &isVisible);
 
-
 		const Node* sourceNode = graph->GetNodeById(sourceNodeId);
 		const Node* targetNode = graph->GetNodeById(targetNodeId);
 

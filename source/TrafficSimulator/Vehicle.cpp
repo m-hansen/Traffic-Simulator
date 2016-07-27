@@ -85,7 +85,8 @@ namespace TrafficSimulator
 		mPathNodeIdString = mPathNodeIdString.substr(0, mPathNodeIdString.length() - delim.length());
 	}
 
-	void Vehicle::Update(std::uint32_t delta, const std::list<Vehicle>& vehicles, const std::vector<Wall>& walls)
+	void Vehicle::Update(std::uint32_t delta, const std::list<Vehicle>& vehicles, 
+		const std::vector<IntersectionManager>& intersectionManagers, const std::vector<Wall>& walls)
 	{
 		// Rotate to face towards target
 		mRotation = 90 + static_cast<float>(atan2(mVelocity.y + mSteering.y, mVelocity.x + mSteering.x) * 180 / PI);// *mRotationSpeed * delta;
@@ -152,9 +153,9 @@ namespace TrafficSimulator
 		mBoundingRect.y = static_cast<std::int32_t>(mPosition.y) - mBoundingRect.h / 2;
 
 		// Update all sensors - do this after the vehicle update logic
-		mRangeFinderLeft.Update(mBoundingRect, mRotation, walls, vehicles);
-		mRangeFinderCenter.Update(mBoundingRect, mRotation, walls, vehicles);
-		mRangeFinderRight.Update(mBoundingRect, mRotation, walls, vehicles);
+		mRangeFinderLeft.Update(mBoundingRect, mRotation, intersectionManagers, walls, vehicles);
+		mRangeFinderCenter.Update(mBoundingRect, mRotation, intersectionManagers, walls, vehicles);
+		mRangeFinderRight.Update(mBoundingRect, mRotation, intersectionManagers, walls, vehicles);
 		mAdjacentAgentSensor.Update(mPosition, vehicles);
 	}
 
@@ -177,7 +178,7 @@ namespace TrafficSimulator
 		SDL_RenderCopyEx(renderer, mTexture, nullptr, &mBoundingRect, mRotation, nullptr, SDL_FLIP_NONE);
 		
 		// Draw bounding rectangles
-		SDL_RenderDrawRect(renderer, &mBoundingRect);
+		//SDL_RenderDrawRect(renderer, &mBoundingRect);
 
 		// Render the vehicle info box
 		if (mIsSelected)

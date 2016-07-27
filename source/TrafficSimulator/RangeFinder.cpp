@@ -11,7 +11,9 @@ namespace TrafficSimulator
 	{
 	}
 
-	void RangeFinder::Update(const SDL_Rect& position, float rotation, const std::vector<Wall>& walls, const std::list<Vehicle>& vehicles)
+	void RangeFinder::Update(const SDL_Rect& position, float rotation, 
+		const std::vector<IntersectionManager>& intersectionManagers, 
+		const std::vector<Wall>& walls, const std::list<Vehicle>& vehicles)
 	{
 		double rotationInRadians = (rotation - 90) * PI / 180;
 		Vector2 vehicleOrigin = { position.x + position.w / 2, position.y + position.h / 2 };
@@ -23,12 +25,24 @@ namespace TrafficSimulator
 
 		// Check for collisions
 		mIsIntersecting = false;
+		std::int32_t x1 = static_cast<std::int32_t>(mStartPosition.x);
+		std::int32_t y1 = static_cast<std::int32_t>(mStartPosition.y);
+		std::int32_t x2 = static_cast<std::int32_t>(mEndPosition.x);
+		std::int32_t y2 = static_cast<std::int32_t>(mEndPosition.y);
+
+		for (auto& manager : intersectionManagers)
+		{
+			for (auto signal : manager.GetTrafficSignals())
+			{
+				if (!signal.GetIsRed()) continue;
+				if (SDL_IntersectRectAndLine(&signal.GetBoundingRect(), &x1, &y1, &x2, &y2))
+				{
+					mIsIntersecting = true;
+				}
+			}
+		}
 		for (auto& wall : walls)
 		{
-			std::int32_t x1 = static_cast<std::int32_t>(mStartPosition.x);
-			std::int32_t y1 = static_cast<std::int32_t>(mStartPosition.y);
-			std::int32_t x2 = static_cast<std::int32_t>(mEndPosition.x);
-			std::int32_t y2 = static_cast<std::int32_t>(mEndPosition.y);
 			if (SDL_IntersectRectAndLine(&wall.GetBoundingRect(), &x1, &y1, &x2, &y2))
 			{
 				mIsIntersecting = true;
@@ -37,10 +51,6 @@ namespace TrafficSimulator
 		for (auto& vehicle : vehicles)
 		{
 			if (vehicle == mOwner) continue;
-			std::int32_t x1 = static_cast<std::int32_t>(mStartPosition.x);
-			std::int32_t y1 = static_cast<std::int32_t>(mStartPosition.y);
-			std::int32_t x2 = static_cast<std::int32_t>(mEndPosition.x);
-			std::int32_t y2 = static_cast<std::int32_t>(mEndPosition.y);
 			if (SDL_IntersectRectAndLine(&vehicle.GetBoundingRectangle(), &x1, &y1, &x2, &y2))
 			{
 				mIsIntersecting = true;

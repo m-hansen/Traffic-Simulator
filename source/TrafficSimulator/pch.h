@@ -35,3 +35,6 @@
 #include "GraphParser.h"
 
 #include "Pathfinder.h"
+
+#include "TrafficSignal.h"
+#include "IntersectionManager.h"

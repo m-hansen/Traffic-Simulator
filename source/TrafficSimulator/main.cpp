@@ -18,6 +18,7 @@ std::uint32_t gFpsTime = 0;
 std::list<TrafficSimulator::Vehicle> gVehicleList; // TODO: vector of shared_ptr for contiguous access
 std::vector<TrafficSimulator::Wall> gWallList;
 std::vector<TrafficSimulator::Spawner> gSpawnerList;
+std::vector<TrafficSimulator::IntersectionManager> gIntersectionManagers;
 TrafficSimulator::Vehicle* gSelectedVehicle = nullptr;
 
 bool InitializeSDL()
@@ -82,6 +83,7 @@ bool LoadResources()
 	success =
 		TextureManager::LoadTexture(gRenderer, "car", ContentPath + "Images/car-sprite.png") &&
 		TextureManager::LoadTexture(gRenderer, "wall", ContentPath + "Images/wall.png") &&
+		TextureManager::LoadTexture(gRenderer, "signal", ContentPath + "Images/signal.png") &&
 		TextureManager::LoadTexture(gRenderer, "node", ContentPath + "Images/node.png") &&
 		TextureManager::LoadTexture(gRenderer, "nodeSM", ContentPath + "Images/node_sm.png") &&
 		TextureManager::LoadTexture(gRenderer, "road", ContentPath + "Images/road.png") &&
@@ -197,20 +199,6 @@ void HandleInput(const SDL_Event& e, bool& isRunning)
 			printf("\n");
 #endif
 		}
-		if (e.button.button == SDL_BUTTON_MIDDLE)
-		{
-			//// Place a vehicle at the mouse position
-			//const std::int32_t CarWidth = 12;
-			//const std::int32_t CarHeight = 24;
-			//TrafficSimulator::Vehicle car(
-			//	TextureManager::GetTexture("car"),
-			//	Vector2f{ static_cast<float>(e.button.x), static_cast<float>(e.button.y) },
-			//	CarWidth,
-			//	CarHeight,
-			//	*gGraph
-			//);
-			//gVehicleList.emplace_back(car);
-		}
 	}
 	else if (e.type == SDL_MOUSEBUTTONUP)
 	{
@@ -321,14 +309,7 @@ void Update(std::uint32_t delta)
 	{
 		gPreviousFrameCount = gFrameCount;
 		gFrameCount = 0;
-		gFpsTime = 0;
-		//printf("%d,%d\n", gPreviousFrameCount, TrafficSimulator::Vehicle::TotalVehicleCount());
-	}
-
-	// Will be removed soon
-	for (auto& vehicle : gVehicleList)
-	{
-		vehicle.Update(delta, gVehicleList, gWallList);
+		gFpsTime = 0;	
 	}
 	
 	if (TrafficSimulator::Vehicle::TotalVehicleCount() < VehicleCap)
@@ -341,7 +322,12 @@ void Update(std::uint32_t delta)
 
 	for (auto& vehicle : TrafficSimulator::Spawner::Vehicles())
 	{
-		vehicle.Update(delta, TrafficSimulator::Spawner::Vehicles(), gWallList);
+		vehicle.Update(delta, TrafficSimulator::Spawner::Vehicles(), gIntersectionManagers, gWallList);
+	}
+
+	for (auto& manager : gIntersectionManagers)
+	{
+		manager.Update(delta);
 	}
 }
 
@@ -354,10 +340,13 @@ void Render()
 	// Render the graph
 	gGraph->Draw(gRenderer);
 
-	// Render all vehicles to screen
-	for (auto& vehicle : gVehicleList)
+	// Render each traffic signal
+	for (auto& manager : gIntersectionManagers)
 	{
-		vehicle.Draw(gRenderer);
+		for (auto signal : manager.GetTrafficSignals()) 
+		{
+			signal.Draw(gRenderer);
+		}
 	}
 
 	for (auto& vehicle : TrafficSimulator::Spawner::Vehicles())
@@ -414,8 +403,16 @@ int main(int argc, char* argv[])
 	gGraph = new Graph(gRenderer, gCalibriFont);
 
 	// Load the default graph
-	GraphParser::LoadGraph(gGraph, (ContentPath + "Maps/empty.xml").c_str());
-	
+	GraphParser::LoadGraph(gGraph, (ContentPath + "Test/test001.xml").c_str());
+
+	TrafficSimulator::IntersectionManager intersectionManager(5000);
+	for (int i = 0; i < 8; i += 2)
+	{
+		// Build the intersection positions
+		intersectionManager.AddSignal(TextureManager::GetTexture("signal"), gGraph->GetNodeById(i)->Position());
+	}
+	gIntersectionManagers.emplace_back(intersectionManager);
+
 	srand((unsigned)time(0));
 
 	while (isRunning)

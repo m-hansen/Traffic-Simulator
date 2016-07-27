@@ -30,7 +30,9 @@ namespace TrafficSimulator
 		void Select();
 		void Deselect();
 		void NavigateTo(const Node& targetNode);
-		void Update(std::uint32_t delta, const std::list<Vehicle>& vehicles, const std::vector<Wall>& walls);
+		void Update(std::uint32_t delta, const std::list<Vehicle>& vehicles, 
+			const std::vector<IntersectionManager>& intersectionManagers,
+			const std::vector<Wall>& walls);
 		void Draw(SDL_Renderer* renderer);
 		const std::list<const Node*>& Itinerary() const;
 		void Seek(const Vector2& target);

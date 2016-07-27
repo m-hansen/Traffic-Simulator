@@ -195,6 +195,7 @@
     <ClCompile Include="Graph.cpp" />
     <ClCompile Include="GraphParser.cpp" />
     <ClCompile Include="IDrawable.cpp" />
+    <ClCompile Include="IntersectionManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="Pathfinder.cpp" />
@@ -208,6 +209,7 @@
     <ClCompile Include="Sensor.cpp" />
     <ClCompile Include="Spawner.cpp" />
     <ClCompile Include="TextureManager.cpp" />
+    <ClCompile Include="TrafficSignal.cpp" />
     <ClCompile Include="Vehicle.cpp" />
     <ClCompile Include="Wall.cpp" />
   </ItemGroup>
@@ -218,6 +220,7 @@
     <ClInclude Include="Graph.h" />
     <ClInclude Include="GraphParser.h" />
     <ClInclude Include="IDrawable.h" />
+    <ClInclude Include="IntersectionManager.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="Pathfinder.h" />
     <ClInclude Include="pch.h" />
@@ -226,6 +229,7 @@
     <ClInclude Include="Sensor.h" />
     <ClInclude Include="Spawner.h" />
     <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="TrafficSignal.h" />
     <ClInclude Include="Vehicle.h" />
     <ClInclude Include="Wall.h" />
   </ItemGroup>
