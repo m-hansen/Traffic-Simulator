@@ -5,7 +5,7 @@
 const std::uint32_t ScreenWidth = 1280;
 const std::uint32_t ScreenHeight = 720;
 const std::string ContentPath = "../../Content/";
-const std::uint32_t VehicleCap = 10;
+const std::uint32_t VehicleCap = 30;
 
 SDL_Window* gWindow = nullptr;
 SDL_Renderer* gRenderer = nullptr;
@@ -405,14 +405,40 @@ int main(int argc, char* argv[])
 	// Load the default graph
 	GraphParser::LoadGraph(gGraph, (ContentPath + "Test/test001.xml").c_str());
 
+	SDL_Texture* signalTexture = TextureManager::GetTexture("signal");
+
 	// Build the intersection signals
 	TrafficSimulator::IntersectionManager intersectionManager(5000);
-	for (int i = 0; i < 8; i += 2)
-	{
-		// Build the intersection positions
-		intersectionManager.AddSignal(TextureManager::GetTexture("signal"), gGraph->GetNodeById(i)->Position());
-	}
+	intersectionManager.AddSignal(signalTexture, gGraph->GetNodeById(0)->Position());
+	intersectionManager.AddSignal(signalTexture, gGraph->GetNodeById(2)->Position());
+	intersectionManager.AddSignal(signalTexture, gGraph->GetNodeById(4)->Position());
+	intersectionManager.AddSignal(signalTexture, gGraph->GetNodeById(6)->Position());
 	gIntersectionManagers.emplace_back(intersectionManager);
+
+	TrafficSimulator::IntersectionManager intersectionManager2(5000);
+	intersectionManager2.AddSignal(signalTexture, gGraph->GetNodeById(8)->Position());
+	intersectionManager2.AddSignal(signalTexture, gGraph->GetNodeById(11)->Position());
+	intersectionManager2.AddSignal(signalTexture, gGraph->GetNodeById(13)->Position());
+	gIntersectionManagers.emplace_back(intersectionManager2);
+
+	TrafficSimulator::IntersectionManager intersectionManager3(5000);
+	intersectionManager3.AddSignal(signalTexture, gGraph->GetNodeById(29)->Position());
+	intersectionManager3.AddSignal(signalTexture, gGraph->GetNodeById(31)->Position());
+	intersectionManager3.AddSignal(signalTexture, gGraph->GetNodeById(33)->Position());
+	gIntersectionManagers.emplace_back(intersectionManager3);
+
+	TrafficSimulator::IntersectionManager intersectionManager4(5000);
+	intersectionManager4.AddSignal(signalTexture, gGraph->GetNodeById(26)->Position());
+	intersectionManager4.AddSignal(signalTexture, gGraph->GetNodeById(20)->Position());
+	intersectionManager4.AddSignal(signalTexture, gGraph->GetNodeById(22)->Position());
+	intersectionManager4.AddSignal(signalTexture, gGraph->GetNodeById(24)->Position());
+	gIntersectionManagers.emplace_back(intersectionManager4);
+
+	TrafficSimulator::IntersectionManager intersectionManager5(5000);
+	intersectionManager5.AddSignal(signalTexture, gGraph->GetNodeById(37)->Position());
+	intersectionManager5.AddSignal(signalTexture, gGraph->GetNodeById(39)->Position());
+	intersectionManager5.AddSignal(signalTexture, gGraph->GetNodeById(35)->Position());
+	gIntersectionManagers.emplace_back(intersectionManager5);
 
 	srand((unsigned)time(0));
 

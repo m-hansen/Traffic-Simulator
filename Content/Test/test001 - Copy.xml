@@ -1,0 +1,54 @@
+<graphml>
+    <graph id="WorldGraph" edgedefault="directed">
+        <node id="0" x="525" y="450"/>
+        <node id="1" x="550" y="425"/>
+        <node id="2" x="550" y="400"/>
+        <node id="3" x="525" y="375"/>
+        <node id="4" x="500" y="375"/>
+        <node id="5" x="475" y="400"/>
+        <node id="6" x="475" y="425"/>
+        <node id="7" x="500" y="450"/>
+        <node id="8" x="525" y="550"/>
+        <node id="9" x="525" y="275"/>
+        <node id="10" x="650" y="425"/>
+        <node id="11" x="650" y="400"/>
+        <node id="12" x="375" y="400"/>
+        <node id="13" x="375" y="425"/>
+        <node id="14" x="500" y="550"/>
+        <node id="15" x="500" y="275"/>
+        <node id="16" x="512" y="200"/>
+        <node id="17" x="512" y="625"/>
+        <node id="18" x="725" y="412"/>
+        <node id="19" x="300" y="412"/>
+        <edge source="8" target="0" visible="true"/>
+        <edge source="7" target="14" visible="true"/>
+        <edge source="3" target="9" visible="true"/>
+        <edge source="15" target="4" visible="true"/>
+        <edge source="1" target="10" visible="true"/>
+        <edge source="11" target="2" visible="true"/>
+        <edge source="3" target="9" visible="true"/>
+        <edge source="15" target="4" visible="true"/>
+        <edge source="5" target="12" visible="true"/>
+        <edge source="13" target="6" visible="true"/>
+        <edge source="0" target="1" visible="true"/>
+        <edge source="0" target="3" visible="true"/>
+        <edge source="0" target="5" visible="true"/>
+        <edge source="2" target="3" visible="true"/>
+        <edge source="2" target="5" visible="true"/>
+        <edge source="2" target="7" visible="true"/>
+        <edge source="4" target="5" visible="true"/>
+        <edge source="4" target="7" visible="true"/>
+        <edge source="4" target="1" visible="true"/>
+        <edge source="6" target="7" visible="true"/>
+        <edge source="6" target="1" visible="true"/>
+        <edge source="6" target="3" visible="true"/>
+        <edge source="9" target="16" visible="true"/>
+        <edge source="16" target="15" visible="true"/>
+        <edge source="10" target="18" visible="true"/>
+        <edge source="18" target="11" visible="true"/>
+        <edge source="14" target="17" visible="true"/>
+        <edge source="17" target="8" visible="true"/>
+        <edge source="12" target="19" visible="true"/>
+        <edge source="19" target="13" visible="true"/>
+    </graph>
+</graphml>
